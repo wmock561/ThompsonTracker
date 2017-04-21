@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9D3-lH-w8E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,117 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Graphs-->
+        <scene sceneID="SZ5-9P-nP5">
+            <objects>
+                <viewController id="fJH-ub-Tfa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V9G-85-1j7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ISj-9z-ujJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tmd-Ur-0MB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Graphs" id="97c-dB-Ce1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxb-hK-N7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-365"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="Nyy-fB-jOq">
+            <objects>
+                <navigationController id="6tE-xS-u4i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="Vwg-Gf-1N9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gl0-d6-YWX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OP9-h9-0Y8" kind="relationship" relationship="rootViewController" id="Kfh-Ae-jgg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haV-1C-d2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="394"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="Ce2-LV-qO8">
+            <objects>
+                <viewController id="OP9-h9-0Y8" customClass="DashboardViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eq-6E-evh"/>
+                        <viewControllerLayoutGuide type="bottom" id="iQM-4h-LDk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qkf-6h-Vz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-Pa-8ug">
+                                <rect key="frame" x="0.0" y="214" width="375" height="404"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tak-Db-6x5">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categorycell" id="yah-CH-RDX" customClass="DashboardCollectionViewCell" customModule="ThompsonTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-wz-9pU">
+                                                    <rect key="frame" x="63.5" y="14.5" width="33.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="QjY-wz-9pU" firstAttribute="centerY" secondItem="yah-CH-RDX" secondAttribute="centerY" id="bao-4J-JvX"/>
+                                            <constraint firstItem="QjY-wz-9pU" firstAttribute="centerX" secondItem="yah-CH-RDX" secondAttribute="centerX" id="e19-cy-DGX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="QjY-wz-9pU" id="SKi-m9-gNH"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="d67-KW-MQN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="OP9-h9-0Y8" id="duz-kw-MzV"/>
+                                    <outlet property="delegate" destination="OP9-h9-0Y8" id="2Vy-zQ-o7p"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r5c-Pa-8ug" firstAttribute="top" secondItem="1eq-6E-evh" secondAttribute="bottom" constant="150" id="Adj-8f-GgK"/>
+                            <constraint firstItem="r5c-Pa-8ug" firstAttribute="leading" secondItem="qkf-6h-Vz7" secondAttribute="leading" id="BJE-KZ-fZa"/>
+                            <constraint firstItem="iQM-4h-LDk" firstAttribute="top" secondItem="r5c-Pa-8ug" secondAttribute="bottom" id="KJj-r4-JbD"/>
+                            <constraint firstAttribute="trailing" secondItem="r5c-Pa-8ug" secondAttribute="trailing" id="hmD-d4-2iI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="onm-vF-WiU"/>
+                    <navigationItem key="navigationItem" id="v0H-VF-Re5"/>
+                    <connections>
+                        <outlet property="dashboardCollectionView" destination="r5c-Pa-8ug" id="skc-ud-MmU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEg-hB-3HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="394"/>
+        </scene>
+        <!--Dash Detail-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashDetailViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,32 +128,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5P-90-YDY">
-                                <rect key="frame" x="139" y="318" width="97" height="30"/>
-                                <state key="normal" title="Consent Form"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-2m-hVA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="8" minY="0.0" maxX="0.0" maxY="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="42R-2m-LdT">
+                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="surveycell" id="7zW-Tb-lCA" customClass="ActivityCollectionViewCell" customModule="ThompsonTracker" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1R-Vx-aBt">
+                                                    <rect key="frame" x="41.5" y="52" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="W1R-Vx-aBt" firstAttribute="centerX" secondItem="7zW-Tb-lCA" secondAttribute="centerX" id="THh-xh-53x"/>
+                                            <constraint firstItem="W1R-Vx-aBt" firstAttribute="centerY" secondItem="7zW-Tb-lCA" secondAttribute="centerY" id="Wni-wD-lNC"/>
+                                        </constraints>
+                                        <size key="customSize" width="125" height="125"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="W1R-Vx-aBt" id="z5u-iZ-kHZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <action selector="consentTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ii-kk-qu3"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JqK-nZ-ffL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="f2T-z4-Ik5"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS2-oZ-X62">
-                                <rect key="frame" x="145" y="378" width="84" height="30"/>
-                                <state key="normal" title="Take Survey"/>
-                                <connections>
-                                    <action selector="surveyTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlM-Gv-nOy"/>
-                                </connections>
-                            </button>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s5P-90-YDY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2w9-Ng-PJY"/>
-                            <constraint firstItem="s5P-90-YDY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DqK-0c-hk6"/>
-                            <constraint firstItem="zS2-oZ-X62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RZI-2D-vEZ"/>
-                            <constraint firstItem="zS2-oZ-X62" firstAttribute="top" secondItem="s5P-90-YDY" secondAttribute="bottom" constant="30" id="wvm-VR-dK1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P3D-2m-hVA" secondAttribute="bottom" id="6vS-Z7-SfT"/>
+                            <constraint firstItem="P3D-2m-hVA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9wu-G4-LS7"/>
+                            <constraint firstAttribute="trailing" secondItem="P3D-2m-hVA" secondAttribute="trailing" id="RKo-gx-eq2"/>
+                            <constraint firstItem="P3D-2m-hVA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Svk-2V-o15"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dash Detail" id="Wrr-6f-Ynr"/>
+                    <navigationItem key="navigationItem" id="rkL-nn-zJ6"/>
+                    <connections>
+                        <outlet property="collectionView" destination="P3D-2m-hVA" id="w3Q-iE-07r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="615" y="394"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="wbP-2p-WLc">
+            <objects>
+                <viewController id="BY1-IU-a2W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lJJ-aF-WcB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1al-wy-XAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4V-yE-4F3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="ROH-Gb-GeK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHO-tE-Bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="1196"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sLI-UE-Ndr">
+            <objects>
+                <tabBarController id="9D3-lH-w8E" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kqn-gz-Vc0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6tE-xS-u4i" kind="relationship" relationship="viewControllers" id="MSW-T0-8JV"/>
+                        <segue destination="fJH-ub-Tfa" kind="relationship" relationship="viewControllers" id="UQU-w6-fYC"/>
+                        <segue destination="BY1-IU-a2W" kind="relationship" relationship="viewControllers" id="RKz-Q5-21f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSq-TK-gK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1932" y="394"/>
         </scene>
     </scenes>
 </document>
