@@ -13,6 +13,8 @@
 		B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */; };
 		B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */; };
 		B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5171EAA73A100AE6BCD /* CustomLayout.swift */; };
+		B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A181ED1EAA9F38002FA82F /* GraphView.swift */; };
+		B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */; };
 		B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203641E9DD2EC000195BA /* AppDelegate.swift */; };
 		B2A2036A1E9DD2EC000195BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A203681E9DD2EC000195BA /* Main.storyboard */; };
 		B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2A2036B1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld */; };
@@ -24,13 +26,11 @@
 		B2A203A01E9DD457000195BA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2039C1E9DD421000195BA /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203A41E9DD4CF000195BA /* ConsentDocument.swift */; };
 		B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203A61E9DD6A9000195BA /* ConsentTask.swift */; };
-		B2A203A91E9DD8B1000195BA /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203A81E9DD8B1000195BA /* SurveyTask.swift */; };
 		B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203BC1EA477E9000195BA /* DashDetailViewController.swift */; };
 		B2A203FF1EA5381C000195BA /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203FE1EA5381C000195BA /* ActivityCollectionViewCell.swift */; };
 		B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204001EA559CB000195BA /* DashboardViewController.swift */; };
 		B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
-		B2EA852C1EA686D100B4E689 /* CustomSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA852B1EA686D100B4E689 /* CustomSurveyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +92,8 @@
 		B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B217C5171EAA73A100AE6BCD /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		B2A181ED1EAA9F38002FA82F /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		B2A203611E9DD2EC000195BA /* ThompsonTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThompsonTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A203641E9DD2EC000195BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2A203691E9DD2EC000195BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,13 +110,11 @@
 		B2A203951E9DD421000195BA /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B2A203A41E9DD4CF000195BA /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		B2A203A61E9DD6A9000195BA /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
-		B2A203A81E9DD8B1000195BA /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		B2A203BC1EA477E9000195BA /* DashDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashDetailViewController.swift; sourceTree = "<group>"; };
 		B2A203FE1EA5381C000195BA /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2A204001EA559CB000195BA /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
-		B2EA852B1EA686D100B4E689 /* CustomSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSurveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +181,8 @@
 				B217C50A1EA97F7900AE6BCD /* Model */,
 				B2A203951E9DD421000195BA /* ResearchKit.xcodeproj */,
 				B2A203641E9DD2EC000195BA /* AppDelegate.swift */,
+				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
+				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
 				B2A204001EA559CB000195BA /* DashboardViewController.swift */,
 				B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */,
 				B2A203BC1EA477E9000195BA /* DashDetailViewController.swift */,
@@ -192,9 +194,7 @@
 				B2A2036B1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld */,
 				B2A203A41E9DD4CF000195BA /* ConsentDocument.swift */,
 				B2A203A61E9DD6A9000195BA /* ConsentTask.swift */,
-				B2A203A81E9DD8B1000195BA /* SurveyTask.swift */,
 				B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */,
-				B2EA852B1EA686D100B4E689 /* CustomSurveyTask.swift */,
 				B217C5171EAA73A100AE6BCD /* CustomLayout.swift */,
 			);
 			path = ThompsonTracker;
@@ -394,10 +394,10 @@
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
-				B2EA852C1EA686D100B4E689 /* CustomSurveyTask.swift in Sources */,
-				B2A203A91E9DD8B1000195BA /* SurveyTask.swift in Sources */,
 				B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */,
+				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
 				B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */,
+				B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */,
 				B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */,
 				B2A203FF1EA5381C000195BA /* ActivityCollectionViewCell.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
