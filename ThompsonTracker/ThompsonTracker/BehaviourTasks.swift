@@ -12,7 +12,7 @@ import UIKit
 enum BehaviourTasks: Int {
     case hyperactivity
     case impulsivity
-    case repitition
+    case repetition
     case anxiety
     case attention
     case irritability

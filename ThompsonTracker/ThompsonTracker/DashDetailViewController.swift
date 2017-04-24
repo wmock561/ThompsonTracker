@@ -122,7 +122,7 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
                 steps += [testQuestionStep]
                 
             case 2:
-                let questionTestSteptitle = "Repitition"
+                let questionTestSteptitle = "Repetition"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
 //                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"

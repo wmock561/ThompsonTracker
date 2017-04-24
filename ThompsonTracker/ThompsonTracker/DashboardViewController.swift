@@ -13,7 +13,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     
     let cellTitles = ["Behaviour", "Health", "Sleep", "Test"]
-    let behaviourQuestionsArray = ["Hyperactivity", "Impulsivity", "Repitition", "Anxiety", "Attention Span", "Irritability", "Self-harm", "Tics", "Defiance", "Social Skills", "Speech", "Tantrums"]
+    let behaviourQuestionsArray = ["Hyperactivity", "Impulsivity", "Repetition", "Anxiety", "Attention Span", "Irritability", "Self-harm", "Tics", "Defiance", "Social Skills", "Speech", "Tantrums"]
     let healthArray = [""]
     let sleepQuestionsArray = [""]
     let giQuestionsArray = [""]
@@ -21,14 +21,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-//        layout.minimumInteritemSpacing = 0
-//        layout.minimumLineSpacing = 0
-//        layout.
-//        dashboardCollectionView.collectionViewLayout = layout
-
-        // Do any additional setup after loading the view.
+        self.title = "Dashboard"
     }
 
     override func didReceiveMemoryWarning() {

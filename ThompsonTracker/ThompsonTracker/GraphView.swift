@@ -18,7 +18,7 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         
-        print(graphPoints)
+        //print(graphPoints)
         
         let width = rect.width
         let height = rect.height
@@ -30,7 +30,9 @@ import UIKit
         path.addClip()
         
         //2 - get the current context
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else{
+            return
+        }
         let colors = [startColor.cgColor, endColor.cgColor]
         
         //3 - set up the color space
@@ -47,7 +49,7 @@ import UIKit
         //6 - draw the gradient
         var startPoint = CGPoint.zero
         var endPoint = CGPoint(x:0, y:self.bounds.height)
-        context!.drawLinearGradient(gradient!,
+        context.drawLinearGradient(gradient!,
                                     start: startPoint,
                                     end: endPoint,
                                     options: CGGradientDrawingOptions(rawValue: 0))
@@ -101,7 +103,7 @@ import UIKit
         //Create the clipping path for the graph gradient
         
         //1 - save the state of the context (commented out for now)
-        context!.saveGState()
+        context.saveGState()
         
         //2 - make a copy of the path
         let clippingPath = graphPath.copy() as! UIBezierPath
@@ -122,8 +124,8 @@ import UIKit
         startPoint = CGPoint(x:margin, y: highestYPoint)
         endPoint = CGPoint(x:margin, y:self.bounds.height)
         
-        context!.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: 0))
-        context!.restoreGState()
+        context.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: 0))
+        context.restoreGState()
         
         //draw the line on top of the clipped gradient
         graphPath.lineWidth = 2.0
