@@ -11,8 +11,9 @@ import UIKit
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    let cellTitles = ["Behaviour", "Health", "Sleep", "Mood"]
+    let cellTitles = ["Behavior", "Health", "Sleep", "Mood"]
     let cellImages = [#imageLiteral(resourceName: "mentalHealth.png"), #imageLiteral(resourceName: "health.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "happy.png")]
     
     //categories
@@ -24,10 +25,22 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     //categoryImages
     let behaviourQuestionImageArray = [#imageLiteral(resourceName: "brain.png"), #imageLiteral(resourceName: "lightning.png"), #imageLiteral(resourceName: "refresh.png"), #imageLiteral(resourceName: "anxiety.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "irritability.png"), #imageLiteral(resourceName: "sadFace.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "frustratedFace.png"), #imageLiteral(resourceName: "handshake.png"), #imageLiteral(resourceName: "speech.png"), #imageLiteral(resourceName: "angryFace.jpg")]
     
+    //dateFormatter
+    let dateFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Dashboard"
+        
+        //dashboardCollectionView.layer.borderColor = UIColor.black.cgColor
+        
+        dateFormatter.dateStyle = .medium
+        
+        let currentDate = Date()
+        
+        dateLabel.text = dateFormatter.string(from: currentDate)
+        
 
     }
 

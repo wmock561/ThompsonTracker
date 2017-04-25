@@ -24,6 +24,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.allowsMultipleSelection = false
         
+        self.title = "Track"//\()"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
