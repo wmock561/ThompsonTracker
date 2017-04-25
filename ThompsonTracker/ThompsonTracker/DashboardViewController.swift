@@ -12,16 +12,23 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
 
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     
-    let cellTitles = ["Behaviour", "Health", "Sleep", "Test"]
+    let cellTitles = ["Behaviour", "Health", "Sleep", "Mood"]
+    let cellImages = [#imageLiteral(resourceName: "mentalHealth.png"), #imageLiteral(resourceName: "health.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "happy.png")]
+    
+    //categories
     let behaviourQuestionsArray = ["Hyperactivity", "Impulsivity", "Repetition", "Anxiety", "Attention Span", "Irritability", "Self-harm", "Tics", "Defiance", "Social Skills", "Speech", "Tantrums"]
     let healthArray = [""]
     let sleepQuestionsArray = [""]
     let giQuestionsArray = [""]
     
+    //categoryImages
+    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "brain.png"), #imageLiteral(resourceName: "lightning.png"), #imageLiteral(resourceName: "refresh.png"), #imageLiteral(resourceName: "anxiety.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "irritability.png"), #imageLiteral(resourceName: "sadFace.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "frustratedFace.png"), #imageLiteral(resourceName: "handshake.png"), #imageLiteral(resourceName: "speech.png"), #imageLiteral(resourceName: "angryFace.jpg")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Dashboard"
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +50,9 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         //cell.backgroundColor = UIColor.blue // make cell more visible in our example project
         //cell.
         
+        cell.cellImage.image = cellImages[indexPath.row]
         cell.titleLabel.text = cellTitles[indexPath.row] //Fill Dynamically from array
+        //cell.cellImage.image = cellImages[indexPath.row]
         
         let bcolor : UIColor = UIColor( red: 0.2, green: 0.2, blue:0.2, alpha: 0.5 )
         
@@ -71,6 +80,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 switch row {
                 case 0:
                     destination.cellTitleArray = behaviourQuestionsArray
+                    destination.cellImageArray = behaviourQuestionImageArray
                 case 1:
                     destination.cellTitleArray = nil
                 case 2:

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ActivityCollectionViewCell: UICollectionViewCell {
+class ActivityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
 }

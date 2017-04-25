@@ -9,12 +9,12 @@
 import UIKit
 import ResearchKit
 
-class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DashDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     var cellTitleArray: [String]?
+    var cellImageArray: [UIImage]?
     
     fileprivate var selectedCells = Set<BehaviourTasks>()
     fileprivate let shareTextLabel = UILabel()
@@ -22,7 +22,8 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.allowsMultipleSelection = true
+        tableView.allowsMultipleSelection = false
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -33,19 +34,17 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         
-//        print(taskViewController.result)
     }
     
-    //IMPLEMENTATION OF UICOLLECTIONVIEW METHODS
+    //IMPLEMENTATION OF Table METHODS
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         testCoreData()
         
         //print(indexPath.row)
-//        print(BehaviourTasks(rawValue: indexPath.row)!)
+        //        print(BehaviourTasks(rawValue: indexPath.row)!)
         selectedCells.insert((BehaviourTasks(rawValue: indexPath.row)!))
-//        print(selectedCells)
+        //        print(selectedCells)
         
         var selected: [Int] = []
         selected.append(indexPath.row)
@@ -61,11 +60,11 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
         present(taskViewController, animated: true, completion: {
             self.selectedCells.removeAll()
             selected.removeAll()
-//            print(selected)
+            //            print(selected)
         })
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let cellCount = cellTitleArray?.count{
             return cellCount
         }else{
@@ -73,13 +72,13 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // get a reference to our storyboard cell
         
         //removing all from selectedCells Array
         selectedCells.removeAll()
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "surveycell", for: indexPath) as! ActivityCollectionViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "surveycell", for: indexPath) as! ActivityTableViewCell
         
         let bcolor : UIColor = UIColor( red: 0.2, green: 0.2, blue:0.2, alpha: 0.5 )
         
@@ -87,8 +86,10 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
         cell.layer.borderColor = bcolor.cgColor
         cell.layer.cornerRadius = 3
         
-        if let cellName = cellTitleArray?[indexPath.row]{
+        if let cellName = cellTitleArray?[indexPath.row],
+            let cellImage = cellImageArray?[indexPath.row]{
             cell.titleLabel.text = cellName
+            cell.cellImage.image = cellImage
         }else{
             cell.titleLabel.text =  "ERROR"
         }
@@ -99,10 +100,10 @@ class DashDetailViewController: UIViewController, UICollectionViewDelegate, UICo
     func pickBehaviourQuestions(indexValues: [Int]) ->[ORKStep]{
         var steps = [ORKStep]()
         
-        let instructionStep = ORKInstructionStep(identifier: "IntroStep")
-        instructionStep.title = "Custom Survey"
-        instructionStep.text = "Testing Text for Survey"
-        steps += [instructionStep]
+//        let instructionStep = ORKInstructionStep(identifier: "IntroStep")
+//        instructionStep.title = "Custom Survey"
+//        instructionStep.text = "Testing Text for Survey"
+//        steps += [instructionStep]
         
         let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
         for num in indexValues{

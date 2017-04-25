@@ -11,4 +11,5 @@ import UIKit
 class DashboardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
 }

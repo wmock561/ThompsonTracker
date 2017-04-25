@@ -53,7 +53,10 @@ class GraphViewController: UIViewController {
     
     func setupGraphDisplay() {
         
-        let average: Double = Double(graphView.graphPoints.reduce(0, +) / graphView.graphPoints.count)
+        print(graphView.graphPoints.reduce(0, +))
+        print(graphView.graphPoints.count)
+        
+        let average: Double = Double(graphView.graphPoints.reduce(0, +)) / Double(graphView.graphPoints.count)
         
         averageResponse.text = "\(average)"
         
