@@ -16,7 +16,7 @@ extension Implusivity {
         return NSFetchRequest<Implusivity>(entityName: "Implusivity")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

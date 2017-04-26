@@ -16,7 +16,7 @@ extension SelfHarm {
         return NSFetchRequest<SelfHarm>(entityName: "SelfHarm")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

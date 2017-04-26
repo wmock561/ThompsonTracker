@@ -62,6 +62,8 @@ class Model {
         }
     }
     
+    //MARK: - Behavior Fetch Functions
+    
     func fetchHyperactivity() -> [Hyperactivity]{
         do {
             let array = try managedContext?.fetch(Hyperactivity.fetchRequest()) ?? []
@@ -71,8 +73,107 @@ class Model {
         }
     }
     
-    func fecthAnxiety
+    func fecthAnxiety() -> [Anxiety]{
+        do {
+            let array = try managedContext?.fetch(Anxiety.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
     
+    func fetchTics() -> [Tics]{
+        do {
+            let array = try managedContext?.fetch(Tics.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchIrritability() -> [Irritability]{
+        do {
+            let array = try managedContext?.fetch(Irritability.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchRepetition() -> [Repetition]{
+        do {
+            let array = try managedContext?.fetch(Repetition.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchSocialSkills() -> [SocialSkills]{
+        do {
+            let array = try managedContext?.fetch(SocialSkills.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchSelfHarm() -> [SelfHarm]{
+        do {
+            let array = try managedContext?.fetch(SelfHarm.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchDefiance() -> [Defiance]{
+        do {
+            let array = try managedContext?.fetch(Defiance.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchSpeech() -> [Speech]{
+        do {
+            let array = try managedContext?.fetch(Speech.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchTantrums() -> [Tantrums]{
+        do {
+            let array = try managedContext?.fetch(Tantrums.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchImplusivity() -> [Implusivity]{
+        do {
+            let array = try managedContext?.fetch(Implusivity.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchAttentionSpan() -> [AttentionSpan]{
+        do {
+            let array = try managedContext?.fetch(AttentionSpan.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    
+    //MARK: - saveContext Function
     func saveContext() {
         guard let context = managedContext,
             context.hasChanges else { return }

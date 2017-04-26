@@ -16,7 +16,7 @@ extension Speech {
         return NSFetchRequest<Speech>(entityName: "Speech")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

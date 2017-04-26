@@ -16,7 +16,7 @@ extension Tantrums {
         return NSFetchRequest<Tantrums>(entityName: "Tantrums")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

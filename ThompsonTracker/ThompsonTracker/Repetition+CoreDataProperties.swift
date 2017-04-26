@@ -16,7 +16,7 @@ extension Repetition {
         return NSFetchRequest<Repetition>(entityName: "Repetition")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

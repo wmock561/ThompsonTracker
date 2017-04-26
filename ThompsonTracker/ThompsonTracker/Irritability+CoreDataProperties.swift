@@ -16,7 +16,7 @@ extension Irritability {
         return NSFetchRequest<Irritability>(entityName: "Irritability")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 

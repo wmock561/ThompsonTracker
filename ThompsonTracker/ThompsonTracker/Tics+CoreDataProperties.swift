@@ -16,7 +16,7 @@ extension Tics {
         return NSFetchRequest<Tics>(entityName: "Tics")
     }
 
-    @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawDate: NSDate
     @NSManaged public var value: Int64
     @NSManaged public var activity: Activity?
 
