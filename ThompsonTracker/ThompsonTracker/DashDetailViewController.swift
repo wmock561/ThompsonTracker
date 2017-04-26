@@ -41,7 +41,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     //IMPLEMENTATION OF Table METHODS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        testCoreData()
+        //testCoreData()
         
         //print(indexPath.row)
         //        print(BehaviourTasks(rawValue: indexPath.row)!)
@@ -230,6 +230,84 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             Model.sharedInstance.saveContext()
             
         }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "ImpulsivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Implusivity(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "RepetitionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Repetition(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AnxietySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Anxiety(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AttentionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = AttentionSpan(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "IrritabilitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Irritability(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Self HarmSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = SelfHarm(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "TicsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Tics(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "DefianceSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Defiance(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Social SkillsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = SocialSkills(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "SpeechSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Speech(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "TantrumsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Tantrums(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
     }
     
     func taskViewControllerSupportsSaveAndRestore(_ taskViewController: ORKTaskViewController) -> Bool {
