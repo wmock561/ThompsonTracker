@@ -71,6 +71,8 @@ class Model {
         }
     }
     
+    func fecthAnxiety
+    
     func saveContext() {
         guard let context = managedContext,
             context.hasChanges else { return }
