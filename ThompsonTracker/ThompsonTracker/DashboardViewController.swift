@@ -10,6 +10,8 @@ import UIKit
 
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    var patient: Patient?
+    
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     
