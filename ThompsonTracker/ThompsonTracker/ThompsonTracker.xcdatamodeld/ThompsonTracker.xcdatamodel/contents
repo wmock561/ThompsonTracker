@@ -75,18 +75,18 @@
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="ticsActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activity" positionX="-306" positionY="-234" width="128" height="223"/>
-        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="90"/>
-        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="90"/>
-        <element name="Repetition" positionX="81" positionY="0" width="128" height="90"/>
+        <element name="Activity" positionX="-306" positionY="-234" width="128" height="225"/>
         <element name="Anxiety" positionX="90" positionY="18" width="128" height="90"/>
         <element name="AttentionSpan" positionX="99" positionY="36" width="128" height="90"/>
-        <element name="Irritability" positionX="108" positionY="54" width="128" height="90"/>
-        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="90"/>
-        <element name="Tics" positionX="126" positionY="90" width="128" height="90"/>
         <element name="Defiance" positionX="72" positionY="45" width="128" height="90"/>
+        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="90"/>
+        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="90"/>
+        <element name="Irritability" positionX="108" positionY="54" width="128" height="90"/>
+        <element name="Repetition" positionX="81" positionY="0" width="128" height="90"/>
+        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="90"/>
         <element name="SocialSkills" positionX="81" positionY="54" width="128" height="90"/>
         <element name="Speech" positionX="90" positionY="63" width="128" height="90"/>
         <element name="Tantrums" positionX="-81" positionY="243" width="128" height="90"/>
+        <element name="Tics" positionX="126" positionY="90" width="128" height="90"/>
     </elements>
 </model>
