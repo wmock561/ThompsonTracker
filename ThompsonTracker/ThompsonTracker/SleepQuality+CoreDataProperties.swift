@@ -1,8 +1,8 @@
 //
-//  Anxiety+CoreDataProperties.swift
+//  SleepQuality+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/26/17.
+//  Created by Will Mock on 4/28/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Anxiety {
+extension SleepQuality {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Anxiety> {
-        return NSFetchRequest<Anxiety>(entityName: "Anxiety")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<SleepQuality> {
+        return NSFetchRequest<SleepQuality>(entityName: "SleepQuality")
     }
 
     @NSManaged public var rawDate: NSDate

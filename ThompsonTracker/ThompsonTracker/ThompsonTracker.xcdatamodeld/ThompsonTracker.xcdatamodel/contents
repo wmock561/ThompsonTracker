@@ -9,6 +9,8 @@
         <relationship name="irritibilityActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Irritability" inverseName="activity" inverseEntity="Irritability" syncable="YES"/>
         <relationship name="repetitionActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Repetition" inverseName="activity" inverseEntity="Repetition" syncable="YES"/>
         <relationship name="selfHarmActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SelfHarm" inverseName="activity" inverseEntity="SelfHarm" syncable="YES"/>
+        <relationship name="sleepLengthActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SleepLength" inverseName="activity" inverseEntity="SleepLength" syncable="YES"/>
+        <relationship name="sleepQualityActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SleepQuality" inverseName="activity" inverseEntity="SleepQuality" syncable="YES"/>
         <relationship name="socialSkillsActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SocialSkills" inverseName="activity" inverseEntity="SocialSkills" syncable="YES"/>
         <relationship name="speechActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Speech" inverseName="activity" inverseEntity="Speech" syncable="YES"/>
         <relationship name="tantrumActivities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tantrums" inverseName="activity" inverseEntity="Tantrums" syncable="YES"/>
@@ -54,6 +56,16 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="selfHarmActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
+    <entity name="SleepLength" representedClassName="SleepLength" syncable="YES">
+        <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sleepLengthActivities" inverseEntity="Activity" syncable="YES"/>
+    </entity>
+    <entity name="SleepQuality" representedClassName="SleepQuality" syncable="YES">
+        <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="sleepQualityActivities" inverseEntity="Activity" syncable="YES"/>
+    </entity>
     <entity name="SocialSkills" representedClassName="SocialSkills" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -75,18 +87,20 @@
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="ticsActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activity" positionX="-306" positionY="-234" width="128" height="223"/>
-        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="90"/>
-        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="90"/>
-        <element name="Repetition" positionX="81" positionY="0" width="128" height="90"/>
+        <element name="Activity" positionX="-306" positionY="-234" width="128" height="255"/>
         <element name="Anxiety" positionX="90" positionY="18" width="128" height="90"/>
         <element name="AttentionSpan" positionX="99" positionY="36" width="128" height="90"/>
-        <element name="Irritability" positionX="108" positionY="54" width="128" height="90"/>
-        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="90"/>
-        <element name="Tics" positionX="126" positionY="90" width="128" height="90"/>
         <element name="Defiance" positionX="72" positionY="45" width="128" height="90"/>
+        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="90"/>
+        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="90"/>
+        <element name="Irritability" positionX="108" positionY="54" width="128" height="90"/>
+        <element name="Repetition" positionX="81" positionY="0" width="128" height="90"/>
+        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="90"/>
         <element name="SocialSkills" positionX="81" positionY="54" width="128" height="90"/>
         <element name="Speech" positionX="90" positionY="63" width="128" height="90"/>
         <element name="Tantrums" positionX="-81" positionY="243" width="128" height="90"/>
+        <element name="Tics" positionX="126" positionY="90" width="128" height="90"/>
+        <element name="SleepQuality" positionX="-63" positionY="-45" width="128" height="90"/>
+        <element name="SleepLength" positionX="-54" positionY="-36" width="128" height="90"/>
     </elements>
 </model>

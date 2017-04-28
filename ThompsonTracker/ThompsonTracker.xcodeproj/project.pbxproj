@@ -35,6 +35,10 @@
 		B25409081EB114510012072D /* Implusivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F21EB114510012072D /* Implusivity+CoreDataProperties.swift */; };
 		B25409091EB114510012072D /* AttentionSpan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F31EB114510012072D /* AttentionSpan+CoreDataClass.swift */; };
 		B254090A1EB114510012072D /* AttentionSpan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F41EB114510012072D /* AttentionSpan+CoreDataProperties.swift */; };
+		B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */; };
+		B257979E1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */; };
+		B257979F1EB3BCF800946412 /* SleepLength+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */; };
+		B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */; };
 		B28682711EAE761C002A768A /* angryFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B28682511EAE761C002A768A /* angryFace.jpg */; };
 		B28682721EAE761C002A768A /* anxiety.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682521EAE761C002A768A /* anxiety.png */; };
 		B28682741EAE761C002A768A /* brain.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682541EAE761C002A768A /* brain.png */; };
@@ -170,6 +174,10 @@
 		B25408F21EB114510012072D /* Implusivity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Implusivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B25408F31EB114510012072D /* AttentionSpan+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttentionSpan+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B25408F41EB114510012072D /* AttentionSpan+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttentionSpan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepQuality+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepQuality+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepLength+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepLength+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B28682511EAE761C002A768A /* angryFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angryFace.jpg; sourceTree = "<group>"; };
 		B28682521EAE761C002A768A /* anxiety.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anxiety.png; sourceTree = "<group>"; };
 		B28682541EAE761C002A768A /* brain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain.png; sourceTree = "<group>"; };
@@ -258,6 +266,10 @@
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */,
+				B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */,
+				B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */,
+				B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */,
 				B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */,
 				B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */,
 				B25408E11EB114510012072D /* Tics+CoreDataClass.swift */,
@@ -602,6 +614,7 @@
 				B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */,
 				B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */,
 				B25408FC1EB114510012072D /* Repetition+CoreDataProperties.swift in Sources */,
+				B257979F1EB3BCF800946412 /* SleepLength+CoreDataClass.swift in Sources */,
 				B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */,
 				B25409021EB114510012072D /* Defiance+CoreDataProperties.swift in Sources */,
 				B25408FD1EB114510012072D /* SocialSkills+CoreDataClass.swift in Sources */,
@@ -609,12 +622,15 @@
 				B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */,
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
 				B25408FE1EB114510012072D /* SocialSkills+CoreDataProperties.swift in Sources */,
+				B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */,
 				B25409001EB114510012072D /* SelfHarm+CoreDataProperties.swift in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
 				B25408F81EB114510012072D /* Tics+CoreDataProperties.swift in Sources */,
+				B257979E1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift in Sources */,
 				B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */,
 				B25409061EB114510012072D /* Tantrums+CoreDataProperties.swift in Sources */,
+				B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */,
 				B25408FF1EB114510012072D /* SelfHarm+CoreDataClass.swift in Sources */,
 				B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */,
 				B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */,

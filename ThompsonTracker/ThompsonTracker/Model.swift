@@ -172,6 +172,27 @@ class Model {
         }
     }
     
+    //MARK: - Sleep Fetch Functions
+    
+    func fetchSleepLength() -> [SleepLength]{
+        do {
+            let array = try managedContext?.fetch(SleepLength.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchSleepQuality() -> [SleepQuality]{
+        do {
+            let array = try managedContext?.fetch(SleepQuality.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    
     
     //MARK: - saveContext Function
     func saveContext() {
