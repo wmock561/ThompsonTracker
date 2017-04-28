@@ -192,6 +192,61 @@ class Model {
         }
     }
     
+    //MARK: - Health Fetch Functions
+    
+    func fetchDiet() -> [Diet]{
+        do {
+            let array = try managedContext?.fetch(Diet.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchStomachAche() -> [StomachAche]{
+        do {
+            let array = try managedContext?.fetch(StomachAche.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchRespiratoryIssues() -> [RespiratoryIssues]{
+        do {
+            let array = try managedContext?.fetch(RespiratoryIssues.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchDiarrhea() -> [Diarrhea]{
+        do {
+            let array = try managedContext?.fetch(Diarrhea.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchHeadaches() -> [Headaches]{
+        do {
+            let array = try managedContext?.fetch(Headaches.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
+    func fetchTremors() -> [Tremors]{
+        do {
+            let array = try managedContext?.fetch(Tremors.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
     
     
     //MARK: - saveContext Function

@@ -19,23 +19,23 @@ extension Activity {
     @NSManaged public var anxietyActivities: NSSet?
     @NSManaged public var attentionSpanActivities: NSSet?
     @NSManaged public var defianceActivities: NSSet?
+    @NSManaged public var diarrheaActivities: NSSet?
+    @NSManaged public var dietActivities: NSSet?
+    @NSManaged public var headacheActivities: NSSet?
     @NSManaged public var hyperActivities: NSSet?
     @NSManaged public var implusiveActivities: NSSet?
     @NSManaged public var irritibilityActivities: NSSet?
     @NSManaged public var repetitionActivities: NSSet?
+    @NSManaged public var respritoryActivities: NSSet?
     @NSManaged public var selfHarmActivities: NSSet?
     @NSManaged public var sleepLengthActivities: NSSet?
     @NSManaged public var sleepQualityActivities: NSSet?
     @NSManaged public var socialSkillsActivities: NSSet?
     @NSManaged public var speechActivities: NSSet?
+    @NSManaged public var stomachAcheActivities: NSSet?
     @NSManaged public var tantrumActivities: NSSet?
     @NSManaged public var ticsActivities: NSSet?
-    @NSManaged public var stomachAcheActivities: NSSet?
-    @NSManaged public var headacheActivities: NSSet?
     @NSManaged public var tremorActivities: NSSet?
-    @NSManaged public var dietActivities: NSSet?
-    @NSManaged public var diarrheaActivities: NSSet?
-    @NSManaged public var respritoryActivities: NSSet?
 
 }
 
@@ -87,6 +87,57 @@ extension Activity {
 
     @objc(removeDefianceActivities:)
     @NSManaged public func removeFromDefianceActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for diarrheaActivities
+extension Activity {
+
+    @objc(addDiarrheaActivitiesObject:)
+    @NSManaged public func addToDiarrheaActivities(_ value: Diarrhea)
+
+    @objc(removeDiarrheaActivitiesObject:)
+    @NSManaged public func removeFromDiarrheaActivities(_ value: Diarrhea)
+
+    @objc(addDiarrheaActivities:)
+    @NSManaged public func addToDiarrheaActivities(_ values: NSSet)
+
+    @objc(removeDiarrheaActivities:)
+    @NSManaged public func removeFromDiarrheaActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for dietActivities
+extension Activity {
+
+    @objc(addDietActivitiesObject:)
+    @NSManaged public func addToDietActivities(_ value: Diet)
+
+    @objc(removeDietActivitiesObject:)
+    @NSManaged public func removeFromDietActivities(_ value: Diet)
+
+    @objc(addDietActivities:)
+    @NSManaged public func addToDietActivities(_ values: NSSet)
+
+    @objc(removeDietActivities:)
+    @NSManaged public func removeFromDietActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for headacheActivities
+extension Activity {
+
+    @objc(addHeadacheActivitiesObject:)
+    @NSManaged public func addToHeadacheActivities(_ value: Headaches)
+
+    @objc(removeHeadacheActivitiesObject:)
+    @NSManaged public func removeFromHeadacheActivities(_ value: Headaches)
+
+    @objc(addHeadacheActivities:)
+    @NSManaged public func addToHeadacheActivities(_ values: NSSet)
+
+    @objc(removeHeadacheActivities:)
+    @NSManaged public func removeFromHeadacheActivities(_ values: NSSet)
 
 }
 
@@ -155,6 +206,23 @@ extension Activity {
 
     @objc(removeRepetitionActivities:)
     @NSManaged public func removeFromRepetitionActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for respritoryActivities
+extension Activity {
+
+    @objc(addRespritoryActivitiesObject:)
+    @NSManaged public func addToRespritoryActivities(_ value: RespiratoryIssues)
+
+    @objc(removeRespritoryActivitiesObject:)
+    @NSManaged public func removeFromRespritoryActivities(_ value: RespiratoryIssues)
+
+    @objc(addRespritoryActivities:)
+    @NSManaged public func addToRespritoryActivities(_ values: NSSet)
+
+    @objc(removeRespritoryActivities:)
+    @NSManaged public func removeFromRespritoryActivities(_ values: NSSet)
 
 }
 
@@ -243,6 +311,23 @@ extension Activity {
 
 }
 
+// MARK: Generated accessors for stomachAcheActivities
+extension Activity {
+
+    @objc(addStomachAcheActivitiesObject:)
+    @NSManaged public func addToStomachAcheActivities(_ value: StomachAche)
+
+    @objc(removeStomachAcheActivitiesObject:)
+    @NSManaged public func removeFromStomachAcheActivities(_ value: StomachAche)
+
+    @objc(addStomachAcheActivities:)
+    @NSManaged public func addToStomachAcheActivities(_ values: NSSet)
+
+    @objc(removeStomachAcheActivities:)
+    @NSManaged public func removeFromStomachAcheActivities(_ values: NSSet)
+
+}
+
 // MARK: Generated accessors for tantrumActivities
 extension Activity {
 
@@ -277,104 +362,19 @@ extension Activity {
 
 }
 
-// MARK: Generated accessors for stomachAcheActivities
-extension Activity {
-
-    @objc(addStomachAcheActivitiesObject:)
-    @NSManaged public func addToStomachAcheActivities(_ value: Tics)
-
-    @objc(removeStomachAcheActivitiesObject:)
-    @NSManaged public func removeFromStomachAcheActivities(_ value: Tics)
-
-    @objc(addStomachAcheActivities:)
-    @NSManaged public func addToStomachAcheActivities(_ values: NSSet)
-
-    @objc(removeStomachAcheActivities:)
-    @NSManaged public func removeFromStomachAcheActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for headacheActivities
-extension Activity {
-
-    @objc(addHeadacheActivitiesObject:)
-    @NSManaged public func addToHeadacheActivities(_ value: Tics)
-
-    @objc(removeHeadacheActivitiesObject:)
-    @NSManaged public func removeFromHeadacheActivities(_ value: Tics)
-
-    @objc(addHeadacheActivities:)
-    @NSManaged public func addToHeadacheActivities(_ values: NSSet)
-
-    @objc(removeHeadacheActivities:)
-    @NSManaged public func removeFromHeadacheActivities(_ values: NSSet)
-
-}
-
 // MARK: Generated accessors for tremorActivities
 extension Activity {
 
     @objc(addTremorActivitiesObject:)
-    @NSManaged public func addToTremorActivities(_ value: Tics)
+    @NSManaged public func addToTremorActivities(_ value: Tremors)
 
     @objc(removeTremorActivitiesObject:)
-    @NSManaged public func removeFromTremorActivities(_ value: Tics)
+    @NSManaged public func removeFromTremorActivities(_ value: Tremors)
 
     @objc(addTremorActivities:)
     @NSManaged public func addToTremorActivities(_ values: NSSet)
 
     @objc(removeTremorActivities:)
     @NSManaged public func removeFromTremorActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for dietActivities
-extension Activity {
-
-    @objc(addDietActivitiesObject:)
-    @NSManaged public func addToDietActivities(_ value: Tics)
-
-    @objc(removeDietActivitiesObject:)
-    @NSManaged public func removeFromDietActivities(_ value: Tics)
-
-    @objc(addDietActivities:)
-    @NSManaged public func addToDietActivities(_ values: NSSet)
-
-    @objc(removeDietActivities:)
-    @NSManaged public func removeFromDietActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for diarrheaActivities
-extension Activity {
-
-    @objc(addDiarrheaActivitiesObject:)
-    @NSManaged public func addToDiarrheaActivities(_ value: Tics)
-
-    @objc(removeDiarrheaActivitiesObject:)
-    @NSManaged public func removeFromDiarrheaActivities(_ value: Tics)
-
-    @objc(addDiarrheaActivities:)
-    @NSManaged public func addToDiarrheaActivities(_ values: NSSet)
-
-    @objc(removeDiarrheaActivities:)
-    @NSManaged public func removeFromDiarrheaActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for respritoryActivities
-extension Activity {
-
-    @objc(addRespritoryActivitiesObject:)
-    @NSManaged public func addToRespritoryActivities(_ value: Tics)
-
-    @objc(removeRespritoryActivitiesObject:)
-    @NSManaged public func removeFromRespritoryActivities(_ value: Tics)
-
-    @objc(addRespritoryActivities:)
-    @NSManaged public func addToRespritoryActivities(_ values: NSSet)
-
-    @objc(removeRespritoryActivities:)
-    @NSManaged public func removeFromRespritoryActivities(_ values: NSSet)
 
 }

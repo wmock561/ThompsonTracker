@@ -90,6 +90,18 @@
 		B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */; };
 		B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204001EA559CB000195BA /* DashboardViewController.swift */; };
 		B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */; };
+		B2CB50B11EB3E20D0075B04E /* Tremors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */; };
+		B2CB50B21EB3E20D0075B04E /* Tremors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */; };
+		B2CB50BF1EB3E66D0075B04E /* Diet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */; };
+		B2CB50C01EB3E66D0075B04E /* Diet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */; };
+		B2CB50C11EB3E66D0075B04E /* StomachAche+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */; };
+		B2CB50C21EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */; };
+		B2CB50C31EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */; };
+		B2CB50C41EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */; };
+		B2CB50C51EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */; };
+		B2CB50C61EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */; };
+		B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */; };
+		B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
@@ -234,6 +246,18 @@
 		B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		B2A204001EA559CB000195BA /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tremors+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tremors+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StomachAche+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StomachAche+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RespiratoryIssues+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RespiratoryIssues+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diarrhea+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diarrhea+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +290,18 @@
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */,
+				B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */,
+				B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */,
+				B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */,
+				B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */,
+				B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */,
+				B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */,
+				B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */,
+				B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */,
+				B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */,
+				B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */,
+				B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */,
 				B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */,
 				B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */,
 				B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */,
@@ -623,7 +659,9 @@
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
 				B25408FE1EB114510012072D /* SocialSkills+CoreDataProperties.swift in Sources */,
 				B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */,
+				B2CB50C11EB3E66D0075B04E /* StomachAche+CoreDataClass.swift in Sources */,
 				B25409001EB114510012072D /* SelfHarm+CoreDataProperties.swift in Sources */,
+				B2CB50C31EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
 				B25408F81EB114510012072D /* Tics+CoreDataProperties.swift in Sources */,
@@ -632,26 +670,36 @@
 				B25409061EB114510012072D /* Tantrums+CoreDataProperties.swift in Sources */,
 				B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */,
 				B25408FF1EB114510012072D /* SelfHarm+CoreDataClass.swift in Sources */,
+				B2CB50C41EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift in Sources */,
 				B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */,
 				B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */,
 				B25409051EB114510012072D /* Tantrums+CoreDataClass.swift in Sources */,
 				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
+				B2CB50C21EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift in Sources */,
+				B2CB50C51EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift in Sources */,
 				B25408FA1EB114510012072D /* Irritability+CoreDataProperties.swift in Sources */,
 				B25409091EB114510012072D /* AttentionSpan+CoreDataClass.swift in Sources */,
 				B25408F71EB114510012072D /* Tics+CoreDataClass.swift in Sources */,
+				B2CB50B11EB3E20D0075B04E /* Tremors+CoreDataClass.swift in Sources */,
+				B2CB50BF1EB3E66D0075B04E /* Diet+CoreDataClass.swift in Sources */,
 				B254090A1EB114510012072D /* AttentionSpan+CoreDataProperties.swift in Sources */,
+				B2CB50C61EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift in Sources */,
 				B25409081EB114510012072D /* Implusivity+CoreDataProperties.swift in Sources */,
+				B2CB50B21EB3E20D0075B04E /* Tremors+CoreDataProperties.swift in Sources */,
 				B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */,
 				B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */,
 				B25408FB1EB114510012072D /* Repetition+CoreDataClass.swift in Sources */,
 				B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */,
 				B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */,
+				B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
+				B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */,
 				B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */,
 				B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */,
 				B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */,
 				B25409011EB114510012072D /* Defiance+CoreDataClass.swift in Sources */,
 				B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */,
+				B2CB50C01EB3E66D0075B04E /* Diet+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

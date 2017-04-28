@@ -37,20 +37,20 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="defianceActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="Diarrhea" representedClassName="Tics" syncable="YES">
+    <entity name="Diarrhea" representedClassName=".Diarrhea" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="diarrheaActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="diarrheaActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="Diet" representedClassName="Tics" syncable="YES">
+    <entity name="Diet" representedClassName=".Diet" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="dietActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="dietActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="Headaches" representedClassName="Tics" syncable="YES">
+    <entity name="Headaches" representedClassName=".Headaches" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="headacheActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="headacheActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <entity name="Hyperactivity" representedClassName="Hyperactivity" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -72,10 +72,10 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="repetitionActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="RespiratoryIssues" representedClassName="Tics" syncable="YES">
+    <entity name="RespiratoryIssues" representedClassName=".RespiratoryIssues" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="respritoryActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="respritoryActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <entity name="SelfHarm" representedClassName="SelfHarm" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -102,10 +102,10 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="speechActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="StomachAche" representedClassName="Tics" syncable="YES">
+    <entity name="StomachAche" representedClassName=".StomachAche" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="stomachAcheActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="stomachAcheActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <entity name="Tantrums" representedClassName="Tantrums" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -117,32 +117,32 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="ticsActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
-    <entity name="Tremors" representedClassName="Tics" syncable="YES">
+    <entity name="Tremors" representedClassName=".Tremors" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="activity" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Activity" inverseName="tremorActivities" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="tremorActivities" inverseEntity="Activity" syncable="YES"/>
     </entity>
     <elements>
         <element name="Activity" positionX="-306" positionY="-234" width="128" height="345"/>
-        <element name="Anxiety" positionX="90" positionY="18" width="128" height="90"/>
-        <element name="AttentionSpan" positionX="99" positionY="36" width="128" height="90"/>
-        <element name="Defiance" positionX="72" positionY="45" width="128" height="90"/>
-        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="90"/>
-        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="90"/>
-        <element name="Irritability" positionX="108" positionY="54" width="128" height="90"/>
-        <element name="Repetition" positionX="81" positionY="0" width="128" height="90"/>
-        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="90"/>
-        <element name="SleepLength" positionX="-54" positionY="-36" width="128" height="90"/>
-        <element name="SleepQuality" positionX="-63" positionY="-45" width="128" height="90"/>
-        <element name="SocialSkills" positionX="81" positionY="54" width="128" height="90"/>
-        <element name="Speech" positionX="90" positionY="63" width="128" height="90"/>
-        <element name="Tantrums" positionX="-81" positionY="243" width="128" height="90"/>
-        <element name="Tics" positionX="126" positionY="90" width="128" height="90"/>
-        <element name="StomachAche" positionX="-81" positionY="-63" width="128" height="90"/>
-        <element name="Headaches" positionX="-72" positionY="-54" width="128" height="90"/>
-        <element name="Tremors" positionX="-63" positionY="-45" width="128" height="90"/>
-        <element name="Diet" positionX="-54" positionY="-36" width="128" height="90"/>
-        <element name="Diarrhea" positionX="-45" positionY="-27" width="128" height="90"/>
-        <element name="RespiratoryIssues" positionX="-99" positionY="-81" width="128" height="90"/>
+        <element name="Anxiety" positionX="90" positionY="18" width="128" height="30"/>
+        <element name="AttentionSpan" positionX="99" positionY="36" width="128" height="30"/>
+        <element name="Defiance" positionX="72" positionY="45" width="128" height="30"/>
+        <element name="Diarrhea" positionX="-45" positionY="-27" width="128" height="30"/>
+        <element name="Diet" positionX="-54" positionY="-36" width="128" height="30"/>
+        <element name="Headaches" positionX="-72" positionY="-54" width="128" height="30"/>
+        <element name="Hyperactivity" positionX="198" positionY="-54" width="128" height="30"/>
+        <element name="Implusivity" positionX="72" positionY="-18" width="128" height="30"/>
+        <element name="Irritability" positionX="108" positionY="54" width="128" height="30"/>
+        <element name="Repetition" positionX="81" positionY="0" width="128" height="30"/>
+        <element name="RespiratoryIssues" positionX="-99" positionY="-81" width="128" height="30"/>
+        <element name="SelfHarm" positionX="117" positionY="72" width="128" height="30"/>
+        <element name="SleepLength" positionX="-54" positionY="-36" width="128" height="30"/>
+        <element name="SleepQuality" positionX="-63" positionY="-45" width="128" height="30"/>
+        <element name="SocialSkills" positionX="81" positionY="54" width="128" height="30"/>
+        <element name="Speech" positionX="90" positionY="63" width="128" height="30"/>
+        <element name="StomachAche" positionX="-81" positionY="-63" width="128" height="30"/>
+        <element name="Tantrums" positionX="-81" positionY="243" width="128" height="30"/>
+        <element name="Tics" positionX="126" positionY="90" width="128" height="30"/>
+        <element name="Tremors" positionX="-63" positionY="-45" width="128" height="30"/>
     </elements>
 </model>
