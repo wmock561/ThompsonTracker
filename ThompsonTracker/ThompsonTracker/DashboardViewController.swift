@@ -18,12 +18,15 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     //categories
     let behaviourQuestionsArray = ["Hyperactivity", "Impulsivity", "Repetition", "Anxiety", "Attention Span", "Irritability", "Self-harm", "Tics", "Defiance", "Social Skills", "Speech", "Tantrums"]
-    let healthArray = [""]
-    let sleepQuestionsArray = [""]
-    let giQuestionsArray = [""]
+    let healthArray = ["Stomach Ache/Pain", "Headaches","Tremors/Seizures", "Diet Problems", "Diarrhea/Constipation", "Respiratory Issues"]
+    let sleepQuestionsArray = ["Quality", "Length"]
+    let moodQuestionsArray = ["Angry", "Happy", "Sad", "Scared", "OK", "Stressed"]
     
     //categoryImages
     let behaviourQuestionImageArray = [#imageLiteral(resourceName: "brain.png"), #imageLiteral(resourceName: "lightning.png"), #imageLiteral(resourceName: "refresh.png"), #imageLiteral(resourceName: "anxiety.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "irritability.png"), #imageLiteral(resourceName: "sadFace.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "frustratedFace.png"), #imageLiteral(resourceName: "handshake.png"), #imageLiteral(resourceName: "speech.png"), #imageLiteral(resourceName: "angryFace.jpg")]
+    let healthQuestionImageArray = [#imageLiteral(resourceName: "digestiveSystem.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "diet.png"), #imageLiteral(resourceName: "poop.png"), #imageLiteral(resourceName: "lungs.png")]
+    let sleepQuestionImageArray = [#imageLiteral(resourceName: "sleep.png"),#imageLiteral(resourceName: "calendar.png")]
+    let moodQuestionImageArray = [#imageLiteral(resourceName: "angryFace.jpg"), #imageLiteral(resourceName: "happy.png"), #imageLiteral(resourceName: "sadFace.png"), #imageLiteral(resourceName: "sickFace.png"), #imageLiteral(resourceName: "neutralFace.png"), #imageLiteral(resourceName: "frustratedFace.png")]
     
     //dateFormatter
     let dateFormatter = DateFormatter()
@@ -94,12 +97,19 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 case 0:
                     destination.cellTitleArray = behaviourQuestionsArray
                     destination.cellImageArray = behaviourQuestionImageArray
+                    destination.categoryIndex = row
                 case 1:
-                    destination.cellTitleArray = nil
+                    destination.cellTitleArray = healthArray
+                    destination.cellImageArray = healthQuestionImageArray
+                    destination.categoryIndex = row
                 case 2:
-                    destination.cellTitleArray = nil
+                    destination.cellTitleArray = sleepQuestionsArray
+                    destination.cellImageArray = sleepQuestionImageArray
+                    destination.categoryIndex = row
                 case 3:
-                    destination.cellTitleArray = nil
+                    destination.cellTitleArray = moodQuestionsArray
+                    destination.cellImageArray = moodQuestionImageArray
+                    destination.categoryIndex = row
                 default:
                     print("Error in switch")
                 }

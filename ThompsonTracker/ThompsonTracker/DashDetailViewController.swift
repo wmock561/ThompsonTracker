@@ -15,8 +15,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var cellTitleArray: [String]?
     var cellImageArray: [UIImage]?
+    var categoryIndex: Int = 5
     
-    fileprivate var selectedCells = Set<BehaviourTasks>()
     fileprivate let shareTextLabel = UILabel()
     
     override func viewDidLoad() {
@@ -24,14 +24,11 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.allowsMultipleSelection = false
         
-        self.title = "Track"//\()"
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Track"
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
@@ -41,17 +38,25 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     //IMPLEMENTATION OF Table METHODS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        testCoreData()
-        
-        //print(indexPath.row)
-        //        print(BehaviourTasks(rawValue: indexPath.row)!)
-        selectedCells.insert((BehaviourTasks(rawValue: indexPath.row)!))
-        //        print(selectedCells)
         
         var selected: [Int] = []
+        
         selected.append(indexPath.row)
         
-        let steps = pickBehaviourQuestions(indexValues: selected)
+        var steps: [ORKStep]?
+        
+        switch categoryIndex {
+        case 0:
+            steps = pickBehaviourQuestions(indexValues: selected)
+        case 1:
+            steps = pickHealthQuestions(indexValues: selected)
+        case 2:
+            steps = pickSleepQuestions(indexValues: selected)
+        case 3:
+            steps = pickEmotionsQuestions(indexValues: selected)
+        default:
+            print("Error in didSelectRowAt inital switch")
+        }
         
         let task = ORKOrderedTask(identifier: "SurveyTask", steps: steps)
         
@@ -60,9 +65,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         taskViewController.delegate = self
         
         present(taskViewController, animated: true, completion: {
-            self.selectedCells.removeAll()
             selected.removeAll()
-            //            print(selected)
         })
     }
     
@@ -75,10 +78,6 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // get a reference to our storyboard cell
-        
-        //removing all from selectedCells Array
-        selectedCells.removeAll()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "surveycell", for: indexPath) as! ActivityTableViewCell
         
@@ -99,98 +98,83 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    //MARK: - Behaviour func
     func pickBehaviourQuestions(indexValues: [Int]) ->[ORKStep]{
         var steps = [ORKStep]()
         
-//        let instructionStep = ORKInstructionStep(identifier: "IntroStep")
-//        instructionStep.title = "Custom Survey"
-//        instructionStep.text = "Testing Text for Survey"
-//        steps += [instructionStep]
-        
         let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
+        
         for num in indexValues{
             switch num {
             case 0:
                 let questionTestSteptitle = "Hyperactivity"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 1:
                 let questionTestSteptitle = "Impulsivity"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 2:
                 let questionTestSteptitle = "Repetition"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 3:
                 let questionTestSteptitle = "Anxiety"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 4:
                 let questionTestSteptitle = "Attention"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 5:
                 let questionTestSteptitle = "Irritability"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 6:
                 let questionTestSteptitle = "Self Harm"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 7:
                 let questionTestSteptitle = "Tics"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 8:
                 let questionTestSteptitle = "Defiance"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//              print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 9:
                 let questionTestSteptitle = "Social Skills"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 10:
                 let questionTestSteptitle = "Speech"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
             case 11:
                 let questionTestSteptitle = "Tantrums"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-//                print(testQuestionStep)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
@@ -203,14 +187,136 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         return steps
     }
     
-    func testCoreData(){
-        print("call")
+    //MARK: - Health func
+    func pickHealthQuestions(indexValues: [Int]) ->[ORKStep]{
+        var steps = [ORKStep]()
         
-        let activityArray = Model.sharedInstance.fetchHyperactivity()
+        let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
         
-        for item in activityArray{
-            print("This is the item: \(item.value)")
+        for num in indexValues{
+            switch num {
+            case 0:
+                let questionTestSteptitle = "Stomach Ache/Pain"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 1:
+                let questionTestSteptitle = "Headaches"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 2:
+                let questionTestSteptitle = "Tremors/Seizures"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 3:
+                let questionTestSteptitle = "Diet Problems"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 4:
+                let questionTestSteptitle = "Diarrhea/Constipation"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 5:
+                let questionTestSteptitle = "Respiratory Issues"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+            default:
+                print("ERROR IN SWITCH HERE")
+                print(num)
+            }
         }
+        
+        return steps
+    }
+    
+    //MARK: - Sleep func
+    func pickSleepQuestions(indexValues: [Int]) ->[ORKStep]{
+        var steps = [ORKStep]()
+        
+        for num in indexValues{
+            switch num {
+            case 0:
+                let questionTestSteptitle = "Quality"
+                let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) of sleep on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 1:
+                let questionTestSteptitle = "Length"
+                let testQuestionFormat: ORKTimeIntervalAnswerFormat = ORKTimeIntervalAnswerFormat(defaultInterval: 8, step: 15)
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please record \(questionTestSteptitle) of sleep"
+                steps += [testQuestionStep]
+            default:
+                print("ERROR IN SWITCH HERE")
+                print(num)
+            }
+        }
+        
+        return steps
+    }
+    
+    //MARK: - Emotions func
+    func pickEmotionsQuestions(indexValues: [Int]) ->[ORKStep]{
+        var steps = [ORKStep]()
+        
+        let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
+        
+        for num in indexValues{
+            switch num {
+            case 0:
+                let questionTestSteptitle = "Angry"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 1:
+                let questionTestSteptitle = "Happy"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 2:
+                let questionTestSteptitle = "Sad"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 3:
+                let questionTestSteptitle = "Scared"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 4:
+                let questionTestSteptitle = "OK"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 5:
+                let questionTestSteptitle = "Stressed"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+            default:
+                print("ERROR IN SWITCH HERE")
+                print(num)
+            }
+        }
+        
+        return steps
     }
     
 }
@@ -219,6 +325,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 extension DashDetailViewController : ORKTaskViewControllerDelegate {
     
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        
         //Handle results with taskViewController.result
         taskViewController.dismiss(animated: true, completion: nil)
         
@@ -230,9 +337,87 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             Model.sharedInstance.saveContext()
             
         }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "ImpulsivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Implusivity(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "RepetitionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Repetition(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AnxietySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Anxiety(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AttentionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = AttentionSpan(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "IrritabilitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Irritability(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Self HarmSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = SelfHarm(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "TicsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Tics(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "DefianceSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Defiance(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Social SkillsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = SocialSkills(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "SpeechSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Speech(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "TantrumsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Tantrums(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
     }
     
     func taskViewControllerSupportsSaveAndRestore(_ taskViewController: ORKTaskViewController) -> Bool {
-        return true
+        return false
     }
 }
