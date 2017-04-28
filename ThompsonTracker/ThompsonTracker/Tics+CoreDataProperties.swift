@@ -2,7 +2,7 @@
 //  Tics+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/26/17.
+//  Created by Will Mock on 4/28/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
