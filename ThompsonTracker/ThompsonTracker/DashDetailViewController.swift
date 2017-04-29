@@ -255,7 +255,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             case 1:
                 let questionTestSteptitle = "Length"
                 let testQuestionFormat: ORKTimeIntervalAnswerFormat = ORKTimeIntervalAnswerFormat(defaultInterval: 8, step: 15)
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)TimeIntervalQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please record \(questionTestSteptitle) of sleep"
                 steps += [testQuestionStep]
             default:
@@ -330,6 +330,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         taskViewController.dismiss(animated: true, completion: nil)
         
         //need to change so that forStepIdentifier is correct based on what they selected????
+        
+        //Behavior Answer Saving
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "HyperactivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
@@ -414,6 +416,112 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             Model.sharedInstance.saveContext()
             
         }
+        
+        //Health Answer Saving
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Stomach Ache/PainSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = StomachAche(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "HeadachesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Headaches(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Tremors/SeizuresSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Tremors(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Diet ProblemsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Diet(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Diarrhea/ConstipationSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Diarrhea(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Respiratory IssuesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = RespiratoryIssues(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        //Sleep Answer Saving
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "QualitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = SleepQuality(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        //FLOAT CASE HERE NEED TO CONFIRM WORKS
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "LengthTimeIntervalQuestionStep")?.results?[0].value(forKey: "answer") as? Float{
+            
+            _ = SleepLength(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        //Mood Answer Saving
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "HappySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Happy(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "SadSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Sad(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "StressedSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Stressed(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "ScaredSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Scared(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AngrySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = Angry(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "OKSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
+            
+            _ = OK(date: Date(), value: answer)
+            Model.sharedInstance.saveContext()
+            
+        }
+        
         
     }
     
