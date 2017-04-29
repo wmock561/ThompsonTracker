@@ -248,6 +248,57 @@ class Model {
         }
     }
     
+    //MARK: - Mood Fetch Functions
+    
+    
+    func fetchHappy() -> [Happy]{
+        do {
+            let array = try managedContext?.fetch(Happy.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    func fetchAngry() -> [Angry]{
+        do {
+            let array = try managedContext?.fetch(Angry.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    func fetchSad() -> [Sad]{
+        do {
+            let array = try managedContext?.fetch(Sad.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    func fetchScared() -> [Scared]{
+        do {
+            let array = try managedContext?.fetch(Scared.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    func fetchStressed() -> [Stressed]{
+        do {
+            let array = try managedContext?.fetch(Stressed.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    func fetchOK() -> [OK]{
+        do {
+            let array = try managedContext?.fetch(OK.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
     
     //MARK: - saveContext Function
     func saveContext() {

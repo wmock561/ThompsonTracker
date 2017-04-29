@@ -102,6 +102,18 @@
 		B2CB50C61EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */; };
 		B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */; };
 		B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */; };
+		B2CB50D51EB447C40075B04E /* Scared+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */; };
+		B2CB50D61EB447C40075B04E /* Scared+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */; };
+		B2CB50D71EB447C40075B04E /* Stressed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */; };
+		B2CB50D81EB447C40075B04E /* Stressed+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */; };
+		B2CB50D91EB447C40075B04E /* OK+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */; };
+		B2CB50DA1EB447C40075B04E /* OK+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */; };
+		B2CB50DB1EB447C40075B04E /* Angry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */; };
+		B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */; };
+		B2CB50DD1EB447C40075B04E /* Happy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */; };
+		B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */; };
+		B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */; };
+		B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +270,18 @@
 		B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diarrhea+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scared+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scared+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stressed+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stressed+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OK+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OK+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Angry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Angry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +314,18 @@
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */,
+				B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */,
+				B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */,
+				B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */,
+				B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */,
+				B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */,
+				B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */,
+				B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */,
+				B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */,
+				B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */,
+				B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */,
+				B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */,
 				B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */,
 				B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */,
 				B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */,
@@ -645,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CB50D71EB447C40075B04E /* Stressed+CoreDataClass.swift in Sources */,
 				B25409041EB114510012072D /* Speech+CoreDataProperties.swift in Sources */,
 				B25409071EB114510012072D /* Implusivity+CoreDataClass.swift in Sources */,
 				B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */,
@@ -653,6 +690,7 @@
 				B257979F1EB3BCF800946412 /* SleepLength+CoreDataClass.swift in Sources */,
 				B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */,
 				B25409021EB114510012072D /* Defiance+CoreDataProperties.swift in Sources */,
+				B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */,
 				B25408FD1EB114510012072D /* SocialSkills+CoreDataClass.swift in Sources */,
 				B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */,
 				B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */,
@@ -661,17 +699,23 @@
 				B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */,
 				B2CB50C11EB3E66D0075B04E /* StomachAche+CoreDataClass.swift in Sources */,
 				B25409001EB114510012072D /* SelfHarm+CoreDataProperties.swift in Sources */,
+				B2CB50D81EB447C40075B04E /* Stressed+CoreDataProperties.swift in Sources */,
 				B2CB50C31EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift in Sources */,
+				B2CB50DB1EB447C40075B04E /* Angry+CoreDataClass.swift in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
 				B25408F81EB114510012072D /* Tics+CoreDataProperties.swift in Sources */,
 				B257979E1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift in Sources */,
+				B2CB50D91EB447C40075B04E /* OK+CoreDataClass.swift in Sources */,
 				B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */,
+				B2CB50DD1EB447C40075B04E /* Happy+CoreDataClass.swift in Sources */,
 				B25409061EB114510012072D /* Tantrums+CoreDataProperties.swift in Sources */,
 				B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */,
+				B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */,
 				B25408FF1EB114510012072D /* SelfHarm+CoreDataClass.swift in Sources */,
 				B2CB50C41EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift in Sources */,
 				B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */,
+				B2CB50D51EB447C40075B04E /* Scared+CoreDataClass.swift in Sources */,
 				B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */,
 				B25409051EB114510012072D /* Tantrums+CoreDataClass.swift in Sources */,
 				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
@@ -687,11 +731,14 @@
 				B25409081EB114510012072D /* Implusivity+CoreDataProperties.swift in Sources */,
 				B2CB50B21EB3E20D0075B04E /* Tremors+CoreDataProperties.swift in Sources */,
 				B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */,
+				B2CB50D61EB447C40075B04E /* Scared+CoreDataProperties.swift in Sources */,
+				B2CB50DA1EB447C40075B04E /* OK+CoreDataProperties.swift in Sources */,
 				B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */,
 				B25408FB1EB114510012072D /* Repetition+CoreDataClass.swift in Sources */,
 				B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */,
 				B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */,
 				B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */,
+				B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
 				B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */,
 				B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */,
@@ -699,6 +746,7 @@
 				B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */,
 				B25409011EB114510012072D /* Defiance+CoreDataClass.swift in Sources */,
 				B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */,
+				B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */,
 				B2CB50C01EB3E66D0075B04E /* Diet+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

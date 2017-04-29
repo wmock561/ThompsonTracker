@@ -36,6 +36,12 @@ extension Activity {
     @NSManaged public var tantrumActivities: NSSet?
     @NSManaged public var ticsActivities: NSSet?
     @NSManaged public var tremorActivities: NSSet?
+    @NSManaged public var angryActivities: NSSet?
+    @NSManaged public var happyActivities: NSSet?
+    @NSManaged public var okActivities: NSSet?
+    @NSManaged public var sadActivities: NSSet?
+    @NSManaged public var scaredActivities: NSSet?
+    @NSManaged public var stressedActivities: NSSet?
 
 }
 
@@ -376,5 +382,107 @@ extension Activity {
 
     @objc(removeTremorActivities:)
     @NSManaged public func removeFromTremorActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for angryActivities
+extension Activity {
+
+    @objc(addAngryActivitiesObject:)
+    @NSManaged public func addToAngryActivities(_ value: Angry)
+
+    @objc(removeAngryActivitiesObject:)
+    @NSManaged public func removeFromAngryActivities(_ value: Angry)
+
+    @objc(addAngryActivities:)
+    @NSManaged public func addToAngryActivities(_ values: NSSet)
+
+    @objc(removeAngryActivities:)
+    @NSManaged public func removeFromAngryActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for happyActivities
+extension Activity {
+
+    @objc(addHappyActivitiesObject:)
+    @NSManaged public func addToHappyActivities(_ value: Happy)
+
+    @objc(removeHappyActivitiesObject:)
+    @NSManaged public func removeFromHappyActivities(_ value: Happy)
+
+    @objc(addHappyActivities:)
+    @NSManaged public func addToHappyActivities(_ values: NSSet)
+
+    @objc(removeHappyActivities:)
+    @NSManaged public func removeFromHappyActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for okActivities
+extension Activity {
+
+    @objc(addOkActivitiesObject:)
+    @NSManaged public func addToOkActivities(_ value: OK)
+
+    @objc(removeOkActivitiesObject:)
+    @NSManaged public func removeFromOkActivities(_ value: OK)
+
+    @objc(addOkActivities:)
+    @NSManaged public func addToOkActivities(_ values: NSSet)
+
+    @objc(removeOkActivities:)
+    @NSManaged public func removeFromOkActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for sadActivities
+extension Activity {
+
+    @objc(addSadActivitiesObject:)
+    @NSManaged public func addToSadActivities(_ value: Sad)
+
+    @objc(removeSadActivitiesObject:)
+    @NSManaged public func removeFromSadActivities(_ value: Sad)
+
+    @objc(addSadActivities:)
+    @NSManaged public func addToSadActivities(_ values: NSSet)
+
+    @objc(removeSadActivities:)
+    @NSManaged public func removeFromSadActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for scaredActivities
+extension Activity {
+
+    @objc(addScaredActivitiesObject:)
+    @NSManaged public func addToScaredActivities(_ value: Scared)
+
+    @objc(removeScaredActivitiesObject:)
+    @NSManaged public func removeFromScaredActivities(_ value: Scared)
+
+    @objc(addScaredActivities:)
+    @NSManaged public func addToScaredActivities(_ values: NSSet)
+
+    @objc(removeScaredActivities:)
+    @NSManaged public func removeFromScaredActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for stressedActivities
+extension Activity {
+
+    @objc(addStressedActivitiesObject:)
+    @NSManaged public func addToStressedActivities(_ value: Stressed)
+
+    @objc(removeStressedActivitiesObject:)
+    @NSManaged public func removeFromStressedActivities(_ value: Stressed)
+
+    @objc(addStressedActivities:)
+    @NSManaged public func addToStressedActivities(_ values: NSSet)
+
+    @objc(removeStressedActivities:)
+    @NSManaged public func removeFromStressedActivities(_ values: NSSet)
 
 }
