@@ -15,6 +15,10 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var patientPhoto: UIImageView!
+    @IBOutlet weak var patientNickname: UILabel!
+    @IBOutlet weak var patientFullname: UILabel!
+    
     let cellTitles = ["Behavior", "Health", "Sleep", "Mood"]
     let cellImages = [#imageLiteral(resourceName: "mentalHealth.png"), #imageLiteral(resourceName: "health.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "happy.png")]
     
@@ -43,7 +47,10 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         dateLabel.text = dateFormatter.string(from: currentDate)
         
-
+//        patientPhoto.image = patient?.photo
+//        patientNickname.text = patient?.nickname
+//        patientFullname.text = (patient?.firstname)! + " " + (patient?.lastname)!
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,14 +16,16 @@ struct Patient {
     var birthdate: Date
     var doctor: String
     var hospital: String
+    var photo: UIImage
     
-    init(nickname: String, firstname: String, lastname: String, birthdate: Date, doctor: String, hospital: String) {
+    init(nickname: String, firstname: String, lastname: String, birthdate: Date, doctor: String, hospital: String, photo: UIImage) {
         self.nickname = nickname
         self.firstname = firstname
         self.lastname = lastname
         self.birthdate = birthdate
         self.doctor = doctor
         self.hospital = hospital
+        self.photo = photo
     }
 }
 
@@ -53,7 +55,7 @@ class PatientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        title = "Patient List"
         createDummyPatient()
         tableview.reloadData()
     }
@@ -67,8 +69,8 @@ class PatientViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DashboardViewController,
         let indexPath = tableview.indexPathForSelectedRow,
-        let numReviews = patients?.count,
-        indexPath.row < numReviews,
+        let nums = patients?.count,
+        indexPath.row < nums,
         let patient = patients?[indexPath.row] {
             destination.patient = patient
         }
@@ -78,9 +80,9 @@ class PatientViewController: UIViewController {
         
         let date = "2017-04-26T17:55:16+0000"
         
-        patients?.append(Patient(nickname: "Johnny", firstname: "John", lastname: "Doe", birthdate: formatRawDate.date(from: date)!, doctor: "Dr.Shawn Moore, PhD", hospital: "University of Missouri Health Care"))
+        patients?.append(Patient(nickname: "James", firstname: "Jamerson", lastname: "Doe", birthdate: formatRawDate.date(from: date)!, doctor: "Dr.Shawn Moore, PhD", hospital: "University of Missouri Health Care", photo: #imageLiteral(resourceName: "James")))
         
-        patients?.append(Patient(nickname: "Billy", firstname: "Bill", lastname: "Turner", birthdate: formatRawDate.date(from: date)!, doctor: "Dr.Shawn Moore, PhD", hospital: "University of Missouri Health Care"))
+        patients?.append(Patient(nickname: "Alex", firstname: "Alexander", lastname: "Turner", birthdate: formatRawDate.date(from: date)!, doctor: "Dr.Shawn Moore, PhD", hospital: "University of Missouri Health Care", photo: #imageLiteral(resourceName: "Alex")))
     }
 
     func getPatientFromCoreData(){
@@ -106,8 +108,56 @@ extension PatientViewController: UITableViewDelegate, UITableViewDataSource {
             cell.patientFullname.text = patient.firstname + " " + patient.lastname
             cell.patientUpdatedDate.text = dateFormatter.string(from: patient.birthdate)
             cell.patientDoctor.text = patient.doctor
+            cell.patientImage.image = patient.photo
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+//        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
+//            print("Share tapped")
+//
+//            let link = "Hello this is Thompson Tracker"
+//            
+//            // set up activity view controller
+//            let textToShare = [ link ]
+//            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+//            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+//            
+//            // exclude some activity types from the list (optional)
+//            activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.assignToContact, UIActivityType.openInIBooks, UIActivityType.postToFlickr, UIActivityType.print, UIActivityType.postToVimeo, UIActivityType.addToReadingList]
+//            
+//            // present the view controller
+//            self.present(activityViewController, animated: true, completion: nil)
+//            
+//            self.tableview.setEditing(false, animated: true)
+//        }
+//        share.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { action, index in
+
+            self.patients?.remove(at: indexPath.row)
+            self.tableview.reloadData()
+            self.tableview.setEditing(false, animated: true)
+            print("Delete tabbed")
+        }
+        delete.backgroundColor = UIColor.red
+        return [delete]
+    }
+    
+    //Deselect row after select
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableview.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //Allow row to be editable
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        tableview.cellForRow(at: indexPath!)
     }
 }

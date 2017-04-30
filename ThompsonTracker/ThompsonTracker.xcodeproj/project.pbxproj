@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */; };
+		710B71391EB2C5F6009D4262 /* FirstnameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71381EB2C5F6009D4262 /* FirstnameTableViewCell.swift */; };
+		710B713B1EB2C600009D4262 /* LastnameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B713A1EB2C600009D4262 /* LastnameTableViewCell.swift */; };
+		710B713D1EB2C607009D4262 /* NicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B713C1EB2C607009D4262 /* NicknameTableViewCell.swift */; };
+		710B71411EB2C624009D4262 /* BirthdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71401EB2C624009D4262 /* BirthdateTableViewCell.swift */; };
+		710B71431EB2C638009D4262 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71421EB2C638009D4262 /* DoctorTableViewCell.swift */; };
+		710B71451EB2C63E009D4262 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71441EB2C63E009D4262 /* HospitalTableViewCell.swift */; };
+		710B71471EB2C645009D4262 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71461EB2C645009D4262 /* PhotoTableViewCell.swift */; };
 		7198321F1EB10EFB002BC697 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; };
 		719832201EB10EFB002BC697 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
@@ -122,6 +130,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
+		710B71381EB2C5F6009D4262 /* FirstnameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstnameTableViewCell.swift; sourceTree = "<group>"; };
+		710B713A1EB2C600009D4262 /* LastnameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastnameTableViewCell.swift; sourceTree = "<group>"; };
+		710B713C1EB2C607009D4262 /* NicknameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicknameTableViewCell.swift; sourceTree = "<group>"; };
+		710B71401EB2C624009D4262 /* BirthdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdateTableViewCell.swift; sourceTree = "<group>"; };
+		710B71421EB2C638009D4262 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
+		710B71441EB2C63E009D4262 /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		710B71461EB2C645009D4262 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		719832151EB10E6D002BC697 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +231,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710B71371EB2C5DE009D4262 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				710B713C1EB2C607009D4262 /* NicknameTableViewCell.swift */,
+				710B71381EB2C5F6009D4262 /* FirstnameTableViewCell.swift */,
+				710B713A1EB2C600009D4262 /* LastnameTableViewCell.swift */,
+				710B71401EB2C624009D4262 /* BirthdateTableViewCell.swift */,
+				710B71421EB2C638009D4262 /* DoctorTableViewCell.swift */,
+				710B71441EB2C63E009D4262 /* HospitalTableViewCell.swift */,
+				710B71461EB2C645009D4262 /* PhotoTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		719832161EB10E6D002BC697 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +337,8 @@
 				B2A203641E9DD2EC000195BA /* AppDelegate.swift */,
 				719832231EB1125E002BC697 /* PatientViewController.swift */,
 				719832251EB1126C002BC697 /* PatientTableViewCell.swift */,
+				710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */,
+				710B71371EB2C5DE009D4262 /* Cell */,
 				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
 				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
 				B2A204001EA559CB000195BA /* DashboardViewController.swift */,
@@ -541,12 +573,20 @@
 				B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */,
 				719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */,
 				B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */,
+				710B71431EB2C638009D4262 /* DoctorTableViewCell.swift in Sources */,
+				710B713D1EB2C607009D4262 /* NicknameTableViewCell.swift in Sources */,
 				B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */,
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
+				710B713B1EB2C600009D4262 /* LastnameTableViewCell.swift in Sources */,
+				710B71451EB2C63E009D4262 /* HospitalTableViewCell.swift in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
 				B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */,
+				710B71411EB2C624009D4262 /* BirthdateTableViewCell.swift in Sources */,
+				710B71471EB2C645009D4262 /* PhotoTableViewCell.swift in Sources */,
 				719832241EB1125E002BC697 /* PatientViewController.swift in Sources */,
+				710B71391EB2C5F6009D4262 /* FirstnameTableViewCell.swift in Sources */,
+				710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */,
 				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
 				B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */,
 				B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */,
