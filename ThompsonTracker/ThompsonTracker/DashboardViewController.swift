@@ -89,7 +89,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             
             if let row = dashboardCollectionView.indexPath(for: cell)?.row{
                 
-                print(row)
+                //print(row)
                 
                 //TODO: fix the nil cases once we have the questions from the designers
                 

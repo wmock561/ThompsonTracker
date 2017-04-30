@@ -23,7 +23,7 @@ class GraphViewController: UIViewController {
         
         let activityArray = Model.sharedInstance.fetchHyperactivity()
         
-        print(activityArray)
+        //print(activityArray)
         
         for item in activityArray {
             graphView.graphPoints.append(Int(item.value))
@@ -37,7 +37,7 @@ class GraphViewController: UIViewController {
         graphView.graphPoints.removeAll()
         
         let activityArray = Model.sharedInstance.fetchHyperactivity()
-        print(activityArray)
+        //print(activityArray)
         
         for item in activityArray {
             graphView.graphPoints.append(Int(item.value))
