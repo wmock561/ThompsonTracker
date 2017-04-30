@@ -9,16 +9,35 @@
 import UIKit
 import Foundation
 
-class AddPatientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddPatientViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var patient: Patient?
-    @IBOutlet weak var tableview: UITableView!
+    
+    @IBOutlet weak var nicknameTextfield: UITextField!
+    @IBOutlet weak var firstnameTextfield: UITextField!
+    @IBOutlet weak var lastnameTextfield: UITextField!
+    @IBOutlet weak var doctorTextfield: UITextField!
+    @IBOutlet weak var hospitalTextfield: UITextField!
+    @IBOutlet weak var birthdateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var thumbnailPhoto: UIImageView!
+    
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        
+//        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        tableview.estimatedRowHeight = 44
+        title = "Add Patient"
+        thumbnailPhoto.image = #imageLiteral(resourceName: "DummyPotrait")
+        datePicker.datePickerMode = .date
+        self.birthdateLabel.text = "Birthdate: " + dateFormatter.string(from: datePicker.date)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,115 +46,42 @@ class AddPatientViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    func importPicture() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        
+        dismiss(animated: true)
+        
+        thumbnailPhoto.image = image
+    }
+    
+    @IBAction func chooseDate(_ sender: Any) {
+        birthdateLabel.text = "Birthdate: " + dateFormatter.string(from: datePicker.date)
+    }
+    
+    @IBAction func addPhoto(_ sender: Any) {
+        importPicture()
+        //imagePickerController(<#T##picker: UIImagePickerController##UIImagePickerController#>, didFinishPickingMediaWithInfo: <#T##[String : Any]#>)
+    }
+    
     @IBAction func addPatient(_ sender: UIBarButtonItem) {
         
-        let nickname = gatherNickname()
-        let firstname = gatherFirstname()
-        let lastname = gatherLastname()
-        let birthdate = gatherBirthdate()
-        let doctor = gatherDoctor()
-        let hospital = gatherHospital()
-        let photo = gatherPhoto()
+        let nickname = nicknameTextfield.text
+        let firstname = firstnameTextfield.text
+        let lastname = lastnameTextfield.text
+        let birthdate = datePicker.date
+        let doctor = doctorTextfield.text
+        let hospital = hospitalTextfield.text
+        let photo = #imageLiteral(resourceName: "James")
         
-        var patient = Patient(nickname: nickname, firstname: firstname, lastname: lastname, birthdate: birthdate, doctor: doctor, hospital: hospital, photo: photo)
+        // Where @will create CoreData of Child
+        var patient = Patient(nickname: nickname!, firstname: firstname!, lastname: lastname!, birthdate: birthdate, doctor: doctor!, hospital: hospital!, photo: photo)
     }
     
-    @discardableResult func gatherPhoto() -> UIImage {
-        let photocell = tableview.cellForRow(at: IndexPath(row: 1, section: 0)) as? PhotoTableViewCell
-        let photo = photocell?.photoImage.image
-        return photo!
-    }
-    
-    @discardableResult func gatherNickname() -> String {
-        let nicknamecell = tableview.cellForRow(at: IndexPath(row: 2, section: 0)) as? NicknameTableViewCell
-        let nickname = nicknamecell?.nicknameTextfield?.text ?? ""
-        return nickname
-    }
-    
-    @discardableResult func gatherFirstname() -> String {
-        let firstnamecell = tableview.cellForRow(at: IndexPath(row: 3, section: 0)) as? FirstnameTableViewCell
-        let firstname = firstnamecell?.firstnameTextfield?.text ?? ""
-        return firstname
-    }
-    
-    @discardableResult func gatherLastname() -> String {
-        let lastnamecell = tableview.cellForRow(at: IndexPath(row: 4, section: 0)) as? LastnameTableViewCell
-        let lastname = lastnamecell?.lastnameTextfield?.text ?? ""
-        return lastname
-    }
-    
-    @discardableResult func gatherHospital() -> String {
-        let hospitalcell = tableview.cellForRow(at: IndexPath(row: 5, section: 0)) as? HospitalTableViewCell
-        let hospital = hospitalcell?.hospitalTextfield?.text ?? ""
-        return hospital
-    }
-    
-    @discardableResult func gatherDoctor() -> String {
-        let doctorcell = tableview.cellForRow(at: IndexPath(row: 6, section: 0)) as? DoctorTableViewCell
-        let doctor = doctorcell?.doctorTextfield?.text ?? ""
-        return doctor
-    }
-    
-    @discardableResult func gatherBirthdate() -> Date {
-        let birthdatecell = tableview.cellForRow(at: IndexPath(row: 7, section: 0)) as? BirthdateTableViewCell
-        let birthdate = birthdatecell?.datePicker.date
-        return birthdate!
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 1:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "photocell", for: indexPath)
-            if let cell = cell as? PhotoTableViewCell {
-                cell.photoImage.image = #imageLiteral(resourceName: "James")
-            }
-            return cell
-        case 2:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "nicknamecell", for: indexPath)
-            if let cell = cell as? NicknameTableViewCell {
-                cell.nicknameTextfield.text = patient?.nickname
-            }
-            return cell
-        case 3:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "firstnamecell", for: indexPath)
-            if let cell = cell as? FirstnameTableViewCell {
-                cell.firstnameTextfield.text = patient?.firstname
-            }
-            return cell
-        case 4:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "lastnamecell", for: indexPath)
-            if let cell = cell as? LastnameTableViewCell {
-                cell.lastnameTextfield.text = patient?.lastname
-            }
-            return cell
-        case 5:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "hospitalcell", for: indexPath)
-            if let cell = cell as? HospitalTableViewCell {
-                cell.hospitalTextfield.text = patient?.hospital
-            }
-            return cell
-        case 6:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "doctorcell", for: indexPath)
-            if let cell = cell as? DoctorTableViewCell {
-                cell.doctorTextfield.text = patient?.doctor
-            }
-            return cell
-        case 7:
-            let cell = tableview.dequeueReusableCell(withIdentifier: "birthdatecell", for: indexPath)
-            if let cell = cell as? BirthdateTableViewCell {
-                cell.datePicker.date = (patient?.birthdate)!
-            }
-            return cell
-        default:
-            return UITableViewCell()
-        }
-    }
 }
