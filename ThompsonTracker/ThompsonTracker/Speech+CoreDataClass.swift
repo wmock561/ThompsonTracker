@@ -28,7 +28,7 @@ public class Speech: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Speech.entity(), insertInto: context)
         
         self.date = date
         

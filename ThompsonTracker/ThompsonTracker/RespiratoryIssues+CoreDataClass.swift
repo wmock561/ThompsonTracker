@@ -27,7 +27,7 @@ public class RespiratoryIssues: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: RespiratoryIssues.entity(), insertInto: context)
         
         self.date = date
         

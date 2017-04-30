@@ -27,7 +27,7 @@ public class Diet: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Diet.entity(), insertInto: context)
         
         self.date = date
         

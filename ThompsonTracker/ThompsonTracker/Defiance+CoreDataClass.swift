@@ -28,7 +28,7 @@ public class Defiance: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Defiance.entity(), insertInto: context)
         
         self.date = date
         

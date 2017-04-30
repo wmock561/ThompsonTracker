@@ -28,7 +28,7 @@ public class Implusivity: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Implusivity.entity(), insertInto: context)
         
         self.date = date
         

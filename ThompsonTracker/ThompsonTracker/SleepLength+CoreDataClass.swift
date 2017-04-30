@@ -27,7 +27,7 @@ public class SleepLength: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: SleepLength.entity(), insertInto: context)
         
         self.date = date
         

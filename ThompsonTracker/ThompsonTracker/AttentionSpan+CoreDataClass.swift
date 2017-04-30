@@ -28,7 +28,7 @@ public class AttentionSpan: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: AttentionSpan.entity(), insertInto: context)
         
         self.date = date
         

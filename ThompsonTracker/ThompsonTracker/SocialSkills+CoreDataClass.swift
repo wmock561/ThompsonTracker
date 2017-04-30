@@ -28,7 +28,7 @@ public class SocialSkills: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: SocialSkills.entity(), insertInto: context)
         
         self.date = date
         

@@ -28,7 +28,7 @@ public class SelfHarm: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: SelfHarm.entity(), insertInto: context)
         
         self.date = date
         

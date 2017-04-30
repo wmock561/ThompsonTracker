@@ -27,7 +27,7 @@ public class OK: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: OK.entity(), insertInto: context)
         
         self.date = date
         

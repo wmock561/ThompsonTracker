@@ -28,7 +28,7 @@ public class Tics: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Tics.entity(), insertInto: context)
         
         self.date = date
         

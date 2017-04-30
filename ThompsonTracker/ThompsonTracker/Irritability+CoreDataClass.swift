@@ -28,7 +28,7 @@ public class Irritability: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Irritability.entity(), insertInto: context)
         
         self.date = date
         

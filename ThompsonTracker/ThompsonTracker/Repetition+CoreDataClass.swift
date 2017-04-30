@@ -28,7 +28,7 @@ public class Repetition: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Repetition.entity(), insertInto: context)
         
         self.date = date
         

@@ -27,7 +27,7 @@ public class Stressed: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Hyperactivity.entity(), insertInto: context)
+        self.init(entity: Stressed.entity(), insertInto: context)
         
         self.date = date
         
