@@ -64,6 +64,12 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         taskViewController.delegate = self
         
+        taskViewController.navigationBar.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        
+        taskViewController.editButtonItem.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        
+        //figure out how to change tint on researchkit buttons
+        
         present(taskViewController, animated: true, completion: {
             selected.removeAll()
         })
@@ -249,15 +255,17 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 let questionTestSteptitle = "Quality"
                 let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) of sleep on a scale of 1-5"
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) of sleep on a scale of 1-5."
                 steps += [testQuestionStep]
                 
             case 1:
-                let questionTestSteptitle = "Length"
+                let questionTestSteptitle = "Duration"
                 let testQuestionFormat: ORKTimeIntervalAnswerFormat = ORKTimeIntervalAnswerFormat(defaultInterval: 8, step: 15)
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)TimeIntervalQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please record \(questionTestSteptitle) of sleep"
                 steps += [testQuestionStep]
+                
+                //Make multi-step question for what time they went to sleep and when they woke up?
             default:
                 print("ERROR IN SWITCH HERE")
                 print(num)

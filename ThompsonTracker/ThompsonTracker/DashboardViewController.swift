@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {//, CLLocationManagerDelegate {
 
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -19,7 +20,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     //categories
     let behaviourQuestionsArray = ["Hyperactivity", "Impulsivity", "Repetition", "Anxiety", "Attention Span", "Irritability", "Self-harm", "Tics", "Defiance", "Social Skills", "Speech", "Tantrums"]
     let healthArray = ["Stomach Ache/Pain", "Headaches","Tremors/Seizures", "Diet Problems", "Diarrhea/Constipation", "Respiratory Issues"]
-    let sleepQuestionsArray = ["Quality", "Length"]
+    let sleepQuestionsArray = ["Quality", "Duration"]
     let moodQuestionsArray = ["Angry", "Happy", "Sad", "Scared", "OK", "Stressed"]
     
     //categoryImages
@@ -31,21 +32,56 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     //dateFormatter
     let dateFormatter = DateFormatter()
     
+    //LocationManager
+//    let locationManager = CLLocationManager()
+//    var currentLocation: CLLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Dashboard"
         
-        //dashboardCollectionView.layer.borderColor = UIColor.black.cgColor
+        //changing custom color for tabBarController
         
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        
+        //navigation bar text navigation color
+        self.navigationController?.navigationBar.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        
+        self.tabBarController?.tabBar.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)]
+        
+        
+        //Setting Dateformatter Style
         dateFormatter.dateStyle = .medium
         
         let currentDate = Date()
         
         dateLabel.text = dateFormatter.string(from: currentDate)
         
-
+        //Location Stuff here
+        
+//        locationManager.requestAlwaysAuthorization()
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager.startUpdatingLocation()
+//        
+//        print("HERE")
+//        if let currentLocation = currentLocation{
+//            print(currentLocation.coordinate.latitude)
+//            print(currentLocation.coordinate.longitude)
+//        }
     }
+    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        self.currentLocation = locations[0]
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print(error)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
