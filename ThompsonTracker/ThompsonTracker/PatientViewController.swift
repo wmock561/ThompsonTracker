@@ -71,7 +71,7 @@ class PatientViewController: UIViewController {
         let nums = patients?.count,
         indexPath.row < nums,
         let patient = patients?[indexPath.row] {
-            destination.patient = patient
+            //destination.patient = patient
         }
     }
     

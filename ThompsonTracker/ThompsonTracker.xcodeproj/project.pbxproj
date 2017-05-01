@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */; };
+		7198321F1EB10EFB002BC697 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; };
+		719832201EB10EFB002BC697 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
 		719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832251EB1126C002BC697 /* PatientTableViewCell.swift */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
 		B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */; };
@@ -172,6 +176,7 @@
 
 /* Begin PBXFileReference section */
 		710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
+		719832151EB10E6D002BC697 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -315,6 +320,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		719832161EB10E6D002BC697 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7198321C1EB10E6E002BC697 /* ResearchKit.framework */,
+				7198321E1EB10E6E002BC697 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +740,8 @@
 				B2CB50D51EB447C40075B04E /* Scared+CoreDataClass.swift in Sources */,
 				B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */,
 				B25409051EB114510012072D /* Tantrums+CoreDataClass.swift in Sources */,
+				719832241EB1125E002BC697 /* PatientViewController.swift in Sources */,
+				710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */,
 				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
 				B2CB50C21EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift in Sources */,
 				B2CB50C51EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift in Sources */,
