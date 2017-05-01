@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */; };
-		7198321F1EB10EFB002BC697 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; };
-		719832201EB10EFB002BC697 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7198321C1EB10E6E002BC697 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71467AB31EB7AA5E00481257 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71467AB01EB7AA5000481257 /* ResearchKit.framework */; };
+		71467AB41EB7AA5E00481257 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71467AB01EB7AA5000481257 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
 		719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832251EB1126C002BC697 /* PatientTableViewCell.swift */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
@@ -117,12 +117,31 @@
 		B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */; };
 		B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */; };
 		B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */; };
-		B2CB51041EB7A5BC0075B04E /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CB51011EB7A5A40075B04E /* ResearchKit.framework */; };
-		B2CB51051EB7A5BC0075B04E /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CB51011EB7A5A40075B04E /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		71467AAF1EB7AA5000481257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		71467AB11EB7AA5000481257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		71467AB51EB7AA5E00481257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 		B2A203791E9DD2EC000195BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B2A203591E9DD2EC000195BA /* Project object */;
@@ -137,27 +156,6 @@
 			remoteGlobalIDString = B2A203601E9DD2EC000195BA;
 			remoteInfo = ThompsonTracker;
 		};
-		B2CB51001EB7A5A40075B04E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		B2CB51021EB7A5A40075B04E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		B2CB51061EB7A5BC0075B04E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,7 +165,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2CB51051EB7A5BC0075B04E /* ResearchKit.framework in Embed Frameworks */,
+				71467AB41EB7AA5E00481257 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +174,7 @@
 
 /* Begin PBXFileReference section */
 		710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
-		719832151EB10E6D002BC697 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 		B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,7 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CB51041EB7A5BC0075B04E /* ResearchKit.framework in Frameworks */,
+				71467AB31EB7AA5E00481257 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +317,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		719832161EB10E6D002BC697 /* Products */ = {
+		71467AAA1EB7AA5000481257 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7198321C1EB10E6E002BC697 /* ResearchKit.framework */,
-				7198321E1EB10E6E002BC697 /* ResearchKitTests.xctest */,
+				71467AB01EB7AA5000481257 /* ResearchKit.framework */,
+				71467AB21EB7AA5000481257 /* ResearchKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,7 +452,7 @@
 		B2A203631E9DD2EC000195BA /* ThompsonTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */,
+				71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */,
 				B28682101EAE741A002A768A /* Images */,
 				B217C50A1EA97F7900AE6BCD /* Model */,
 				B2A203681E9DD2EC000195BA /* Main.storyboard */,
@@ -499,15 +496,6 @@
 			path = ThompsonTrackerUITests;
 			sourceTree = "<group>";
 		};
-		B2CB50FB1EB7A5A40075B04E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B2CB51011EB7A5A40075B04E /* ResearchKit.framework */,
-				B2CB51031EB7A5A40075B04E /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -523,7 +511,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B2CB51071EB7A5BC0075B04E /* PBXTargetDependency */,
+				71467AB61EB7AA5E00481257 /* PBXTargetDependency */,
 			);
 			name = ThompsonTracker;
 			productName = ThompsonTracker;
@@ -578,7 +566,7 @@
 				TargetAttributes = {
 					B2A203601E9DD2EC000195BA = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 4F48D7BT8E;
+						DevelopmentTeam = 7S69HUYJ5S;
 						ProvisioningStyle = Automatic;
 					};
 					B2A203771E9DD2EC000195BA = {
@@ -606,8 +594,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B2CB50FB1EB7A5A40075B04E /* Products */;
-					ProjectRef = B2CB50FA1EB7A5A40075B04E /* ResearchKit.xcodeproj */;
+					ProductGroup = 71467AAA1EB7AA5000481257 /* Products */;
+					ProjectRef = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -620,18 +608,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B2CB51011EB7A5A40075B04E /* ResearchKit.framework */ = {
+		71467AB01EB7AA5000481257 /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = B2CB51001EB7A5A40075B04E /* PBXContainerItemProxy */;
+			remoteRef = 71467AAF1EB7AA5000481257 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B2CB51031EB7A5A40075B04E /* ResearchKitTests.xctest */ = {
+		71467AB21EB7AA5000481257 /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = B2CB51021EB7A5A40075B04E /* PBXContainerItemProxy */;
+			remoteRef = 71467AB11EB7AA5000481257 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -794,6 +782,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		71467AB61EB7AA5E00481257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = 71467AB51EB7AA5E00481257 /* PBXContainerItemProxy */;
+		};
 		B2A2037A1E9DD2EC000195BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B2A203601E9DD2EC000195BA /* ThompsonTracker */;
@@ -803,11 +796,6 @@
 			isa = PBXTargetDependency;
 			target = B2A203601E9DD2EC000195BA /* ThompsonTracker */;
 			targetProxy = B2A203841E9DD2EC000195BA /* PBXContainerItemProxy */;
-		};
-		B2CB51071EB7A5BC0075B04E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = B2CB51061EB7A5BC0075B04E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -931,7 +919,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4F48D7BT8E;
+				DEVELOPMENT_TEAM = 7S69HUYJ5S;
 				INFOPLIST_FILE = ThompsonTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mockdesign.ThompsonTracker;
@@ -945,7 +933,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4F48D7BT8E;
+				DEVELOPMENT_TEAM = 7S69HUYJ5S;
 				INFOPLIST_FILE = ThompsonTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mockdesign.ThompsonTracker;
