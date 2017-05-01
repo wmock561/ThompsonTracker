@@ -11,8 +11,14 @@ import CoreLocation
 
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {//, CLLocationManagerDelegate {
 
+    var patient: Patient?
+    
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var patientPhoto: UIImageView!
+    @IBOutlet weak var patientNickname: UILabel!
+    @IBOutlet weak var patientFullname: UILabel!
     
     let cellTitles = ["Behavior", "Health", "Sleep", "Mood"]
     let cellImages = [#imageLiteral(resourceName: "mentalHealth.png"), #imageLiteral(resourceName: "health.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "happy.png")]
