@@ -46,8 +46,7 @@ class PatientViewController: UIViewController {
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         
-        formatter.timeStyle = .short
-        formatter.dateStyle = .medium
+        formatter.dateStyle = .long
         
         return formatter
     }()
