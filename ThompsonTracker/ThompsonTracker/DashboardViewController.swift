@@ -11,7 +11,7 @@ import CoreLocation
 
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {//, CLLocationManagerDelegate {
 
-    var patient: Patient?
+    //var patient: Patient?
     
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -67,7 +67,9 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         dateLabel.text = dateFormatter.string(from: currentDate)
         
-        //Location Stuff here
+//        patientPhoto.image = patient?.photo
+//        patientNickname.text = patient?.nickname
+//        patientFullname.text = (patient?.firstname)! + " " + (patient?.lastname)!
         
 //        locationManager.requestAlwaysAuthorization()
 //        locationManager.delegate = self
