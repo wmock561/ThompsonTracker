@@ -1,3 +1,4 @@
+
 //
 //  GraphView.swift
 //  ThompsonTracker
@@ -9,34 +10,82 @@
 import Foundation
 import UIKit
 
+
 @IBDesignable class GraphView: UIView {
+    var data = NSMutableArray()
+    fileprivate var context : CGContext?
+    
+    fileprivate let padding     : CGFloat = 30
+    fileprivate var graphWidth  : CGFloat = 0
+    fileprivate var graphHeight : CGFloat = 0
+    fileprivate var axisWidth   : CGFloat = 0
+    fileprivate var axisHeight  : CGFloat = 0
+    fileprivate var everest     : CGFloat = 5
+    static var graphPoints = [Int]()
+    
+    var counter = 0
+    
+    
     
     @IBInspectable var startColor: UIColor = UIColor.red
     @IBInspectable var endColor: UIColor = UIColor.green
     
-    var graphPoints = [Int]()
+    var average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    
+    // Graph Styles
+    var showLines   = true
+    var showPoints  = true
+    // var linesColor  = UIColor.init(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
+    var linesColor = UIColor.black
+    var graphColor  = UIColor.black
+    var labelFont   = UIFont.systemFont(ofSize: 10)
+    var labelColor  = UIColor.black
+    var xAxisColor  = UIColor.init(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
+    var yAxisColor  = UIColor.black
+    
+    
+    let clearColor = UIColor.clear
+    var xMargin         : CGFloat = 20
+    var originLabelText = ""
+    var originLabelColor = UIColor.white
+    
+    required init(coder: NSCoder) {
+        super.init(coder:coder)!
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        
+    }
+    
+    init(frame: CGRect, data: NSArray) {
+        
+        super.init(frame: frame)
+        backgroundColor = UIColor.clear
+        self.data = data.mutableCopy() as! NSMutableArray
+        
+        
+        
+        
+    }
+    
     
     override func draw(_ rect: CGRect) {
         
-        //print(graphPoints)
         
-        let width = rect.width
-        let height = rect.height
+        super.draw(rect)
         
-        //set up background clipping area
-        let path = UIBezierPath(roundedRect: rect,
-                                byRoundingCorners: UIRectCorner.allCorners,
-                                cornerRadii: CGSize(width: 8.0, height: 8.0))
-        path.addClip()
         
-        //2 - get the current context
-        guard let context = UIGraphicsGetCurrentContext() else{
-            return
-        }
+        
+        context = UIGraphicsGetCurrentContext()
+        
+        
+        
+        
+        
         let colors = [startColor.cgColor, endColor.cgColor]
         
         //3 - set up the color space
@@ -51,124 +100,203 @@ import UIKit
                                   locations: colorLocations)
         
         //6 - draw the gradient
-        var startPoint = CGPoint.zero
-        var endPoint = CGPoint(x:0, y:self.bounds.height)
-        context.drawLinearGradient(gradient!,
+        //        var startPoint = CGPoint.zero
+        //        var endPoint = CGPoint(x:0, y:self.bounds.height)
+        //Original gradient above ^^^
+        
+        graphWidth = (rect.size.width - padding) - 10
+        graphHeight = rect.size.height - 40
+        axisWidth = rect.size.width - 10
+        axisHeight = (rect.size.height - padding) - 10
+        
+        
+        
+        
+        let startPoint = CGPoint(x: padding, y: 5)
+        let endPoint = CGPoint(x: axisWidth + 10 , y: axisHeight + 5)
+        
+        context?.addRect(CGRect(origin: startPoint, size: CGSize(width: axisWidth - 30, height: axisHeight + 5)))
+        
+        context?.clip()
+        
+        context?.drawLinearGradient(gradient!,
                                     start: startPoint,
                                     end: endPoint,
                                     options: CGGradientDrawingOptions(rawValue: 0))
         
-        //calculate the x point
         
-        let margin:CGFloat = 20.0
-        let columnXPoint = { (column:Int) -> CGFloat in
-            //Calculate gap between points
-            let spacer = (width - margin*2 - 4) /
-                CGFloat((self.graphPoints.count - 1))
-            var x:CGFloat = CGFloat(column) * spacer
-            x += margin + 2
-            return x
+        
+    
+        
+        // Lets work out the highest value and round to the nearest 25.
+        // This will be used to work out the position of each value
+        // on the Y axis, it essentialy reperesents 100% of Y
+        for point in data {
+            let n : Int = ((point as AnyObject).object(forKey: "value") as! NSNumber).intValue
+            if CGFloat(n) > everest {
+                everest = CGFloat(Int(ceilf(Float(n) / 25) * 25))
+            }
+        }
+        if everest == 0 {
+            everest = 25
         }
         
-        // calculate the y point
+        // Draw graph X-AXIS
+        let xAxisPath = CGMutablePath()
+        xAxisPath.move(to: CGPoint(x: padding, y: rect.size.height - 31))
+        xAxisPath.addLine(to: CGPoint(x: axisWidth, y: rect.size.height - 31))
+        context?.addPath(xAxisPath)
         
-        let topBorder:CGFloat = 60
-        let bottomBorder:CGFloat = 50
-        let graphHeight = height - topBorder - bottomBorder
-        let maxValue = graphPoints.max()
-        let columnYPoint = { (graphPoint:Int) -> CGFloat in
-            var y:CGFloat = CGFloat(graphPoint) /
-                CGFloat(maxValue ?? 0) * graphHeight
-            y = graphHeight + topBorder - y // Flip the graph
-            return y
-        }
+        context?.setStrokeColor(xAxisColor.cgColor)
+        context?.strokePath()
         
-        // draw the line graph
+        // Draw graph Y-AXIS
+        let yAxisPath = CGMutablePath()
+        yAxisPath.move(to: CGPoint(x: padding, y: 10))
+        yAxisPath.addLine(to: CGPoint(x: padding, y: rect.size.height - 31))
+        yAxisPath.move(to: CGPoint(x: axisWidth, y: 10))
+        yAxisPath.addLine(to: CGPoint(x: axisWidth, y: rect.size.height - 31))
+        context?.addPath(yAxisPath)
         
-        UIColor.white.setFill()
-        UIColor.white.setStroke()
+        context?.setStrokeColor(yAxisColor.cgColor)
+        context?.strokePath()
         
-        //set up the points line
-        let graphPath = UIBezierPath()
-        //go to start of line
-        graphPath.move(to: CGPoint(x:columnXPoint(0),
-                                      y:columnYPoint(graphPoints[0])))
-        
-        //add points for each item in the graphPoints array
-        //at the correct (x, y) for the point
-        for i in 1..<graphPoints.count {
-            let nextPoint = CGPoint(x:columnXPoint(i),
-                                    y:columnYPoint(graphPoints[i]))
-            graphPath.addLine(to: nextPoint)
-        }
-        
-        graphPath.stroke()
-        
-        //Create the clipping path for the graph gradient
-        
-        //1 - save the state of the context (commented out for now)
-        context.saveGState()
-        
-        //2 - make a copy of the path
-        let clippingPath = graphPath.copy() as! UIBezierPath
-        
-        //3 - add lines to the copied path to complete the clip area
-        clippingPath.addLine(to: CGPoint(
-            x: columnXPoint(graphPoints.count - 1),
-            y:height))
-        clippingPath.addLine(to: CGPoint(
-            x:columnXPoint(0),
-            y:height))
-        clippingPath.close()
-        
-        //4 - add the clipping path to the context
-        clippingPath.addClip()
-        
-        let highestYPoint = columnYPoint(maxValue ?? 0)
-        startPoint = CGPoint(x:margin, y: highestYPoint)
-        endPoint = CGPoint(x:margin, y:self.bounds.height)
-        
-        context.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: 0))
-        context.restoreGState()
-        
-        //draw the line on top of the clipped gradient
-        graphPath.lineWidth = 2.0
-        graphPath.stroke()
-        
-        //Draw the circles on top of graph stroke
-        for i in 0..<graphPoints.count {
-            var point = CGPoint(x:columnXPoint(i), y:columnYPoint(graphPoints[i]))
-            point.x -= 5.0/2
-            point.y -= 5.0/2
+        // Draw y axis labels and lines
+        let yLabelInterval : Int = Int(everest / 5)
+        for i in 0...5 {
             
-            let circle = UIBezierPath(ovalIn: CGRect(origin: point, size: CGSize(width: 5.0, height: 5.0)))
-            circle.fill()
+            let label = axisLabel(NSString(format: "%d", i * yLabelInterval))
+            label.frame = CGRect(x: 0, y: floor((rect.size.height - padding) - CGFloat(i) * (axisHeight / 5) - 10), width: 20, height: 20)
+            label.backgroundColor = UIColor.clear
+            addSubview(label)
+            
+            if(showLines && i != 0) {
+                let line = CGMutablePath()
+                line.move(to: CGPoint(x: padding + 1, y: floor(rect.size.height - padding) - (CGFloat(i) * (axisHeight / 5))))
+                line.addLine(to: CGPoint(x: axisWidth, y: floor(rect.size.height - padding) - (CGFloat(i) * (axisHeight / 5))))
+                context?.addPath(line)
+                context?.setStrokeColor(linesColor.cgColor)
+                context?.strokePath()
+            }
         }
         
-        //Draw horizontal graph lines on the top of everything
-        let linePath = UIBezierPath()
+        // Lets move to the first point
+        let pointPath = CGMutablePath()
+        let firstPoint = (data[0] as! NSDictionary).object(forKey: "value") as! NSNumber
+        let initialY : CGFloat = ceil((CGFloat(firstPoint.intValue as Int) * (axisHeight / everest))) - 10
+        let initialX : CGFloat = padding + xMargin
+        pointPath.move(to: CGPoint(x: initialX, y: graphHeight - initialY))
         
-        //top line
-        linePath.move(to: CGPoint(x:margin, y: topBorder))
-        linePath.addLine(to: CGPoint(x: width - margin,
-                                        y:topBorder))
+        // Loop over the remaining values
+        for point in data {
+            plotPoint(point as! NSDictionary, path: pointPath)
+        }
         
-        //center line
-        linePath.move(to: CGPoint(x:margin,
-                                     y: graphHeight/2 + topBorder))
-        linePath.addLine(to: CGPoint(x:width - margin,
-                                        y:graphHeight/2 + topBorder))
+        // Set stroke colours and stroke the values path
+        context?.addPath(pointPath)
+        context?.setLineWidth(2)
+        context?.setStrokeColor(graphColor.cgColor)
+        context?.strokePath()
         
-        //bottom line
-        linePath.move(to: CGPoint(x:margin,
-                                     y:height - bottomBorder))
-        linePath.addLine(to: CGPoint(x:width - margin,
-                                        y:height - bottomBorder))
-        let color = UIColor(white: 1.0, alpha: 0.3)
-        color.setStroke()
+        // Add Origin Label
+        let originLabel = UILabel()
+        originLabel.text = originLabelText
+        originLabel.textAlignment = NSTextAlignment.center
+        originLabel.font = labelFont
+        originLabel.textColor = originLabelColor
+        originLabel.backgroundColor = backgroundColor
+        originLabel.frame = CGRect(x: -2, y: graphHeight + 20, width: 40, height: 20)
+        originLabel.backgroundColor = UIColor.clear
+        addSubview(originLabel)
         
-        linePath.lineWidth = 1.0
-        linePath.stroke()
+        
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        label.center = CGPoint(x: axisWidth / 2, y: axisHeight * 1.2)
+        label.textAlignment = .center
+        let doubleStr = String(format: "Average : %.2f", average)
+        label.text = "\(doubleStr)"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.backgroundColor = UIColor.clear
+        addSubview(label)
+        
+        
+        
+        
+        
         
     }
+    
+    
+    
+    
+    
+    // Plot a point on the graph
+    func plotPoint(_ point : NSDictionary, path: CGMutablePath) {
+        
+        // work out the distance to draw the remaining points at
+        let interval = Int(graphWidth - xMargin * 2) / (data.count - 1);
+        
+        let pointValue = (point.object(forKey: "value") as! NSNumber).intValue
+        
+        // Calculate X and Y positions
+        let yposition : CGFloat = ceil((CGFloat(pointValue) * (axisHeight / everest))) - 10
+        let xposition : CGFloat = CGFloat(interval * (data.index(of: point))) + padding + xMargin
+        
+        // Draw line to this value
+        
+        path.addLine(to: CGPoint(x: xposition, y: graphHeight - yposition))
+        
+        let xLabel = axisLabel(point.object(forKey: "label" + String(counter)) as! NSString)
+        counter += 1
+        xLabel.frame = CGRect(x: xposition - 17, y: graphHeight + 20, width: 36, height: 20)
+        xLabel.textAlignment = NSTextAlignment.center
+        xLabel.backgroundColor = UIColor.clear
+        addSubview(xLabel)
+        
+        if(showPoints) {
+            // Add a marker for this value
+            let pointMarker = valueMarker()
+            pointMarker.backgroundColor = clearColor.cgColor
+            pointMarker.frame = CGRect(x: xposition - 8, y: CGFloat(ceil(graphHeight - yposition) - 8), width: 16, height: 16)
+            layer.addSublayer(pointMarker)
+        }
+        
+        
+        
+    }
+    
+    
+    // Returns an axis label
+    func axisLabel(_ title: NSString) -> UILabel {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = title as String
+        label.font = labelFont
+        label.textColor = labelColor
+        label.backgroundColor = backgroundColor
+        label.textAlignment = NSTextAlignment.right
+        
+        return label
+    }
+    
+    
+    // Returns a point for plotting
+    func valueMarker() -> CALayer {
+        let pointMarker = CALayer()
+        pointMarker.backgroundColor = backgroundColor?.cgColor
+        pointMarker.cornerRadius = 8
+        pointMarker.masksToBounds = true
+        
+        let markerInner = CALayer()
+        markerInner.frame = CGRect(x: 3, y: 3, width: 10, height: 10)
+        markerInner.cornerRadius = 5
+        markerInner.masksToBounds = true
+        markerInner.backgroundColor = graphColor.cgColor
+        
+        pointMarker.addSublayer(markerInner)
+        
+        return pointMarker
+    }
+    
+    
 }

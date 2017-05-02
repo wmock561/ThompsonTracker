@@ -8,71 +8,105 @@
 
 import UIKit
 
+
+
+@IBDesignable
 class GraphViewController: UIViewController {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var graphView: GraphView!
-    
-    //Labels
-    @IBOutlet weak var averageResponse: UILabel!
+    @IBOutlet weak var subView: UIView!
+    let dateFormatter = DateFormatter()
+    var graph = GraphView()
+    var realData = [Dictionary <String, Any>]()
+    let x: CGFloat = 10
+    let y: CGFloat = 50
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
-        self.title = "Graphs"
+        let width = self.view.frame.width
+        let height = self.view.frame.height
+        dateFormatter.dateFormat = "MM/dd"
+        let myData = Model.sharedInstance.fetchHyperactivity()
         
-        let activityArray = Model.sharedInstance.fetchHyperactivity()
+        //
+        var counter = 0
         
-        for item in activityArray {
-            graphView.graphPoints.append(Int(item.value))
+        for item in myData
+        {
+            realData.append( ["label" + String(counter) : dateFormatter.string(from: item.date) , "value" : NSNumber(value : item.value) ])
+            GraphView.graphPoints.append(Int(item.value))
+            counter += 1
         }
+        print(realData)
+        let graph = GraphView(frame: CGRect(x : x, y: y, width: width-x*2, height: height * 0.65), data: realData as NSArray)
         
-        setupGraphDisplay()
+//        subView = graph
+        self.subView.addSubview(graph)
+        //self.view.addSubview(graph)
+        self.title = "Graphs"
+    
+        graph.setNeedsDisplay()
+        
+        
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
-
-        graphView.graphPoints.removeAll()
         
-        let activityArray = Model.sharedInstance.fetchHyperactivity()
+        GraphView.graphPoints.removeAll()
+        realData.removeAll()
         
-        for item in activityArray {
-            graphView.graphPoints.append(Int(item.value))
+        //Sean code. Look at how pretty it is!!
+        
+        for view in self.subView.subviews {
+            view.removeFromSuperview()
         }
         
-        graphView.setNeedsDisplay()
+        for view in graph.subviews {
+            view.removeFromSuperview()
+        }
         
-        setupGraphDisplay()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.subView.setNeedsLayout()
+        self.subView.layoutIfNeeded()
+        
+        self.subView.setNeedsDisplay()
+    
+        
+        let myData = Model.sharedInstance.fetchHyperactivity()
+        var counter = 0
+        for item in myData
+        {
+            realData.append( ["label" + String(counter) : dateFormatter.string(from: item.date) , "value" : NSNumber(value : item.value) ])
+            GraphView.graphPoints.append(Int(item.value))
+            counter += 1
+        }
+        let width = self.view.frame.width
+        let height = self.view.frame.height
+        graph = GraphView(frame: CGRect(x : x, y: y, width: width-x*2, height: height * 0.65), data: realData as NSArray)
+        self.subView.addSubview(graph)
+        // self.view.addSubview(graph)
+        graph.setNeedsDisplay()
+        
     }
     
-    func setupGraphDisplay() {
-        
-//        print(graphView.graphPoints.reduce(0, +))
-//        print(graphView.graphPoints.count)
-        
-        let average: Double = Double(graphView.graphPoints.reduce(0, +)) / Double(graphView.graphPoints.count)
-        
-        let doubleStr = String(format: "%.2f", average)
-        
-        averageResponse.text = "\(doubleStr)"
-        
-    }
+    //
+    // func setupGraphDisplay() -> String {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    //  let average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
+    //   let doubleStr = String(format: "Average : %.2f", average)
+    //    let average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
+    //    let doubleStr = String(format: "Average : %.2f", average)
+    //
+    //    return doubleStr
+    ////
+    ////        //NS sstrings in draw on page
+    ////        //    //.enumerated
+    ////        //    //for(index , text)
+    ////        //
+    ////
+    //}
+    
+    //}
 }
