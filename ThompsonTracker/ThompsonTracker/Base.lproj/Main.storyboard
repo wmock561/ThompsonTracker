@@ -31,7 +31,7 @@
         <!--Graphs-->
         <scene sceneID="SZ5-9P-nP5">
             <objects>
-                <viewController id="fJH-ub-Tfa" customClass="GraphViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fJH-ub-Tfa" customClass="GraphViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V9G-85-1j7"/>
                         <viewControllerLayoutGuide type="bottom" id="ISj-9z-ujJ"/>
@@ -308,9 +308,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="ROH-Gb-GeK"/>
-                    <navigationItem key="navigationItem" id="YJM-4n-iwy">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="barButtonIcon.png" id="wLW-Ia-ANO"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="YJM-4n-iwy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHO-tE-Bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,7 +336,6 @@
     </scenes>
     <resources>
         <image name="Thompson Tracker Logo.png" width="1417" height="1417"/>
-        <image name="barButtonIcon.png" width="30" height="30"/>
         <image name="bargraph.png" width="30" height="30"/>
         <image name="dashboard.png" width="30" height="30"/>
         <image name="gear.png" width="30" height="30"/>

@@ -13,6 +13,32 @@
 		B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */; };
 		B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */; };
 		B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5171EAA73A100AE6BCD /* CustomLayout.swift */; };
+		B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */; };
+		B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */; };
+		B25408F71EB114510012072D /* Tics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E11EB114510012072D /* Tics+CoreDataClass.swift */; };
+		B25408F81EB114510012072D /* Tics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E21EB114510012072D /* Tics+CoreDataProperties.swift */; };
+		B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E31EB114510012072D /* Irritability+CoreDataClass.swift */; };
+		B25408FA1EB114510012072D /* Irritability+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E41EB114510012072D /* Irritability+CoreDataProperties.swift */; };
+		B25408FB1EB114510012072D /* Repetition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E51EB114510012072D /* Repetition+CoreDataClass.swift */; };
+		B25408FC1EB114510012072D /* Repetition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E61EB114510012072D /* Repetition+CoreDataProperties.swift */; };
+		B25408FD1EB114510012072D /* SocialSkills+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E71EB114510012072D /* SocialSkills+CoreDataClass.swift */; };
+		B25408FE1EB114510012072D /* SocialSkills+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E81EB114510012072D /* SocialSkills+CoreDataProperties.swift */; };
+		B25408FF1EB114510012072D /* SelfHarm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E91EB114510012072D /* SelfHarm+CoreDataClass.swift */; };
+		B25409001EB114510012072D /* SelfHarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408EA1EB114510012072D /* SelfHarm+CoreDataProperties.swift */; };
+		B25409011EB114510012072D /* Defiance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408EB1EB114510012072D /* Defiance+CoreDataClass.swift */; };
+		B25409021EB114510012072D /* Defiance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408EC1EB114510012072D /* Defiance+CoreDataProperties.swift */; };
+		B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408ED1EB114510012072D /* Speech+CoreDataClass.swift */; };
+		B25409041EB114510012072D /* Speech+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408EE1EB114510012072D /* Speech+CoreDataProperties.swift */; };
+		B25409051EB114510012072D /* Tantrums+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408EF1EB114510012072D /* Tantrums+CoreDataClass.swift */; };
+		B25409061EB114510012072D /* Tantrums+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F01EB114510012072D /* Tantrums+CoreDataProperties.swift */; };
+		B25409071EB114510012072D /* Implusivity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F11EB114510012072D /* Implusivity+CoreDataClass.swift */; };
+		B25409081EB114510012072D /* Implusivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F21EB114510012072D /* Implusivity+CoreDataProperties.swift */; };
+		B25409091EB114510012072D /* AttentionSpan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F31EB114510012072D /* AttentionSpan+CoreDataClass.swift */; };
+		B254090A1EB114510012072D /* AttentionSpan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408F41EB114510012072D /* AttentionSpan+CoreDataProperties.swift */; };
+		B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */; };
+		B257979E1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */; };
+		B257979F1EB3BCF800946412 /* SleepLength+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */; };
+		B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */; };
 		B28682711EAE761C002A768A /* angryFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B28682511EAE761C002A768A /* angryFace.jpg */; };
 		B28682721EAE761C002A768A /* anxiety.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682521EAE761C002A768A /* anxiety.png */; };
 		B28682741EAE761C002A768A /* brain.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682541EAE761C002A768A /* brain.png */; };
@@ -64,6 +90,30 @@
 		B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */; };
 		B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204001EA559CB000195BA /* DashboardViewController.swift */; };
 		B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */; };
+		B2CB50B11EB3E20D0075B04E /* Tremors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */; };
+		B2CB50B21EB3E20D0075B04E /* Tremors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */; };
+		B2CB50BF1EB3E66D0075B04E /* Diet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */; };
+		B2CB50C01EB3E66D0075B04E /* Diet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */; };
+		B2CB50C11EB3E66D0075B04E /* StomachAche+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */; };
+		B2CB50C21EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */; };
+		B2CB50C31EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */; };
+		B2CB50C41EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */; };
+		B2CB50C51EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */; };
+		B2CB50C61EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */; };
+		B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */; };
+		B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */; };
+		B2CB50D51EB447C40075B04E /* Scared+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */; };
+		B2CB50D61EB447C40075B04E /* Scared+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */; };
+		B2CB50D71EB447C40075B04E /* Stressed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */; };
+		B2CB50D81EB447C40075B04E /* Stressed+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */; };
+		B2CB50D91EB447C40075B04E /* OK+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */; };
+		B2CB50DA1EB447C40075B04E /* OK+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */; };
+		B2CB50DB1EB447C40075B04E /* Angry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */; };
+		B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */; };
+		B2CB50DD1EB447C40075B04E /* Happy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */; };
+		B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */; };
+		B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */; };
+		B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +176,32 @@
 		B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B217C5171EAA73A100AE6BCD /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anxiety+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anxiety+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408E11EB114510012072D /* Tics+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tics+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408E21EB114510012072D /* Tics+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tics+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408E31EB114510012072D /* Irritability+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Irritability+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408E41EB114510012072D /* Irritability+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Irritability+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408E51EB114510012072D /* Repetition+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repetition+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408E61EB114510012072D /* Repetition+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repetition+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408E71EB114510012072D /* SocialSkills+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SocialSkills+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408E81EB114510012072D /* SocialSkills+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SocialSkills+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408E91EB114510012072D /* SelfHarm+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SelfHarm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408EA1EB114510012072D /* SelfHarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SelfHarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408EB1EB114510012072D /* Defiance+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Defiance+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408EC1EB114510012072D /* Defiance+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Defiance+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408ED1EB114510012072D /* Speech+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Speech+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408EE1EB114510012072D /* Speech+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Speech+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408EF1EB114510012072D /* Tantrums+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tantrums+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408F01EB114510012072D /* Tantrums+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tantrums+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408F11EB114510012072D /* Implusivity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Implusivity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408F21EB114510012072D /* Implusivity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Implusivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25408F31EB114510012072D /* AttentionSpan+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttentionSpan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B25408F41EB114510012072D /* AttentionSpan+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttentionSpan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepQuality+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepQuality+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepLength+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepLength+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B28682511EAE761C002A768A /* angryFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angryFace.jpg; sourceTree = "<group>"; };
 		B28682521EAE761C002A768A /* anxiety.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anxiety.png; sourceTree = "<group>"; };
 		B28682541EAE761C002A768A /* brain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain.png; sourceTree = "<group>"; };
@@ -182,6 +258,30 @@
 		B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		B2A204001EA559CB000195BA /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tremors+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tremors+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StomachAche+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StomachAche+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RespiratoryIssues+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RespiratoryIssues+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diarrhea+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Diarrhea+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Headaches+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scared+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scared+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stressed+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stressed+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OK+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OK+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Angry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Angry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +314,56 @@
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2CB50C91EB447C40075B04E /* Scared+CoreDataClass.swift */,
+				B2CB50CA1EB447C40075B04E /* Scared+CoreDataProperties.swift */,
+				B2CB50CB1EB447C40075B04E /* Stressed+CoreDataClass.swift */,
+				B2CB50CC1EB447C40075B04E /* Stressed+CoreDataProperties.swift */,
+				B2CB50CD1EB447C40075B04E /* OK+CoreDataClass.swift */,
+				B2CB50CE1EB447C40075B04E /* OK+CoreDataProperties.swift */,
+				B2CB50CF1EB447C40075B04E /* Angry+CoreDataClass.swift */,
+				B2CB50D01EB447C40075B04E /* Angry+CoreDataProperties.swift */,
+				B2CB50D11EB447C40075B04E /* Happy+CoreDataClass.swift */,
+				B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */,
+				B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */,
+				B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */,
+				B2CB50B51EB3E66D0075B04E /* Diet+CoreDataClass.swift */,
+				B2CB50B61EB3E66D0075B04E /* Diet+CoreDataProperties.swift */,
+				B2CB50B71EB3E66D0075B04E /* StomachAche+CoreDataClass.swift */,
+				B2CB50B81EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift */,
+				B2CB50B91EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift */,
+				B2CB50BA1EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift */,
+				B2CB50BB1EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift */,
+				B2CB50BC1EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift */,
+				B2CB50BD1EB3E66D0075B04E /* Headaches+CoreDataClass.swift */,
+				B2CB50BE1EB3E66D0075B04E /* Headaches+CoreDataProperties.swift */,
+				B2CB50AF1EB3E20D0075B04E /* Tremors+CoreDataClass.swift */,
+				B2CB50B01EB3E20D0075B04E /* Tremors+CoreDataProperties.swift */,
+				B25797991EB3BCF800946412 /* SleepQuality+CoreDataClass.swift */,
+				B257979A1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift */,
+				B257979B1EB3BCF800946412 /* SleepLength+CoreDataClass.swift */,
+				B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */,
+				B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */,
+				B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */,
+				B25408E11EB114510012072D /* Tics+CoreDataClass.swift */,
+				B25408E21EB114510012072D /* Tics+CoreDataProperties.swift */,
+				B25408E31EB114510012072D /* Irritability+CoreDataClass.swift */,
+				B25408E41EB114510012072D /* Irritability+CoreDataProperties.swift */,
+				B25408E51EB114510012072D /* Repetition+CoreDataClass.swift */,
+				B25408E61EB114510012072D /* Repetition+CoreDataProperties.swift */,
+				B25408E71EB114510012072D /* SocialSkills+CoreDataClass.swift */,
+				B25408E81EB114510012072D /* SocialSkills+CoreDataProperties.swift */,
+				B25408E91EB114510012072D /* SelfHarm+CoreDataClass.swift */,
+				B25408EA1EB114510012072D /* SelfHarm+CoreDataProperties.swift */,
+				B25408EB1EB114510012072D /* Defiance+CoreDataClass.swift */,
+				B25408EC1EB114510012072D /* Defiance+CoreDataProperties.swift */,
+				B25408ED1EB114510012072D /* Speech+CoreDataClass.swift */,
+				B25408EE1EB114510012072D /* Speech+CoreDataProperties.swift */,
+				B25408EF1EB114510012072D /* Tantrums+CoreDataClass.swift */,
+				B25408F01EB114510012072D /* Tantrums+CoreDataProperties.swift */,
+				B25408F11EB114510012072D /* Implusivity+CoreDataClass.swift */,
+				B25408F21EB114510012072D /* Implusivity+CoreDataProperties.swift */,
+				B25408F31EB114510012072D /* AttentionSpan+CoreDataClass.swift */,
+				B25408F41EB114510012072D /* AttentionSpan+CoreDataProperties.swift */,
 				B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */,
 				B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */,
 				B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */,
@@ -531,23 +681,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CB50D71EB447C40075B04E /* Stressed+CoreDataClass.swift in Sources */,
+				B25409041EB114510012072D /* Speech+CoreDataProperties.swift in Sources */,
+				B25409071EB114510012072D /* Implusivity+CoreDataClass.swift in Sources */,
 				B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */,
 				B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */,
+				B25408FC1EB114510012072D /* Repetition+CoreDataProperties.swift in Sources */,
+				B257979F1EB3BCF800946412 /* SleepLength+CoreDataClass.swift in Sources */,
 				B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */,
+				B25409021EB114510012072D /* Defiance+CoreDataProperties.swift in Sources */,
+				B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */,
+				B25408FD1EB114510012072D /* SocialSkills+CoreDataClass.swift in Sources */,
 				B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */,
+				B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */,
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
+				B25408FE1EB114510012072D /* SocialSkills+CoreDataProperties.swift in Sources */,
+				B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */,
+				B2CB50C11EB3E66D0075B04E /* StomachAche+CoreDataClass.swift in Sources */,
+				B25409001EB114510012072D /* SelfHarm+CoreDataProperties.swift in Sources */,
+				B2CB50D81EB447C40075B04E /* Stressed+CoreDataProperties.swift in Sources */,
+				B2CB50C31EB3E66D0075B04E /* RespiratoryIssues+CoreDataClass.swift in Sources */,
+				B2CB50DB1EB447C40075B04E /* Angry+CoreDataClass.swift in Sources */,
 				B2A203A51E9DD4CF000195BA /* ConsentDocument.swift in Sources */,
 				B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */,
+				B25408F81EB114510012072D /* Tics+CoreDataProperties.swift in Sources */,
+				B257979E1EB3BCF800946412 /* SleepQuality+CoreDataProperties.swift in Sources */,
+				B2CB50D91EB447C40075B04E /* OK+CoreDataClass.swift in Sources */,
 				B2A204031EA55C31000195BA /* DashboardCollectionViewCell.swift in Sources */,
+				B2CB50DD1EB447C40075B04E /* Happy+CoreDataClass.swift in Sources */,
+				B25409061EB114510012072D /* Tantrums+CoreDataProperties.swift in Sources */,
+				B257979D1EB3BCF800946412 /* SleepQuality+CoreDataClass.swift in Sources */,
+				B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */,
+				B25408FF1EB114510012072D /* SelfHarm+CoreDataClass.swift in Sources */,
+				B2CB50C41EB3E66D0075B04E /* RespiratoryIssues+CoreDataProperties.swift in Sources */,
+				B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */,
+				B2CB50D51EB447C40075B04E /* Scared+CoreDataClass.swift in Sources */,
+				B25409031EB114510012072D /* Speech+CoreDataClass.swift in Sources */,
+				B25409051EB114510012072D /* Tantrums+CoreDataClass.swift in Sources */,
 				B2A181F41EAD3BCC002FA82F /* GraphViewController.swift in Sources */,
+				B2CB50C21EB3E66D0075B04E /* StomachAche+CoreDataProperties.swift in Sources */,
+				B2CB50C51EB3E66D0075B04E /* Diarrhea+CoreDataClass.swift in Sources */,
+				B25408FA1EB114510012072D /* Irritability+CoreDataProperties.swift in Sources */,
+				B25409091EB114510012072D /* AttentionSpan+CoreDataClass.swift in Sources */,
+				B25408F71EB114510012072D /* Tics+CoreDataClass.swift in Sources */,
+				B2CB50B11EB3E20D0075B04E /* Tremors+CoreDataClass.swift in Sources */,
+				B2CB50BF1EB3E66D0075B04E /* Diet+CoreDataClass.swift in Sources */,
+				B254090A1EB114510012072D /* AttentionSpan+CoreDataProperties.swift in Sources */,
+				B2CB50C61EB3E66D0075B04E /* Diarrhea+CoreDataProperties.swift in Sources */,
+				B25409081EB114510012072D /* Implusivity+CoreDataProperties.swift in Sources */,
+				B2CB50B21EB3E20D0075B04E /* Tremors+CoreDataProperties.swift in Sources */,
 				B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */,
+				B2CB50D61EB447C40075B04E /* Scared+CoreDataProperties.swift in Sources */,
+				B2CB50DA1EB447C40075B04E /* OK+CoreDataProperties.swift in Sources */,
 				B2A181EE1EAA9F38002FA82F /* GraphView.swift in Sources */,
+				B25408FB1EB114510012072D /* Repetition+CoreDataClass.swift in Sources */,
 				B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */,
 				B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */,
+				B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */,
+				B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
+				B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */,
 				B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */,
 				B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */,
 				B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */,
+				B25409011EB114510012072D /* Defiance+CoreDataClass.swift in Sources */,
+				B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */,
+				B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */,
+				B2CB50C01EB3E66D0075B04E /* Diet+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
