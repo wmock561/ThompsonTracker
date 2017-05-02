@@ -1,8 +1,8 @@
 //
-//  Stressed+CoreDataClass.swift
+//  Excited+CoreDataClass.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/28/17.
+//  Created by Will Mock on 5/1/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-public class Stressed: NSManagedObject {
+public class Excited: NSManagedObject {
     var date: Date{
         get{
             return rawDate as Date
@@ -27,7 +27,7 @@ public class Stressed: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Stressed.entity(), insertInto: context)
+        self.init(entity: Excited.entity(), insertInto: context)
         
         self.date = date
         

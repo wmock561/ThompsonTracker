@@ -53,26 +53,34 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         case 2:
             steps = pickSleepQuestions(indexValues: selected)
         case 3:
-            steps = pickEmotionsQuestions(indexValues: selected)
+            pickEmotionsQuestions(indexValues: selected)
+            steps = nil
         default:
             print("Error in didSelectRowAt inital switch")
         }
+    
+        if let steps = steps{
+            
+            let task = ORKOrderedTask(identifier: "SurveyTask", steps: steps)
+            
+            let taskViewController = ORKTaskViewController(task: task, taskRun: nil)
+            
+            taskViewController.delegate = self
+            
+            taskViewController.navigationBar.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+            
+            taskViewController.editButtonItem.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
+            
+            //TODO: figure out how to change tint on researchkit buttons
+            
+            present(taskViewController, animated: true, completion: {
+                selected.removeAll()
+            })
+        }
         
-        let task = ORKOrderedTask(identifier: "SurveyTask", steps: steps)
+        //stop cell highlighting
+        self.tableView.deselectRow(at: indexPath, animated: true)
         
-        let taskViewController = ORKTaskViewController(task: task, taskRun: nil)
-        
-        taskViewController.delegate = self
-        
-        taskViewController.navigationBar.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
-        
-        taskViewController.editButtonItem.tintColor = UIColor(red:0.41, green:0.76, blue:0.83, alpha:1.0)
-        
-        //figure out how to change tint on researchkit buttons
-        
-        present(taskViewController, animated: true, completion: {
-            selected.removeAll()
-        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,72 +121,42 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         for num in indexValues{
             switch num {
             case 0:
-                let questionTestSteptitle = "Hyperactivity"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 1:
-                let questionTestSteptitle = "Impulsivity"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 2:
-                let questionTestSteptitle = "Repetition"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 3:
-                let questionTestSteptitle = "Anxiety"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 4:
                 let questionTestSteptitle = "Attention"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
-            case 5:
-                let questionTestSteptitle = "Irritability"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 6:
-                let questionTestSteptitle = "Self Harm"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 7:
-                let questionTestSteptitle = "Tics"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
-            case 8:
+            case 1:
                 let questionTestSteptitle = "Defiance"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
-            case 9:
-                let questionTestSteptitle = "Social Skills"
+            case 2:
+                let questionTestSteptitle = "Hyperactivity"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
-            case 10:
-                let questionTestSteptitle = "Speech"
+            case 3:
+                let questionTestSteptitle = "Impulsivity"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
                 steps += [testQuestionStep]
                 
-            case 11:
+            case 4:
+                let questionTestSteptitle = "Self Harm"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+            case 5:
+                
+                let questionTestSteptitle = "Repetition"
+                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
+                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
+                steps += [testQuestionStep]
+                
+            case 6:
                 let questionTestSteptitle = "Tantrums"
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
@@ -276,55 +254,117 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     //MARK: - Emotions func
-    func pickEmotionsQuestions(indexValues: [Int]) ->[ORKStep]{
-        var steps = [ORKStep]()
-        
-        let testQuestionFormat: ORKScaleAnswerFormat = ORKScaleAnswerFormat(maximumValue: 5, minimumValue: 1, defaultValue: 1, step: 1)
-        
+    
+    //THIS WILL BE MODIFIED TO NOT LAUNCH A RESEARCHKIT SURVEY
+    func pickEmotionsQuestions(indexValues: [Int]){
         for num in indexValues{
             switch num {
             case 0:
-                let questionTestSteptitle = "Angry"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
+                _ = Excited(date: Date(), value: 7)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Excited activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
                 
             case 1:
-                let questionTestSteptitle = "Happy"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
+                _ = Happy(date: Date(), value: 6)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Happy activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
                 
             case 2:
-                let questionTestSteptitle = "Sad"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
+                _ = Calm(date: Date(), value: 5)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Calm activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
                 
             case 3:
-                let questionTestSteptitle = "Scared"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
+                _ = Anxiety(date: Date(), value: 4)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Anxious activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
                 
             case 4:
-                let questionTestSteptitle = "OK"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
-                
+                _ = Sad(date: Date(), value: 3)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Sad activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
             case 5:
-                let questionTestSteptitle = "Stressed"
-                let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)SliderChoiceQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
-                testQuestionStep.text = "Please rate \(questionTestSteptitle) on a scale of 1-5"
-                steps += [testQuestionStep]
+                _ = Irritability(date: Date(), value: 2)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Irritable activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+            case 6:
+                _ = Angry(date: Date(), value: 1)
+                Model.sharedInstance.saveContext()
+                //Alert
+                let alert = UIAlertController(title: "Saved Data!", message: "Angry activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                }))
+                alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                    (alertAction)-> Void in
+                    self.backSegue()
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
             default:
                 print("ERROR IN SWITCH HERE")
                 print(num)
             }
         }
-        
-        return steps
+    }
+    
+    func backSegue() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
@@ -346,12 +386,36 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = Hyperactivity(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Hyperactivity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+
+            
         }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "ImpulsivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = Implusivity(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
+            
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Implusive activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -360,61 +424,73 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = Repetition(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Repeating actions have been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AnxietySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Anxiety(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "AttentionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = AttentionSpan(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Attention span has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "IrritabilitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Irritability(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Self HarmSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = SelfHarm(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Self harm activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "TicsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Tics(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "DefianceSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = Defiance(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "Social SkillsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = SocialSkills(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "SpeechSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Speech(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Defiant activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -422,6 +498,17 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             
             _ = Tantrums(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
+            
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Tantrum has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -432,12 +519,34 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = StomachAche(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Stomach Ache has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "HeadachesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = Headaches(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
+            
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Headaches have been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -446,12 +555,34 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = Tremors(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Tremors have been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Diet ProblemsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = Diet(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
+            
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Diet has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -460,12 +591,34 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = Diarrhea(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Diarrhea has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Respiratory IssuesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
             _ = RespiratoryIssues(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
+            
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Respiratory Issues has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -476,6 +629,17 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = SleepQuality(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Sleep Quality has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         //FLOAT CASE HERE NEED TO CONFIRM WORKS
@@ -484,51 +648,20 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
             _ = SleepLength(date: Date(), value: answer)
             Model.sharedInstance.saveContext()
             
-        }
-        
-        //Mood Answer Saving
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "HappySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Happy(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "SadSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Sad(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
+            //Alert
+            let alert = UIAlertController(title: "Saved Data!", message: "Sleep Duration has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+            }))
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: {
+                (alertAction)-> Void in
+                self.backSegue()
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }
         
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "StressedSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Stressed(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "ScaredSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Scared(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "AngrySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = Angry(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
-        
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "OKSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
-            
-            _ = OK(date: Date(), value: answer)
-            Model.sharedInstance.saveContext()
-            
-        }
+        //Mood saving done on selection
         
         
     }

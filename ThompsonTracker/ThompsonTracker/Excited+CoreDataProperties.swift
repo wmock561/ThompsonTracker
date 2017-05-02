@@ -1,8 +1,8 @@
 //
-//  Stressed+CoreDataProperties.swift
+//  Excited+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/28/17.
+//  Created by Will Mock on 5/1/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Stressed {
+extension Excited {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Stressed> {
-        return NSFetchRequest<Stressed>(entityName: "Stressed")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Excited> {
+        return NSFetchRequest<Excited>(entityName: "Excited")
     }
 
     @NSManaged public var rawDate: NSDate
