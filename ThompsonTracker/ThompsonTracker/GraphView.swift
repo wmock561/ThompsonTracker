@@ -25,10 +25,18 @@ import UIKit
     
     var counter = 0
     
-    
-    
-    @IBInspectable var startColor: UIColor = UIColor.red
-    @IBInspectable var endColor: UIColor = UIColor.green
+    //#69F6D3 convert to hex for first color
+    //69C1D3
+    var startColor = UIColor(red: CGFloat(0x69)/255
+        ,green: CGFloat(0xF6)/255
+        ,blue: CGFloat(0xD3)/255
+        ,alpha: 1.0)
+    var endColor = UIColor(red: CGFloat(0x69)/255
+        ,green: CGFloat(0xC1)/255
+        ,blue: CGFloat(0xD3)/255
+        ,alpha: 1.0)
+   // @IBInspectable var startColor: UIColor = UIColor.red
+    //@IBInspectable var endColor: UIColor = UIColor.green
     
     var average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
     
@@ -38,8 +46,8 @@ import UIKit
     var showLines   = true
     var showPoints  = true
     // var linesColor  = UIColor.init(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
-    var linesColor = UIColor.black
-    var graphColor  = UIColor.black
+    var linesColor = UIColor.white
+    var graphColor  = UIColor.white
     var labelFont   = UIFont.systemFont(ofSize: 10)
     var labelColor  = UIColor.black
     var xAxisColor  = UIColor.init(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
