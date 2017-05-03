@@ -1,8 +1,8 @@
 //
-//  Speech+CoreDataProperties.swift
+//  Calm+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/26/17.
+//  Created by Will Mock on 5/1/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Speech {
+extension Calm {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Speech> {
-        return NSFetchRequest<Speech>(entityName: "Speech")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Calm> {
+        return NSFetchRequest<Calm>(entityName: "Calm")
     }
 
     @NSManaged public var rawDate: NSDate

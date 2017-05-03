@@ -1,17 +1,16 @@
 //
-//  Speech+CoreDataClass.swift
+//  Calm+CoreDataClass.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/26/17.
+//  Created by Will Mock on 5/1/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-@objc(Speech)
-public class Speech: NSManagedObject {
 
+public class Calm: NSManagedObject {
     var date: Date{
         get{
             return rawDate as Date
@@ -28,7 +27,7 @@ public class Speech: NSManagedObject {
             return nil
         }
         
-        self.init(entity: Speech.entity(), insertInto: context)
+        self.init(entity: Calm.entity(), insertInto: context)
         
         self.date = date
         

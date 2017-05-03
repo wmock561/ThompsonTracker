@@ -73,45 +73,9 @@ class Model {
         }
     }
     
-    func fecthAnxiety() -> [Anxiety]{
-        do {
-            let array = try managedContext?.fetch(Anxiety.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    
-    func fetchTics() -> [Tics]{
-        do {
-            let array = try managedContext?.fetch(Tics.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    
-    func fetchIrritability() -> [Irritability]{
-        do {
-            let array = try managedContext?.fetch(Irritability.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    
     func fetchRepetition() -> [Repetition]{
         do {
             let array = try managedContext?.fetch(Repetition.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    
-    func fetchSocialSkills() -> [SocialSkills]{
-        do {
-            let array = try managedContext?.fetch(SocialSkills.fetchRequest()) ?? []
             return array
         } catch {
             return[]
@@ -130,15 +94,6 @@ class Model {
     func fetchDefiance() -> [Defiance]{
         do {
             let array = try managedContext?.fetch(Defiance.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    
-    func fetchSpeech() -> [Speech]{
-        do {
-            let array = try managedContext?.fetch(Speech.fetchRequest()) ?? []
             return array
         } catch {
             return[]
@@ -250,6 +205,14 @@ class Model {
     
     //MARK: - Mood Fetch Functions
     
+    func fetchExcited() -> [Excited]{
+        do {
+            let array = try managedContext?.fetch(Excited.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
     
     func fetchHappy() -> [Happy]{
         do {
@@ -259,14 +222,25 @@ class Model {
             return[]
         }
     }
-    func fetchAngry() -> [Angry]{
+    
+    func fetchCalm() -> [Irritability]{
         do {
-            let array = try managedContext?.fetch(Angry.fetchRequest()) ?? []
+            let array = try managedContext?.fetch(Irritability.fetchRequest()) ?? []
             return array
         } catch {
             return[]
         }
     }
+    
+    func fecthAnxiety() -> [Anxiety]{
+        do {
+            let array = try managedContext?.fetch(Anxiety.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+    
     func fetchSad() -> [Sad]{
         do {
             let array = try managedContext?.fetch(Sad.fetchRequest()) ?? []
@@ -275,31 +249,25 @@ class Model {
             return[]
         }
     }
-    func fetchScared() -> [Scared]{
+    
+    func fetchIrritability() -> [Irritability]{
         do {
-            let array = try managedContext?.fetch(Scared.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    func fetchStressed() -> [Stressed]{
-        do {
-            let array = try managedContext?.fetch(Stressed.fetchRequest()) ?? []
-            return array
-        } catch {
-            return[]
-        }
-    }
-    func fetchOK() -> [OK]{
-        do {
-            let array = try managedContext?.fetch(OK.fetchRequest()) ?? []
+            let array = try managedContext?.fetch(Irritability.fetchRequest()) ?? []
             return array
         } catch {
             return[]
         }
     }
     
+    func fetchAngry() -> [Angry]{
+        do {
+            let array = try managedContext?.fetch(Angry.fetchRequest()) ?? []
+            return array
+        } catch {
+            return[]
+        }
+    }
+        
     //MARK: - saveContext Function
     func saveContext() {
         guard let context = managedContext,

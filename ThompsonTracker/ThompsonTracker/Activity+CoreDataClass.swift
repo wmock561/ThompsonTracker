@@ -16,10 +16,6 @@ public class Activity: NSManagedObject {
         return self.anxietyActivities?.allObjects as? [Anxiety]
     }
     
-    var ticsActivityArray: [Tics]?{
-        return self.ticsActivities?.allObjects as? [Tics]
-    }
-    
     var irritabilityActivityArray: [Irritability]?{
         return self.irritibilityActivities?.allObjects as? [Irritability]
     }
@@ -28,20 +24,12 @@ public class Activity: NSManagedObject {
         return self.repetitionActivities?.allObjects as? [Repetition]
     }
     
-    var socailSkillsActivityArray: [SocialSkills]?{
-        return self.socialSkillsActivities?.allObjects as? [SocialSkills]
-    }
-    
     var selfHarmActivityArray: [SelfHarm]?{
         return self.selfHarmActivities?.allObjects as? [SelfHarm]
     }
     
     var defianceActivityArray: [Defiance]?{
         return self.defianceActivities?.allObjects as? [Defiance]
-    }
-    
-    var speechActivityArray: [Speech]?{
-        return self.speechActivities?.allObjects as? [Speech]
     }
     
     var tantrumsActivityArray: [Tantrums]?{

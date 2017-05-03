@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 4/28/17.
+//  Created by Will Mock on 5/1/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -16,32 +16,45 @@ extension Activity {
         return NSFetchRequest<Activity>(entityName: "Activity")
     }
 
+    @NSManaged public var angryActivities: NSSet?
     @NSManaged public var anxietyActivities: NSSet?
     @NSManaged public var attentionSpanActivities: NSSet?
     @NSManaged public var defianceActivities: NSSet?
     @NSManaged public var diarrheaActivities: NSSet?
     @NSManaged public var dietActivities: NSSet?
+    @NSManaged public var happyActivities: NSSet?
     @NSManaged public var headacheActivities: NSSet?
     @NSManaged public var hyperActivities: NSSet?
     @NSManaged public var implusiveActivities: NSSet?
     @NSManaged public var irritibilityActivities: NSSet?
     @NSManaged public var repetitionActivities: NSSet?
     @NSManaged public var respritoryActivities: NSSet?
+    @NSManaged public var sadActivities: NSSet?
     @NSManaged public var selfHarmActivities: NSSet?
     @NSManaged public var sleepLengthActivities: NSSet?
     @NSManaged public var sleepQualityActivities: NSSet?
-    @NSManaged public var socialSkillsActivities: NSSet?
-    @NSManaged public var speechActivities: NSSet?
     @NSManaged public var stomachAcheActivities: NSSet?
     @NSManaged public var tantrumActivities: NSSet?
-    @NSManaged public var ticsActivities: NSSet?
     @NSManaged public var tremorActivities: NSSet?
-    @NSManaged public var angryActivities: NSSet?
-    @NSManaged public var happyActivities: NSSet?
-    @NSManaged public var okActivities: NSSet?
-    @NSManaged public var sadActivities: NSSet?
-    @NSManaged public var scaredActivities: NSSet?
-    @NSManaged public var stressedActivities: NSSet?
+    @NSManaged public var excitedActivities: NSSet?
+    @NSManaged public var calmActivities: NSSet?
+
+}
+
+// MARK: Generated accessors for angryActivities
+extension Activity {
+
+    @objc(addAngryActivitiesObject:)
+    @NSManaged public func addToAngryActivities(_ value: Angry)
+
+    @objc(removeAngryActivitiesObject:)
+    @NSManaged public func removeFromAngryActivities(_ value: Angry)
+
+    @objc(addAngryActivities:)
+    @NSManaged public func addToAngryActivities(_ values: NSSet)
+
+    @objc(removeAngryActivities:)
+    @NSManaged public func removeFromAngryActivities(_ values: NSSet)
 
 }
 
@@ -127,6 +140,23 @@ extension Activity {
 
     @objc(removeDietActivities:)
     @NSManaged public func removeFromDietActivities(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for happyActivities
+extension Activity {
+
+    @objc(addHappyActivitiesObject:)
+    @NSManaged public func addToHappyActivities(_ value: Happy)
+
+    @objc(removeHappyActivitiesObject:)
+    @NSManaged public func removeFromHappyActivities(_ value: Happy)
+
+    @objc(addHappyActivities:)
+    @NSManaged public func addToHappyActivities(_ values: NSSet)
+
+    @objc(removeHappyActivities:)
+    @NSManaged public func removeFromHappyActivities(_ values: NSSet)
 
 }
 
@@ -232,6 +262,23 @@ extension Activity {
 
 }
 
+// MARK: Generated accessors for sadActivities
+extension Activity {
+
+    @objc(addSadActivitiesObject:)
+    @NSManaged public func addToSadActivities(_ value: Sad)
+
+    @objc(removeSadActivitiesObject:)
+    @NSManaged public func removeFromSadActivities(_ value: Sad)
+
+    @objc(addSadActivities:)
+    @NSManaged public func addToSadActivities(_ values: NSSet)
+
+    @objc(removeSadActivities:)
+    @NSManaged public func removeFromSadActivities(_ values: NSSet)
+
+}
+
 // MARK: Generated accessors for selfHarmActivities
 extension Activity {
 
@@ -283,40 +330,6 @@ extension Activity {
 
 }
 
-// MARK: Generated accessors for socialSkillsActivities
-extension Activity {
-
-    @objc(addSocialSkillsActivitiesObject:)
-    @NSManaged public func addToSocialSkillsActivities(_ value: SocialSkills)
-
-    @objc(removeSocialSkillsActivitiesObject:)
-    @NSManaged public func removeFromSocialSkillsActivities(_ value: SocialSkills)
-
-    @objc(addSocialSkillsActivities:)
-    @NSManaged public func addToSocialSkillsActivities(_ values: NSSet)
-
-    @objc(removeSocialSkillsActivities:)
-    @NSManaged public func removeFromSocialSkillsActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for speechActivities
-extension Activity {
-
-    @objc(addSpeechActivitiesObject:)
-    @NSManaged public func addToSpeechActivities(_ value: Speech)
-
-    @objc(removeSpeechActivitiesObject:)
-    @NSManaged public func removeFromSpeechActivities(_ value: Speech)
-
-    @objc(addSpeechActivities:)
-    @NSManaged public func addToSpeechActivities(_ values: NSSet)
-
-    @objc(removeSpeechActivities:)
-    @NSManaged public func removeFromSpeechActivities(_ values: NSSet)
-
-}
-
 // MARK: Generated accessors for stomachAcheActivities
 extension Activity {
 
@@ -351,23 +364,6 @@ extension Activity {
 
 }
 
-// MARK: Generated accessors for ticsActivities
-extension Activity {
-
-    @objc(addTicsActivitiesObject:)
-    @NSManaged public func addToTicsActivities(_ value: Tics)
-
-    @objc(removeTicsActivitiesObject:)
-    @NSManaged public func removeFromTicsActivities(_ value: Tics)
-
-    @objc(addTicsActivities:)
-    @NSManaged public func addToTicsActivities(_ values: NSSet)
-
-    @objc(removeTicsActivities:)
-    @NSManaged public func removeFromTicsActivities(_ values: NSSet)
-
-}
-
 // MARK: Generated accessors for tremorActivities
 extension Activity {
 
@@ -385,104 +381,36 @@ extension Activity {
 
 }
 
-// MARK: Generated accessors for angryActivities
+// MARK: Generated accessors for excitedActivities
 extension Activity {
 
-    @objc(addAngryActivitiesObject:)
-    @NSManaged public func addToAngryActivities(_ value: Angry)
+    @objc(addExcitedActivitiesObject:)
+    @NSManaged public func addToExcitedActivities(_ value: Excited)
 
-    @objc(removeAngryActivitiesObject:)
-    @NSManaged public func removeFromAngryActivities(_ value: Angry)
+    @objc(removeExcitedActivitiesObject:)
+    @NSManaged public func removeFromExcitedActivities(_ value: Excited)
 
-    @objc(addAngryActivities:)
-    @NSManaged public func addToAngryActivities(_ values: NSSet)
+    @objc(addExcitedActivities:)
+    @NSManaged public func addToExcitedActivities(_ values: NSSet)
 
-    @objc(removeAngryActivities:)
-    @NSManaged public func removeFromAngryActivities(_ values: NSSet)
+    @objc(removeExcitedActivities:)
+    @NSManaged public func removeFromExcitedActivities(_ values: NSSet)
 
 }
 
-// MARK: Generated accessors for happyActivities
+// MARK: Generated accessors for calmActivities
 extension Activity {
 
-    @objc(addHappyActivitiesObject:)
-    @NSManaged public func addToHappyActivities(_ value: Happy)
+    @objc(addCalmActivitiesObject:)
+    @NSManaged public func addToCalmActivities(_ value: Calm)
 
-    @objc(removeHappyActivitiesObject:)
-    @NSManaged public func removeFromHappyActivities(_ value: Happy)
+    @objc(removeCalmActivitiesObject:)
+    @NSManaged public func removeFromCalmActivities(_ value: Calm)
 
-    @objc(addHappyActivities:)
-    @NSManaged public func addToHappyActivities(_ values: NSSet)
+    @objc(addCalmActivities:)
+    @NSManaged public func addToCalmActivities(_ values: NSSet)
 
-    @objc(removeHappyActivities:)
-    @NSManaged public func removeFromHappyActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for okActivities
-extension Activity {
-
-    @objc(addOkActivitiesObject:)
-    @NSManaged public func addToOkActivities(_ value: OK)
-
-    @objc(removeOkActivitiesObject:)
-    @NSManaged public func removeFromOkActivities(_ value: OK)
-
-    @objc(addOkActivities:)
-    @NSManaged public func addToOkActivities(_ values: NSSet)
-
-    @objc(removeOkActivities:)
-    @NSManaged public func removeFromOkActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for sadActivities
-extension Activity {
-
-    @objc(addSadActivitiesObject:)
-    @NSManaged public func addToSadActivities(_ value: Sad)
-
-    @objc(removeSadActivitiesObject:)
-    @NSManaged public func removeFromSadActivities(_ value: Sad)
-
-    @objc(addSadActivities:)
-    @NSManaged public func addToSadActivities(_ values: NSSet)
-
-    @objc(removeSadActivities:)
-    @NSManaged public func removeFromSadActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for scaredActivities
-extension Activity {
-
-    @objc(addScaredActivitiesObject:)
-    @NSManaged public func addToScaredActivities(_ value: Scared)
-
-    @objc(removeScaredActivitiesObject:)
-    @NSManaged public func removeFromScaredActivities(_ value: Scared)
-
-    @objc(addScaredActivities:)
-    @NSManaged public func addToScaredActivities(_ values: NSSet)
-
-    @objc(removeScaredActivities:)
-    @NSManaged public func removeFromScaredActivities(_ values: NSSet)
-
-}
-
-// MARK: Generated accessors for stressedActivities
-extension Activity {
-
-    @objc(addStressedActivitiesObject:)
-    @NSManaged public func addToStressedActivities(_ value: Stressed)
-
-    @objc(removeStressedActivitiesObject:)
-    @NSManaged public func removeFromStressedActivities(_ value: Stressed)
-
-    @objc(addStressedActivities:)
-    @NSManaged public func addToStressedActivities(_ values: NSSet)
-
-    @objc(removeStressedActivities:)
-    @NSManaged public func removeFromStressedActivities(_ values: NSSet)
+    @objc(removeCalmActivities:)
+    @NSManaged public func removeFromCalmActivities(_ values: NSSet)
 
 }
