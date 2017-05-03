@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="94b-t2-dKH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="94b-t2-dKH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAl-SB-vFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="1519" y="-367"/>
         </scene>
         <!--Graphs-->
         <scene sceneID="SZ5-9P-nP5">
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxb-hK-N7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458.4000000000001" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="2393" y="-367"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="Nyy-fB-jOq">
@@ -245,6 +245,12 @@
                                     <constraint firstAttribute="width" secondItem="y3M-4Z-55u" secondAttribute="height" multiplier="1:1" id="iCX-PL-pJD"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-xY-I9d">
+                                <rect key="frame" x="16" y="162" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -252,6 +258,7 @@
                             <constraint firstItem="cCp-Uh-BOr" firstAttribute="top" secondItem="Cro-BH-Ahy" secondAttribute="bottom" constant="8" id="Fiq-rc-egP"/>
                             <constraint firstItem="iQM-4h-LDk" firstAttribute="top" secondItem="r5c-Pa-8ug" secondAttribute="bottom" id="KJj-r4-JbD"/>
                             <constraint firstItem="r5c-Pa-8ug" firstAttribute="top" secondItem="1eq-6E-evh" secondAttribute="bottom" constant="150" id="LBU-yc-UcC"/>
+                            <constraint firstItem="NYF-xY-I9d" firstAttribute="top" secondItem="1eq-6E-evh" secondAttribute="bottom" constant="98" id="NBk-lJ-huf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y3M-4Z-55u" secondAttribute="trailing" constant="130" id="VYS-OK-Tg2"/>
                             <constraint firstItem="Cro-BH-Ahy" firstAttribute="top" secondItem="1eq-6E-evh" secondAttribute="bottom" constant="8" id="Xzl-ej-yCQ"/>
                             <constraint firstItem="y3M-4Z-55u" firstAttribute="leading" secondItem="qkf-6h-Vz7" secondAttribute="leadingMargin" constant="130" id="b0q-jQ-BMd"/>
@@ -261,6 +268,7 @@
                             <constraint firstItem="y3M-4Z-55u" firstAttribute="centerX" secondItem="qkf-6h-Vz7" secondAttribute="centerX" id="sWA-25-jdj"/>
                             <constraint firstItem="r5c-Pa-8ug" firstAttribute="top" secondItem="y3M-4Z-55u" secondAttribute="bottom" id="su7-5W-Yj0"/>
                             <constraint firstItem="Cro-BH-Ahy" firstAttribute="centerX" secondItem="qkf-6h-Vz7" secondAttribute="centerX" id="t6R-mS-Byc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NYF-xY-I9d" secondAttribute="leading" id="wwc-eJ-aG7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" id="onm-vF-WiU"/>
@@ -268,6 +276,7 @@
                     <connections>
                         <outlet property="dashboardCollectionView" destination="r5c-Pa-8ug" id="skc-ud-MmU"/>
                         <outlet property="dateLabel" destination="cCp-Uh-BOr" id="xD7-Cx-68U"/>
+                        <outlet property="patientNameLabel" destination="NYF-xY-I9d" id="iL3-Yo-NHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEg-hB-3HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,23 +362,6 @@
             <point key="canvasLocation" x="2392.8000000000002" y="393.55322338830587"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="y54-uY-9AE">
-            <objects>
-                <navigationController id="ggm-Uq-Cwe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear.png" id="9xe-KX-ck1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6hx-V7-qgy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BY1-IU-a2W" kind="relationship" relationship="rootViewController" id="lLB-Vw-Try"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Npq-3L-gjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-235" y="1181"/>
-        </scene>
-        <!--Settings-->
         <scene sceneID="wbP-2p-WLc">
             <objects>
                 <viewController id="BY1-IU-a2W" sceneMemberID="viewController">
@@ -380,14 +372,27 @@
                     <view key="view" contentMode="scaleToFill" id="D4V-yE-4F3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-BM-TeG">
+                                <rect key="frame" x="116" y="318.5" width="144" height="30"/>
+                                <state key="normal" title="Return to Patient List"/>
+                                <connections>
+                                    <segue destination="94b-t2-dKH" kind="presentation" modalTransitionStyle="flipHorizontal" id="ZaE-Ab-A5L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wZ8-BM-TeG" firstAttribute="centerY" secondItem="D4V-yE-4F3" secondAttribute="centerY" id="7bn-Sq-mDu"/>
+                            <constraint firstItem="wZ8-BM-TeG" firstAttribute="centerX" secondItem="D4V-yE-4F3" secondAttribute="centerX" id="JjR-ZP-DcE"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="ROH-Gb-GeK"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear.png" id="ROH-Gb-GeK"/>
                     <navigationItem key="navigationItem" id="YJM-4n-iwy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHO-tE-Bu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="1181"/>
+            <point key="canvasLocation" x="-234" y="1262"/>
         </scene>
         <!--Add Patient View Controller-->
         <scene sceneID="250-EV-9Zp">
@@ -633,7 +638,7 @@
                                             <outlet property="patientImage" destination="bFf-lu-IPr" id="Y6D-hB-8tl"/>
                                             <outlet property="patientNickname" destination="VBK-qX-fGk" id="L9P-LG-w6x"/>
                                             <outlet property="patientUpdatedDate" destination="cTa-zh-U8u" id="TM8-YN-EGN"/>
-                                            <segue destination="9D3-lH-w8E" kind="show" id="CM8-Ae-dVu"/>
+                                            <segue destination="9D3-lH-w8E" kind="presentation" id="bTp-cW-Jta"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -654,9 +659,7 @@
                     <navigationItem key="navigationItem" title="Patient List" id="lKO-iw-iSt">
                         <barButtonItem key="rightBarButtonItem" title="Add Patient" id="jHV-yN-nLO">
                             <connections>
-                                <segue destination="Tqd-8c-H7o" kind="popoverPresentation" popoverAnchorBarButtonItem="jHV-yN-nLO" id="w8W-Lg-05V">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="2KW-9s-lZA" kind="show" id="Ud5-Ck-EnT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -666,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vf-1F-HIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303.2" y="393.55322338830587"/>
+            <point key="canvasLocation" x="-1303" y="394"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sLI-UE-Ndr">
@@ -681,7 +684,7 @@
                     <connections>
                         <segue destination="6tE-xS-u4i" kind="relationship" relationship="viewControllers" id="MSW-T0-8JV"/>
                         <segue destination="nPF-8o-HLu" kind="relationship" relationship="viewControllers" id="VX9-BS-oiN"/>
-                        <segue destination="ggm-Uq-Cwe" kind="relationship" relationship="viewControllers" id="egO-Eh-31u"/>
+                        <segue destination="BY1-IU-a2W" kind="relationship" relationship="viewControllers" id="gtc-UG-sWS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSq-TK-gK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -704,25 +707,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cm5-kr-w3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2322" y="394"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jMX-Cm-pfz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tqd-8c-H7o" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KAw-90-f98">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2KW-9s-lZA" kind="relationship" relationship="rootViewController" id="phD-ms-0Sx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LjJ-hF-QHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1303.2" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="-2268" y="394"/>
         </scene>
     </scenes>
     <resources>

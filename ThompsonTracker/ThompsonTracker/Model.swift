@@ -53,9 +53,9 @@ class Model {
     }
     
     
-    func fetchActivity() -> [Activity] {
+    func fetchChild() -> [Child] {
         do {
-            let array = try managedContext?.fetch(Activity.fetchRequest()) ?? []
+            let array = try managedContext?.fetch(Child.fetchRequest()) ?? []
             return array
         } catch {
             return[]

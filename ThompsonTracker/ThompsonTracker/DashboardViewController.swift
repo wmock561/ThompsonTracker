@@ -15,10 +15,14 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var patientNameLabel: UILabel!
     
-    @IBOutlet weak var patientPhoto: UIImageView!
-    @IBOutlet weak var patientNickname: UILabel!
-    @IBOutlet weak var patientFullname: UILabel!
+    var patientName: String?
+    
+    
+//    @IBOutlet weak var patientPhoto: UIImageView!
+//    @IBOutlet weak var patientNickname: UILabel!
+//    @IBOutlet weak var patientFullname: UILabel!
     
     let cellTitles = ["Behavior", "Health", "Sleep", "Mood"]
     let cellImages = [#imageLiteral(resourceName: "behaviorHead.png"), #imageLiteral(resourceName: "health problems.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "mood.png")]
@@ -45,7 +49,13 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.title = "Dashboard"
+        
         self.title = "Dashboard"
+        
+        if let name = patientName{
+            self.patientNameLabel.text = name
+        }
         
         //changing custom color for tabBarController
         

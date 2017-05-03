@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */; };
-		71467AB31EB7AA5E00481257 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71467AB01EB7AA5000481257 /* ResearchKit.framework */; };
-		71467AB41EB7AA5E00481257 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71467AB01EB7AA5000481257 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
 		719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832251EB1126C002BC697 /* PatientTableViewCell.swift */; };
-		71CB8BEB1EB7B2600023A04E /* selfharm.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CB8BEA1EB7B2600023A04E /* selfharm.png */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
 		B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */; };
 		B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */; };
@@ -106,31 +103,41 @@
 		B2CB50DE1EB447C40075B04E /* Happy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */; };
 		B2CB50DF1EB447C40075B04E /* Sad+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */; };
 		B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */; };
+		B2CB51291EB7AD0D0075B04E /* behaviors@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51101EB7AD0D0075B04E /* behaviors@3x.png */; };
+		B2CB512A1EB7AD0D0075B04E /* Defiant@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51111EB7AD0D0075B04E /* Defiant@3x.png */; };
+		B2CB512B1EB7AD0D0075B04E /* Hyperactivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51121EB7AD0D0075B04E /* Hyperactivity@3x.png */; };
+		B2CB512C1EB7AD0D0075B04E /* impulsivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51131EB7AD0D0075B04E /* impulsivity@3x.png */; };
+		B2CB512D1EB7AD0D0075B04E /* self harm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51141EB7AD0D0075B04E /* self harm@3x.png */; };
+		B2CB512E1EB7AD0D0075B04E /* short attention span@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51151EB7AD0D0075B04E /* short attention span@3x.png */; };
+		B2CB512F1EB7AD0D0075B04E /* Tantrums@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51161EB7AD0D0075B04E /* Tantrums@3x.png */; };
+		B2CB51301EB7AD0D0075B04E /* behaviorHead@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51171EB7AD0D0075B04E /* behaviorHead@3x.png */; };
+		B2CB51311EB7AD0D0075B04E /* Diarrhea@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51191EB7AD0D0075B04E /* Diarrhea@3x.png */; };
+		B2CB51321EB7AD0D0075B04E /* Diet Problems@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB511A1EB7AD0D0075B04E /* Diet Problems@3x.png */; };
+		B2CB51331EB7AD0D0075B04E /* Headaches@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB511B1EB7AD0D0075B04E /* Headaches@3x.png */; };
+		B2CB51341EB7AD0D0075B04E /* Seizures@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB511C1EB7AD0D0075B04E /* Seizures@3x.png */; };
+		B2CB51351EB7AD0D0075B04E /* Stomach Ache@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB511D1EB7AD0D0075B04E /* Stomach Ache@3x.png */; };
+		B2CB51361EB7AD0D0075B04E /* health problems@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB511E1EB7AD0D0075B04E /* health problems@3x.png */; };
+		B2CB51371EB7AD0D0075B04E /* Angry.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51201EB7AD0D0075B04E /* Angry.png */; };
+		B2CB51381EB7AD0D0075B04E /* Anxious.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51211EB7AD0D0075B04E /* Anxious.png */; };
+		B2CB51391EB7AD0D0075B04E /* Calm.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51221EB7AD0D0075B04E /* Calm.png */; };
+		B2CB513A1EB7AD0D0075B04E /* Excited.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51231EB7AD0D0075B04E /* Excited.png */; };
+		B2CB513B1EB7AD0D0075B04E /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51241EB7AD0D0075B04E /* happy.png */; };
+		B2CB513C1EB7AD0D0075B04E /* irritable.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51251EB7AD0D0075B04E /* irritable.png */; };
+		B2CB513D1EB7AD0D0075B04E /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51261EB7AD0D0075B04E /* sad.png */; };
+		B2CB513E1EB7AD0D0075B04E /* mood.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51271EB7AD0D0075B04E /* mood.png */; };
+		B2CB513F1EB7AD0D0075B04E /* sleep@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CB51281EB7AD0D0075B04E /* sleep@3x.png */; };
+		B2CB51461EB7F0FB0075B04E /* Calm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB51421EB7F0FB0075B04E /* Calm+CoreDataClass.swift */; };
+		B2CB51471EB7F0FB0075B04E /* Calm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB51431EB7F0FB0075B04E /* Calm+CoreDataProperties.swift */; };
+		B2CB51481EB7F0FB0075B04E /* Excited+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB51441EB7F0FB0075B04E /* Excited+CoreDataClass.swift */; };
+		B2CB51491EB7F0FB0075B04E /* Excited+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CB51451EB7F0FB0075B04E /* Excited+CoreDataProperties.swift */; };
+		B2D194541EB9972A00230A03 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CB51581EB997010075B04E /* ResearchKit.framework */; };
+		B2D194551EB9972A00230A03 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CB51581EB997010075B04E /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2D1945A1EB9998000230A03 /* Child+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D194581EB9998000230A03 /* Child+CoreDataClass.swift */; };
+		B2D1945B1EB9998000230A03 /* Child+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D194591EB9998000230A03 /* Child+CoreDataProperties.swift */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		71467AAF1EB7AA5000481257 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		71467AB11EB7AA5000481257 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		71467AB51EB7AA5E00481257 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
 		B2A203791E9DD2EC000195BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B2A203591E9DD2EC000195BA /* Project object */;
@@ -145,6 +152,27 @@
 			remoteGlobalIDString = B2A203601E9DD2EC000195BA;
 			remoteInfo = ThompsonTracker;
 		};
+		B2CB51571EB997010075B04E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		B2CB51591EB997010075B04E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		B2D194561EB9972A00230A03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -154,7 +182,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				71467AB41EB7AA5E00481257 /* ResearchKit.framework in Embed Frameworks */,
+				B2D194551EB9972A00230A03 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,10 +191,8 @@
 
 /* Begin PBXFileReference section */
 		710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
-		71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
-		71CB8BEA1EB7B2600023A04E /* selfharm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selfharm.png; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -266,6 +292,36 @@
 		B2CB50D21EB447C40075B04E /* Happy+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Happy+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2CB50D31EB447C40075B04E /* Sad+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2CB50D41EB447C40075B04E /* Sad+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sad+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB51101EB7AD0D0075B04E /* behaviors@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "behaviors@3x.png"; sourceTree = "<group>"; };
+		B2CB51111EB7AD0D0075B04E /* Defiant@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Defiant@3x.png"; sourceTree = "<group>"; };
+		B2CB51121EB7AD0D0075B04E /* Hyperactivity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hyperactivity@3x.png"; sourceTree = "<group>"; };
+		B2CB51131EB7AD0D0075B04E /* impulsivity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "impulsivity@3x.png"; sourceTree = "<group>"; };
+		B2CB51141EB7AD0D0075B04E /* self harm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "self harm@3x.png"; sourceTree = "<group>"; };
+		B2CB51151EB7AD0D0075B04E /* short attention span@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "short attention span@3x.png"; sourceTree = "<group>"; };
+		B2CB51161EB7AD0D0075B04E /* Tantrums@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tantrums@3x.png"; sourceTree = "<group>"; };
+		B2CB51171EB7AD0D0075B04E /* behaviorHead@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "behaviorHead@3x.png"; sourceTree = "<group>"; };
+		B2CB51191EB7AD0D0075B04E /* Diarrhea@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Diarrhea@3x.png"; sourceTree = "<group>"; };
+		B2CB511A1EB7AD0D0075B04E /* Diet Problems@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Diet Problems@3x.png"; sourceTree = "<group>"; };
+		B2CB511B1EB7AD0D0075B04E /* Headaches@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Headaches@3x.png"; sourceTree = "<group>"; };
+		B2CB511C1EB7AD0D0075B04E /* Seizures@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seizures@3x.png"; sourceTree = "<group>"; };
+		B2CB511D1EB7AD0D0075B04E /* Stomach Ache@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stomach Ache@3x.png"; sourceTree = "<group>"; };
+		B2CB511E1EB7AD0D0075B04E /* health problems@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health problems@3x.png"; sourceTree = "<group>"; };
+		B2CB51201EB7AD0D0075B04E /* Angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Angry.png; sourceTree = "<group>"; };
+		B2CB51211EB7AD0D0075B04E /* Anxious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anxious.png; sourceTree = "<group>"; };
+		B2CB51221EB7AD0D0075B04E /* Calm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calm.png; sourceTree = "<group>"; };
+		B2CB51231EB7AD0D0075B04E /* Excited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Excited.png; sourceTree = "<group>"; };
+		B2CB51241EB7AD0D0075B04E /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		B2CB51251EB7AD0D0075B04E /* irritable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = irritable.png; sourceTree = "<group>"; };
+		B2CB51261EB7AD0D0075B04E /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		B2CB51271EB7AD0D0075B04E /* mood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood.png; sourceTree = "<group>"; };
+		B2CB51281EB7AD0D0075B04E /* sleep@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sleep@3x.png"; sourceTree = "<group>"; };
+		B2CB51421EB7F0FB0075B04E /* Calm+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB51431EB7F0FB0075B04E /* Calm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB51441EB7F0FB0075B04E /* Excited+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Excited+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2CB51451EB7F0FB0075B04E /* Excited+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Excited+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		B2D194581EB9998000230A03 /* Child+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2D194591EB9998000230A03 /* Child+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,7 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71467AB31EB7AA5E00481257 /* ResearchKit.framework in Frameworks */,
+				B2D194541EB9972A00230A03 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,18 +351,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		71467AAA1EB7AA5000481257 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				71467AB01EB7AA5000481257 /* ResearchKit.framework */,
-				71467AB21EB7AA5000481257 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B217C50A1EA97F7900AE6BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2D194581EB9998000230A03 /* Child+CoreDataClass.swift */,
+				B2D194591EB9998000230A03 /* Child+CoreDataProperties.swift */,
 				B2CB51421EB7F0FB0075B04E /* Calm+CoreDataClass.swift */,
 				B2CB51431EB7F0FB0075B04E /* Calm+CoreDataProperties.swift */,
 				B2CB51441EB7F0FB0075B04E /* Excited+CoreDataClass.swift */,
@@ -361,7 +410,13 @@
 		B28682101EAE741A002A768A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				71CB8BEA1EB7B2600023A04E /* selfharm.png */,
+				B2CB510F1EB7AD0D0075B04E /* behaviors */,
+				B2CB51171EB7AD0D0075B04E /* behaviorHead@3x.png */,
+				B2CB51181EB7AD0D0075B04E /* health problems */,
+				B2CB511E1EB7AD0D0075B04E /* health problems@3x.png */,
+				B2CB511F1EB7AD0D0075B04E /* mood */,
+				B2CB51271EB7AD0D0075B04E /* mood.png */,
+				B2CB51281EB7AD0D0075B04E /* sleep@3x.png */,
 				B29022D91EAFD9050008391E /* barButtonIcon.png */,
 				B29022D51EAFD7C90008391E /* dashboard.png */,
 				B29022D71EAFD8020008391E /* bargraph.png */,
@@ -423,7 +478,7 @@
 		B2A203631E9DD2EC000195BA /* ThompsonTracker */ = {
 			isa = PBXGroup;
 			children = (
-				71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */,
+				B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */,
 				B28682101EAE741A002A768A /* Images */,
 				B217C50A1EA97F7900AE6BCD /* Model */,
 				B2A203681E9DD2EC000195BA /* Main.storyboard */,
@@ -431,12 +486,12 @@
 				719832231EB1125E002BC697 /* PatientViewController.swift */,
 				719832251EB1126C002BC697 /* PatientTableViewCell.swift */,
 				710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */,
-				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
-				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
 				B2A204001EA559CB000195BA /* DashboardViewController.swift */,
 				B2A204021EA55C31000195BA /* DashboardCollectionViewCell.swift */,
 				B2A203BC1EA477E9000195BA /* DashDetailViewController.swift */,
 				B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */,
+				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
+				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
 				B2A2036E1E9DD2EC000195BA /* Assets.xcassets */,
 				B2A203701E9DD2EC000195BA /* LaunchScreen.storyboard */,
 				B2A203731E9DD2EC000195BA /* Info.plist */,
@@ -467,6 +522,55 @@
 			path = ThompsonTrackerUITests;
 			sourceTree = "<group>";
 		};
+		B2CB510F1EB7AD0D0075B04E /* behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB51101EB7AD0D0075B04E /* behaviors@3x.png */,
+				B2CB51111EB7AD0D0075B04E /* Defiant@3x.png */,
+				B2CB51121EB7AD0D0075B04E /* Hyperactivity@3x.png */,
+				B2CB51131EB7AD0D0075B04E /* impulsivity@3x.png */,
+				B2CB51141EB7AD0D0075B04E /* self harm@3x.png */,
+				B2CB51151EB7AD0D0075B04E /* short attention span@3x.png */,
+				B2CB51161EB7AD0D0075B04E /* Tantrums@3x.png */,
+			);
+			path = behaviors;
+			sourceTree = "<group>";
+		};
+		B2CB51181EB7AD0D0075B04E /* health problems */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB51191EB7AD0D0075B04E /* Diarrhea@3x.png */,
+				B2CB511A1EB7AD0D0075B04E /* Diet Problems@3x.png */,
+				B2CB511B1EB7AD0D0075B04E /* Headaches@3x.png */,
+				B2CB511C1EB7AD0D0075B04E /* Seizures@3x.png */,
+				B2CB511D1EB7AD0D0075B04E /* Stomach Ache@3x.png */,
+			);
+			path = "health problems";
+			sourceTree = "<group>";
+		};
+		B2CB511F1EB7AD0D0075B04E /* mood */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB51201EB7AD0D0075B04E /* Angry.png */,
+				B2CB51211EB7AD0D0075B04E /* Anxious.png */,
+				B2CB51221EB7AD0D0075B04E /* Calm.png */,
+				B2CB51231EB7AD0D0075B04E /* Excited.png */,
+				B2CB51241EB7AD0D0075B04E /* happy.png */,
+				B2CB51251EB7AD0D0075B04E /* irritable.png */,
+				B2CB51261EB7AD0D0075B04E /* sad.png */,
+			);
+			path = mood;
+			sourceTree = "<group>";
+		};
+		B2CB51521EB997000075B04E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB51581EB997010075B04E /* ResearchKit.framework */,
+				B2CB515A1EB997010075B04E /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,7 +586,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				71467AB61EB7AA5E00481257 /* PBXTargetDependency */,
+				B2D194571EB9972A00230A03 /* PBXTargetDependency */,
 			);
 			name = ThompsonTracker;
 			productName = ThompsonTracker;
@@ -537,7 +641,7 @@
 				TargetAttributes = {
 					B2A203601E9DD2EC000195BA = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 7S69HUYJ5S;
+						DevelopmentTeam = 4F48D7BT8E;
 						ProvisioningStyle = Automatic;
 					};
 					B2A203771E9DD2EC000195BA = {
@@ -565,8 +669,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 71467AAA1EB7AA5000481257 /* Products */;
-					ProjectRef = 71467AA91EB7AA5000481257 /* ResearchKit.xcodeproj */;
+					ProductGroup = B2CB51521EB997000075B04E /* Products */;
+					ProjectRef = B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -579,18 +683,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		71467AB01EB7AA5000481257 /* ResearchKit.framework */ = {
+		B2CB51581EB997010075B04E /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = 71467AAF1EB7AA5000481257 /* PBXContainerItemProxy */;
+			remoteRef = B2CB51571EB997010075B04E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		71467AB21EB7AA5000481257 /* ResearchKitTests.xctest */ = {
+		B2CB515A1EB997010075B04E /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = 71467AB11EB7AA5000481257 /* PBXContainerItemProxy */;
+			remoteRef = B2CB51591EB997010075B04E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -623,7 +727,8 @@
 				B286828C1EAE761C002A768A /* speech.png in Resources */,
 				B28682721EAE761C002A768A /* anxiety.png in Resources */,
 				B28682841EAE761C002A768A /* mentalHealth.png in Resources */,
-				71CB8BEB1EB7B2600023A04E /* selfharm.png in Resources */,
+				B2CB512B1EB7AD0D0075B04E /* Hyperactivity@3x.png in Resources */,
+				B2CB513A1EB7AD0D0075B04E /* Excited.png in Resources */,
 				B28682821EAE761C002A768A /* lightning.png in Resources */,
 				B2CB51311EB7AD0D0075B04E /* Diarrhea@3x.png in Resources */,
 				B2CB51331EB7AD0D0075B04E /* Headaches@3x.png in Resources */,
@@ -722,6 +827,7 @@
 				B25408FA1EB114510012072D /* Irritability+CoreDataProperties.swift in Sources */,
 				B2CB51461EB7F0FB0075B04E /* Calm+CoreDataClass.swift in Sources */,
 				B25409091EB114510012072D /* AttentionSpan+CoreDataClass.swift in Sources */,
+				B2D1945A1EB9998000230A03 /* Child+CoreDataClass.swift in Sources */,
 				B2CB50B11EB3E20D0075B04E /* Tremors+CoreDataClass.swift in Sources */,
 				B2CB50BF1EB3E66D0075B04E /* Diet+CoreDataClass.swift in Sources */,
 				B254090A1EB114510012072D /* AttentionSpan+CoreDataProperties.swift in Sources */,
@@ -738,6 +844,7 @@
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
 				B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */,
 				B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */,
+				B2D1945B1EB9998000230A03 /* Child+CoreDataProperties.swift in Sources */,
 				B2CB51481EB7F0FB0075B04E /* Excited+CoreDataClass.swift in Sources */,
 				B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */,
 				B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */,
@@ -767,11 +874,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		71467AB61EB7AA5E00481257 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = 71467AB51EB7AA5E00481257 /* PBXContainerItemProxy */;
-		};
 		B2A2037A1E9DD2EC000195BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B2A203601E9DD2EC000195BA /* ThompsonTracker */;
@@ -781,6 +883,11 @@
 			isa = PBXTargetDependency;
 			target = B2A203601E9DD2EC000195BA /* ThompsonTracker */;
 			targetProxy = B2A203841E9DD2EC000195BA /* PBXContainerItemProxy */;
+		};
+		B2D194571EB9972A00230A03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = B2D194561EB9972A00230A03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -904,7 +1011,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S69HUYJ5S;
+				DEVELOPMENT_TEAM = 4F48D7BT8E;
 				INFOPLIST_FILE = ThompsonTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mockdesign.ThompsonTracker;
@@ -918,7 +1025,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S69HUYJ5S;
+				DEVELOPMENT_TEAM = 4F48D7BT8E;
 				INFOPLIST_FILE = ThompsonTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mockdesign.ThompsonTracker;
