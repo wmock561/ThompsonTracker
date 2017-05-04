@@ -34,7 +34,7 @@ class AddPatientViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = "Add Patient"
+        title = "Add Child"
         thumbnailPhoto.image = #imageLiteral(resourceName: "DummyPotrait")
         datePicker.datePickerMode = .date
         self.birthdateLabel.text = "Birthdate: " + dateFormatter.string(from: datePicker.date)

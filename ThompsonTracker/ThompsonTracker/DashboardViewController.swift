@@ -8,18 +8,21 @@
 
 import UIKit
 import CoreLocation
+import Foundation
 
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {//, CLLocationManagerDelegate {
 
     //var patient: Patient?
+    //performSegue(withIdentifier: "childlist", sender: self)
     
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var patientNameLabel: UILabel!
     
+    @IBOutlet weak var childImage: UIImageView!
+    
     var patientName: String?
-    
-    
+//
 //    @IBOutlet weak var patientPhoto: UIImageView!
 //    @IBOutlet weak var patientNickname: UILabel!
 //    @IBOutlet weak var patientFullname: UILabel!
@@ -34,8 +37,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     let moodQuestionsArray = ["Excited", "Happy", "Calm", "Anxious", "Sad", "Irritable", "Angry"]
     
     //categoryImages
-    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "Defiant.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "self harm.png"), #imageLiteral(resourceName: "Tantrums.png")]
-    let healthQuestionImageArray = [#imageLiteral(resourceName: "digestiveSystem.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "diet.png"), #imageLiteral(resourceName: "poop.png"), #imageLiteral(resourceName: "lungs.png")]
+    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "Defiant.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "selfHarmFixed.png"), #imageLiteral(resourceName: "Tantrums.png")]
+    let healthQuestionImageArray = [#imageLiteral(resourceName: "digestiveSystem.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "diet.png"), #imageLiteral(resourceName: "Diarrhea.png"), #imageLiteral(resourceName: "lungs.png")]
     let sleepQuestionImageArray = [#imageLiteral(resourceName: "sleep.png"),#imageLiteral(resourceName: "calendar.png")]
     let moodQuestionImageArray = [#imageLiteral(resourceName: "Excited.png"), #imageLiteral(resourceName: "happy.png"), #imageLiteral(resourceName: "Calm.png"), #imageLiteral(resourceName: "Anxious.png"), #imageLiteral(resourceName: "sad.png"), #imageLiteral(resourceName: "irritable.png"), #imageLiteral(resourceName: "Angry.png")]
     
@@ -52,6 +55,14 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         self.navigationController?.title = "Dashboard"
         
         self.title = "Dashboard"
+        
+        //Tap Gesture Recognizer
+        
+        let recognizer = UITapGestureRecognizer() // Creates a tap gesture recognzier
+        recognizer.numberOfTapsRequired = 1 // Sets the number of taps
+        recognizer.addTarget(self, action: #selector(showModal(sender:))) // Sets the action triggered on tap
+        
+        childImage.addGestureRecognizer(recognizer) // Adds the recognizer to the pie chart
         
         if let name = patientName{
             self.patientNameLabel.text = name
@@ -117,9 +128,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categorycell", for: indexPath) as! DashboardCollectionViewCell
         
-        //cell.backgroundColor = UIColor.blue // make cell more visible in our example project
-        //cell.
-        
         cell.cellImage.image = cellImages[indexPath.row]
         cell.titleLabel.text = cellTitles[indexPath.row] //Fill Dynamically from array
         //cell.cellImage.image = cellImages[indexPath.row]
@@ -131,6 +139,10 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         cell.layer.cornerRadius = 3
         
         return cell
+    }
+    
+    func showModal(sender: AnyObject) {
+        performSegue(withIdentifier: "childlist", sender: sender)
     }
     
     

@@ -9,12 +9,26 @@
 import Foundation
 import UIKit
 
-@IBDesignable class GraphView: UIView {
+class GraphView: UIView {
     
-    @IBInspectable var startColor: UIColor = UIColor.red
-    @IBInspectable var endColor: UIColor = UIColor.green
+    var startColor: UIColor = UIColor.blue
+    var endColor: UIColor = UIColor.green
     
-    var graphPoints = [Int]()
+    var graphPoints: [Int] = [1,2,4,2,5]
+    
+    init(frame: CGRect, startColor: UIColor, endColor: UIColor, graphPoints: [Int]) {
+        
+        self.startColor = startColor
+        self.endColor = endColor
+        self.graphPoints = graphPoints
+        
+        super.init(frame: frame)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func draw(_ rect: CGRect) {
         

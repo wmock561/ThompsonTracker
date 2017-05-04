@@ -10,6 +10,7 @@
 		710B71341EB2BA0A009D4262 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */; };
 		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
 		719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832251EB1126C002BC697 /* PatientTableViewCell.swift */; };
+		B211F0071EBB9D7500BA37F8 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
 		B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */; };
 		B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */; };
@@ -134,6 +135,7 @@
 		B2D194551EB9972A00230A03 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CB51581EB997010075B04E /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2D1945A1EB9998000230A03 /* Child+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D194581EB9998000230A03 /* Child+CoreDataClass.swift */; };
 		B2D1945B1EB9998000230A03 /* Child+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D194591EB9998000230A03 /* Child+CoreDataProperties.swift */; };
+		B2D194651EBA459000230A03 /* selfHarmFixed.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D194641EBA459000230A03 /* selfHarmFixed.png */; };
 		B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +195,7 @@
 		710B71331EB2BA0A009D4262 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 		B2CB51511EB997000075B04E /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B2D194581EB9998000230A03 /* Child+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2D194591EB9998000230A03 /* Child+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2D194641EBA459000230A03 /* selfHarmFixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selfHarmFixed.png; sourceTree = "<group>"; };
 		B2EA85291EA5C10100B4E689 /* BehaviourTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -492,6 +496,7 @@
 				B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */,
 				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
 				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
+				B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */,
 				B2A2036E1E9DD2EC000195BA /* Assets.xcassets */,
 				B2A203701E9DD2EC000195BA /* LaunchScreen.storyboard */,
 				B2A203731E9DD2EC000195BA /* Info.plist */,
@@ -525,6 +530,7 @@
 		B2CB510F1EB7AD0D0075B04E /* behaviors */ = {
 			isa = PBXGroup;
 			children = (
+				B2D194641EBA459000230A03 /* selfHarmFixed.png */,
 				B2CB51101EB7AD0D0075B04E /* behaviors@3x.png */,
 				B2CB51111EB7AD0D0075B04E /* Defiant@3x.png */,
 				B2CB51121EB7AD0D0075B04E /* Hyperactivity@3x.png */,
@@ -708,6 +714,7 @@
 				B2CB512C1EB7AD0D0075B04E /* impulsivity@3x.png in Resources */,
 				B28682711EAE761C002A768A /* angryFace.jpg in Resources */,
 				B286828D1EAE761C002A768A /* suprisedFace.png in Resources */,
+				B2D194651EBA459000230A03 /* selfHarmFixed.png in Resources */,
 				B29022D81EAFD8020008391E /* bargraph.png in Resources */,
 				B29022D41EAFD77B0008391E /* gear.png in Resources */,
 				B2CB513B1EB7AD0D0075B04E /* happy.png in Resources */,
@@ -839,6 +846,7 @@
 				B25408FB1EB114510012072D /* Repetition+CoreDataClass.swift in Sources */,
 				B2A203A71E9DD6A9000195BA /* ConsentTask.swift in Sources */,
 				B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */,
+				B211F0071EBB9D7500BA37F8 /* GraphTableViewCell.swift in Sources */,
 				B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */,
 				B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
