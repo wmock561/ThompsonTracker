@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9482DC581EB933AF00EBC3F2 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482DC571EB933AF00EBC3F2 /* GraphTableViewCell.swift */; };
+		9482DC5A1EB952B100EBC3F2 /* GraphTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482DC591EB952B100EBC3F2 /* GraphTableViewController.swift */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
 		B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */; };
 		B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */; };
@@ -170,6 +172,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9482DC571EB933AF00EBC3F2 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		9482DC591EB952B100EBC3F2 /* GraphTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewController.swift; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -448,6 +452,8 @@
 				B2A203BC1EA477E9000195BA /* DashDetailViewController.swift */,
 				B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */,
 				B2A203681E9DD2EC000195BA /* Main.storyboard */,
+				9482DC571EB933AF00EBC3F2 /* GraphTableViewCell.swift */,
+				9482DC591EB952B100EBC3F2 /* GraphTableViewController.swift */,
 				B2A2036E1E9DD2EC000195BA /* Assets.xcassets */,
 				B2A203701E9DD2EC000195BA /* LaunchScreen.storyboard */,
 				B2A203731E9DD2EC000195BA /* Info.plist */,
@@ -739,10 +745,12 @@
 				B2A203FF1EA5381C000195BA /* ActivityTableViewCell.swift in Sources */,
 				B2CB50C71EB3E66D0075B04E /* Headaches+CoreDataClass.swift in Sources */,
 				B2CB50DC1EB447C40075B04E /* Angry+CoreDataProperties.swift in Sources */,
+				9482DC5A1EB952B100EBC3F2 /* GraphTableViewController.swift in Sources */,
 				B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */,
 				B2CB50C81EB3E66D0075B04E /* Headaches+CoreDataProperties.swift in Sources */,
 				B2A203651E9DD2EC000195BA /* AppDelegate.swift in Sources */,
 				B2EA852A1EA5C10100B4E689 /* BehaviourTasks.swift in Sources */,
+				9482DC581EB933AF00EBC3F2 /* GraphTableViewCell.swift in Sources */,
 				B2A204011EA559CB000195BA /* DashboardViewController.swift in Sources */,
 				B25409011EB114510012072D /* Defiance+CoreDataClass.swift in Sources */,
 				B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */,

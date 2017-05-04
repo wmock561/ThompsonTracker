@@ -29,6 +29,7 @@ class GraphViewController: UIViewController {
         let height = self.view.frame.height
         dateFormatter.dateFormat = "MM/dd"
         let myData = Model.sharedInstance.fetchHyperactivity()
+        print(Model.sharedInstance.fetchSelfHarm())
         
         //
         var counter = 0
@@ -91,22 +92,4 @@ class GraphViewController: UIViewController {
         
     }
     
-    //
-    // func setupGraphDisplay() -> String {
-    
-    //  let average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
-    //   let doubleStr = String(format: "Average : %.2f", average)
-    //    let average: Double = Double(GraphView.graphPoints.reduce(0, +)) / Double(GraphView.graphPoints.count)
-    //    let doubleStr = String(format: "Average : %.2f", average)
-    //
-    //    return doubleStr
-    ////
-    ////        //NS sstrings in draw on page
-    ////        //    //.enumerated
-    ////        //    //for(index , text)
-    ////        //
-    ////
-    //}
-    
-    //}
 }

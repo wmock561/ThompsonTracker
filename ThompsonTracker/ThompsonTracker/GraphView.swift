@@ -121,6 +121,8 @@ import UIKit
         
         
         let startPoint = CGPoint(x: padding, y: 5)
+        //change start y to 10 to get rid of the top margin colors
+        
         let endPoint = CGPoint(x: axisWidth + 10 , y: axisHeight + 5)
         
         context?.addRect(CGRect(origin: startPoint, size: CGSize(width: axisWidth - 30, height: axisHeight + 5)))
@@ -241,9 +243,26 @@ import UIKit
     
     // Plot a point on the graph
     func plotPoint(_ point : NSDictionary, path: CGMutablePath) {
+      
+        //added to prevent bugs
+        var space : Int
+        if(data.count == 1)
+        {
+            space = 1
+        }
+        else
+        {
+            space = data.count - 1
+        }
+        
         
         // work out the distance to draw the remaining points at
-        let interval = Int(graphWidth - xMargin * 2) / (data.count - 1);
+        //old interval which crashed
+        //let interval = Int(graphWidth - xMargin * 2) / (data.count - 1);
+       
+        let interval = Int(graphWidth - xMargin * 2) / (space);
+        
+        
         
         let pointValue = (point.object(forKey: "value") as! NSNumber).intValue
         

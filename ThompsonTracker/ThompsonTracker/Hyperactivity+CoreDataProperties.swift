@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-extension Hyperactivity {
+extension Hyperactivity{//: ValueType {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Hyperactivity> {
         return NSFetchRequest<Hyperactivity>(entityName: "Hyperactivity")
