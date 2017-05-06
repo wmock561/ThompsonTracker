@@ -217,15 +217,5 @@ postfix func ++( x: inout Float) -> Float {
     return (x - 1)
 }
 
-prefix func ++( x: inout Float80) -> Float80 {
-    x += 1
-    return x
-}
-
-postfix func ++( x: inout Float80) -> Float80 {
-    x += 1
-    return (x - 1)
-}
-
 
 

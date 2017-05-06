@@ -16,6 +16,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     var cellTitleArray: [String]?
     var cellImageArray: [UIImage]?
     var categoryIndex: Int = 5
+    var childObject: Child?
     
     fileprivate let shareTextLabel = UILabel()
     
@@ -260,7 +261,9 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         for num in indexValues{
             switch num {
             case 0:
-                _ = Excited(date: Date(), value: 7)
+                
+                let newVal = Excited(date: Date(), value: 7)
+                childObject?.addToExcitedActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Excited activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -274,7 +277,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alert, animated: true, completion: nil)
                 
             case 1:
-                _ = Happy(date: Date(), value: 6)
+                let newVal = Happy(date: Date(), value: 6)
+                childObject?.addToHappyActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Happy activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -288,7 +292,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alert, animated: true, completion: nil)
                 
             case 2:
-                _ = Calm(date: Date(), value: 5)
+                let newVal = Calm(date: Date(), value: 5)
+                childObject?.addToCalmActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Calm activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -302,7 +307,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alert, animated: true, completion: nil)
                 
             case 3:
-                _ = Anxiety(date: Date(), value: 4)
+                let newVal = Anxiety(date: Date(), value: 4)
+                childObject?.addToAnxietyActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Anxious activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -316,7 +322,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alert, animated: true, completion: nil)
                 
             case 4:
-                _ = Sad(date: Date(), value: 3)
+                let newVal = Sad(date: Date(), value: 3)
+                childObject?.addToSadActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Sad activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -329,7 +336,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 }))
                 self.present(alert, animated: true, completion: nil)
             case 5:
-                _ = Irritability(date: Date(), value: 2)
+                let newVal = Irritability(date: Date(), value: 2)
+                childObject?.addToIrritibilityActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Irritable activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -343,7 +351,8 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alert, animated: true, completion: nil)
                 
             case 6:
-                _ = Angry(date: Date(), value: 1)
+                let newVal = Angry(date: Date(), value: 1)
+                childObject?.addToAngryActivities(newVal!)
                 Model.sharedInstance.saveContext()
                 //Alert
                 let alert = UIAlertController(title: "Saved Data!", message: "Angry activity has been tracked!", preferredStyle: UIAlertControllerStyle.alert)
@@ -383,7 +392,10 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "HyperactivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Hyperactivity(date: Date(), value: answer)
+            let newVal = Hyperactivity(date: Date(), value: answer)
+            
+            childObject?.addToHyperActivities(newVal!)
+            
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -403,7 +415,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "ImpulsivitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Implusivity(date: Date(), value: answer)
+            let newVal = Implusivity(date: Date(), value: answer)
+            childObject?.addToImplusiveActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -421,7 +434,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "RepetitionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Repetition(date: Date(), value: answer)
+            let newVal = Repetition(date: Date(), value: answer)
+            childObject?.addToRepetitionActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -440,7 +454,10 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "AttentionSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = AttentionSpan(date: Date(), value: answer)
+            let newVal = AttentionSpan(date: Date(), value: answer)
+            
+            childObject?.addToAttentionSpanActivities(newVal!)
+            
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -459,7 +476,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Self HarmSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = SelfHarm(date: Date(), value: answer)
+            let newVal = SelfHarm(date: Date(), value: answer)
+            childObject?.addToSelfHarmActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -478,7 +496,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "DefianceSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Defiance(date: Date(), value: answer)
+            let newVal = Defiance(date: Date(), value: answer)
+            childObject?.addToDefianceActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -496,7 +515,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "TantrumsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Tantrums(date: Date(), value: answer)
+            let newVal = Tantrums(date: Date(), value: answer)
+            childObject?.addToTantrumActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -516,7 +536,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Stomach Ache/PainSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = StomachAche(date: Date(), value: answer)
+            let newVal = StomachAche(date: Date(), value: answer)
+            childObject?.addToStomachAcheActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -534,7 +555,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "HeadachesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Headaches(date: Date(), value: answer)
+            let newVal = Headaches(date: Date(), value: answer)
+            childObject?.addToHeadacheActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -552,7 +574,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Tremors/SeizuresSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Tremors(date: Date(), value: answer)
+            let newVal = Tremors(date: Date(), value: answer)
+            childObject?.addToTremorActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -570,7 +593,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Diet ProblemsSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Diet(date: Date(), value: answer)
+            let newVal = Diet(date: Date(), value: answer)
+            childObject?.addToDietActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -588,7 +612,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Diarrhea/ConstipationSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = Diarrhea(date: Date(), value: answer)
+            let newVal = Diarrhea(date: Date(), value: answer)
+            childObject?.addToDiarrheaActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -606,7 +631,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "Respiratory IssuesSliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = RespiratoryIssues(date: Date(), value: answer)
+            let newVal = RespiratoryIssues(date: Date(), value: answer)
+            childObject?.addToRespritoryActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -626,7 +652,9 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "QualitySliderChoiceQuestionStep")?.results?[0].value(forKey: "answer") as? Int{
             
-            _ = SleepQuality(date: Date(), value: answer)
+            
+            let newVal = SleepQuality(date: Date(), value: answer)
+            childObject?.addToSleepQualityActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert
@@ -645,7 +673,8 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         //FLOAT CASE HERE NEED TO CONFIRM WORKS
         if let answer = taskViewController.result.stepResult(forStepIdentifier: "LengthTimeIntervalQuestionStep")?.results?[0].value(forKey: "answer") as? Float{
             
-            _ = SleepLength(date: Date(), value: answer)
+            let newVal = SleepLength(date: Date(), value: answer)
+            childObject?.addToSleepLengthActivities(newVal!)
             Model.sharedInstance.saveContext()
             
             //Alert

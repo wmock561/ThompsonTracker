@@ -13,22 +13,37 @@ class GraphView: UIView {
     
     var startColor: UIColor = UIColor.blue
     var endColor: UIColor = UIColor.green
+    var lineColor: UIColor = UIColor.white
+    var dotColor: UIColor = UIColor.black
+    var horizontalLineColor: UIColor = UIColor.black
     
-    var graphPoints: [Int] = [1,2,4,2,5]
     
-    init(frame: CGRect, startColor: UIColor, endColor: UIColor, graphPoints: [Int]) {
-        
-        self.startColor = startColor
-        self.endColor = endColor
-        self.graphPoints = graphPoints
-        
-        super.init(frame: frame)
-        
-    }
+    var graphPoints: [Int] = [0]
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+//    init(frame: CGRect, graphPoints: [Int]) {
+//        
+//        //NEED TO ADD OTHER COLOR VALUES INTO CONSTRUCTOR?
+//        self.graphPoints = graphPoints
+//        
+//        super.init(frame: frame)
+//        
+//    }
+//    
+//    init(frame: CGRect, graphPoints: [Int], startColor: UIColor, endColor: UIColor, lineColor: UIColor, dotColor: UIColor, horizontalLineColor: UIColor, axisColor: UIColor) {
+//        self.startColor = startColor
+//        self.endColor = endColor
+//        self.lineColor = lineColor
+//        self.dotColor = dotColor
+//        self.horizontalLineColor = horizontalLineColor
+//        self.axisColor = axisColor
+//        self.graphPoints = graphPoints
+//        
+//        super.init(frame: frame)
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
     
     override func draw(_ rect: CGRect) {
         
@@ -95,8 +110,8 @@ class GraphView: UIView {
         
         // draw the line graph
         
-        UIColor.white.setFill()
-        UIColor.white.setStroke()
+        dotColor.setFill()
+        lineColor.setStroke()
         
         //set up the points line
         let graphPath = UIBezierPath()
@@ -174,7 +189,7 @@ class GraphView: UIView {
                                      y:height - bottomBorder))
         linePath.addLine(to: CGPoint(x:width - margin,
                                         y:height - bottomBorder))
-        let color = UIColor(white: 1.0, alpha: 0.3)
+        let color = horizontalLineColor
         color.setStroke()
         
         linePath.lineWidth = 1.0

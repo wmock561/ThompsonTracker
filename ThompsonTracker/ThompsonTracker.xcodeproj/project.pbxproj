@@ -11,6 +11,7 @@
 		719832241EB1125E002BC697 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832231EB1125E002BC697 /* PatientViewController.swift */; };
 		719832261EB1126C002BC697 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719832251EB1126C002BC697 /* PatientTableViewCell.swift */; };
 		B211F0071EBB9D7500BA37F8 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */; };
+		B211F00B1EBBC7BD00BA37F8 /* defianceFixed.png in Resources */ = {isa = PBXBuildFile; fileRef = B211F00A1EBBC7BD00BA37F8 /* defianceFixed.png */; };
 		B217C50E1EA97F9700AE6BCD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50D1EA97F9700AE6BCD /* Model.swift */; };
 		B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */; };
 		B217C5141EA9831600AE6BCD /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */; };
@@ -196,6 +197,7 @@
 		719832231EB1125E002BC697 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		719832251EB1126C002BC697 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		B211F00A1EBBC7BD00BA37F8 /* defianceFixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defianceFixed.png; sourceTree = "<group>"; };
 		B217C50D1EA97F9700AE6BCD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B217C50F1EA9831600AE6BCD /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5101EA9831600AE6BCD /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 		B2CB510F1EB7AD0D0075B04E /* behaviors */ = {
 			isa = PBXGroup;
 			children = (
+				B211F00A1EBBC7BD00BA37F8 /* defianceFixed.png */,
 				B2D194641EBA459000230A03 /* selfHarmFixed.png */,
 				B2CB51101EB7AD0D0075B04E /* behaviors@3x.png */,
 				B2CB51111EB7AD0D0075B04E /* Defiant@3x.png */,
@@ -733,6 +736,7 @@
 				B28682861EAE761C002A768A /* poop.png in Resources */,
 				B286828C1EAE761C002A768A /* speech.png in Resources */,
 				B28682721EAE761C002A768A /* anxiety.png in Resources */,
+				B211F00B1EBBC7BD00BA37F8 /* defianceFixed.png in Resources */,
 				B28682841EAE761C002A768A /* mentalHealth.png in Resources */,
 				B2CB512B1EB7AD0D0075B04E /* Hyperactivity@3x.png in Resources */,
 				B2CB513A1EB7AD0D0075B04E /* Excited.png in Resources */,

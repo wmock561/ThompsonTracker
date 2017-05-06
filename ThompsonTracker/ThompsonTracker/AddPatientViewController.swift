@@ -11,7 +11,7 @@ import Foundation
 
 class AddPatientViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    var patient: Patient?
+    var child: Child?
     
     @IBOutlet weak var nicknameTextfield: UITextField!
     @IBOutlet weak var firstnameTextfield: UITextField!
@@ -78,10 +78,20 @@ class AddPatientViewController: UIViewController, UIImagePickerControllerDelegat
         let birthdate = datePicker.date
         let doctor = doctorTextfield.text
         let hospital = hospitalTextfield.text
-        let photo = #imageLiteral(resourceName: "James")
+        let photo = thumbnailPhoto.image
+        let imgData = UIImagePNGRepresentation(photo!) as NSData?
         
         // Where @will create CoreData of Child
-        var patient = Patient(nickname: nickname!, firstname: firstname!, lastname: lastname!, birthdate: birthdate, doctor: doctor!, hospital: hospital!, photo: photo)
+        var _ = Child(nickName: nickname!, firstName: firstname!, lastName: lastname!, birthDate: birthdate, doctorsName: doctor!, hospital: hospital!, photo: imgData)
+        
+        Model.sharedInstance.saveContext()
+        
+        self.backsegue()
+        
+    }
+    
+    func backsegue(){
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

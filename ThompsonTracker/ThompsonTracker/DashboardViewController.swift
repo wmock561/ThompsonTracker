@@ -11,18 +11,16 @@ import CoreLocation
 import Foundation
 
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {//, CLLocationManagerDelegate {
-
-    //var patient: Patient?
-    //performSegue(withIdentifier: "childlist", sender: self)
     
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var patientNameLabel: UILabel!
     
     @IBOutlet weak var childImage: UIImageView!
     
     var patientName: String?
-//
+    var patientImage: UIImage?
+    var patientIndex: Int?
+    
 //    @IBOutlet weak var patientPhoto: UIImageView!
 //    @IBOutlet weak var patientNickname: UILabel!
 //    @IBOutlet weak var patientFullname: UILabel!
@@ -37,7 +35,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     let moodQuestionsArray = ["Excited", "Happy", "Calm", "Anxious", "Sad", "Irritable", "Angry"]
     
     //categoryImages
-    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "Defiant.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "selfHarmFixed.png"), #imageLiteral(resourceName: "Tantrums.png")]
+    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "defianceFixed.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "selfHarmFixed.png"), #imageLiteral(resourceName: "Tantrums.png")]
     let healthQuestionImageArray = [#imageLiteral(resourceName: "digestiveSystem.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "diet.png"), #imageLiteral(resourceName: "Diarrhea.png"), #imageLiteral(resourceName: "lungs.png")]
     let sleepQuestionImageArray = [#imageLiteral(resourceName: "sleep.png"),#imageLiteral(resourceName: "calendar.png")]
     let moodQuestionImageArray = [#imageLiteral(resourceName: "Excited.png"), #imageLiteral(resourceName: "happy.png"), #imageLiteral(resourceName: "Calm.png"), #imageLiteral(resourceName: "Anxious.png"), #imageLiteral(resourceName: "sad.png"), #imageLiteral(resourceName: "irritable.png"), #imageLiteral(resourceName: "Angry.png")]
@@ -48,6 +46,9 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     //LocationManager
 //    let locationManager = CLLocationManager()
 //    var currentLocation: CLLocation?
+    
+    //Array of children
+    let childArray = Model.sharedInstance.fetchChild()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +65,20 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         childImage.addGestureRecognizer(recognizer) // Adds the recognizer to the pie chart
         
-        if let name = patientName{
-            self.patientNameLabel.text = name
+//        if let name = patientName{
+//            self.patientNameLabel.text = name
+//        }
+        
+        if let imageNSData = childArray[patientIndex!].photo {
+            let imageData = imageNSData as Data
+            self.childImage.image = UIImage(data: imageData)
+        }else{
+            self.childImage.image = #imageLiteral(resourceName: "DummyPotrait")
         }
+        
+        let width = self.childImage.frame.width
+        
+        self.childImage.layer.cornerRadius = width/2
         
         //changing custom color for tabBarController
         
@@ -87,21 +99,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         let currentDate = Date()
         
         dateLabel.text = dateFormatter.string(from: currentDate)
-        
-//        patientPhoto.image = patient?.photo
-//        patientNickname.text = patient?.nickname
-//        patientFullname.text = (patient?.firstname)! + " " + (patient?.lastname)!
-        
-//        locationManager.requestAlwaysAuthorization()
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.startUpdatingLocation()
-//        
-//        print("HERE")
-//        if let currentLocation = currentLocation{
-//            print(currentLocation.coordinate.latitude)
-//            print(currentLocation.coordinate.longitude)
-//        }
     }
     
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -144,8 +141,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     func showModal(sender: AnyObject) {
         performSegue(withIdentifier: "childlist", sender: sender)
     }
-    
-    
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -163,6 +158,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 case 0:
                     destination.cellTitleArray = behaviourQuestionsArray
                     destination.cellImageArray = behaviourQuestionImageArray
+                    destination.childObject = childArray[patientIndex!]
                     destination.categoryIndex = row
                 case 1:
                     destination.cellTitleArray = healthArray
@@ -183,6 +179,13 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             }
             
         }
+        
+//        if let destination = segue.destination as? GraphViewController,
+//            let childIndex = patientIndex {
+//            
+//            destination.childIndex = childIndex
+//            
+//        }
     }
 
 }
