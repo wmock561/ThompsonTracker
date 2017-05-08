@@ -65,10 +65,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         childImage.addGestureRecognizer(recognizer) // Adds the recognizer to the pie chart
         
-//        if let name = patientName{
-//            self.patientNameLabel.text = name
-//        }
-        
         if let imageNSData = childArray[patientIndex!].photo {
             let imageData = imageNSData as Data
             self.childImage.image = UIImage(data: imageData)
@@ -139,7 +135,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func showModal(sender: AnyObject) {
-        performSegue(withIdentifier: "childlist", sender: sender)
+        dismiss(animated: true)
+        //performSegue(withIdentifier: "childlist", sender: sender)
     }
 
     // MARK: - Navigation

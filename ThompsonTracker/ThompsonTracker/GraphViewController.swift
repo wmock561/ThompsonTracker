@@ -42,6 +42,16 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var childIndex: Int?
     
     var children: [Child]?
+    
+    var attentionSpanActivityArray = [AttentionSpan]()
+    var defianceActivityArray = [Defiance]()
+    var hyperActivityArray = [Hyperactivity]()
+    var implisivityActivityArray = [Implusivity]()
+    var repetitionActivityArray = [Repetition]()
+    var selfHarmActivityArray = [SelfHarm]()
+    var tantrumsActivityArray = [Tantrums]()
+    
+    var selectedArrayType: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,9 +91,47 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected")
-        print(indexPath.row)
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let sectionNum = indexPath.section
+        let cellNum = indexPath.row
+        
+        print(sectionNum)
+        print(cellNum)
+        
+        switch sectionNum {
+        case 0:
+            print("in section")
+            switch cellNum {
+            case 0:
+                selectedArrayType = "attentionSpanActivityArray"
+            case 1:
+                selectedArrayType = "defianceActivityArray"
+            case 2:
+                selectedArrayType = "hyperActivityArray"
+            case 3:
+                selectedArrayType = "implisivityActivityArray"
+            case 4:
+                selectedArrayType = "repetitionActivityArray"
+            case 5:
+                selectedArrayType = "selfHarmActivityArray"
+            case 6:
+                selectedArrayType = "tantrumsActivityArray"
+            default:
+                print("ERROR in 0")
+            }
+        case 1: break
+            
+        case 2: break
+            
+        case 3: break
+            
+        default:
+            print("Section Error")
+        }
+
+        
+        //dateArray =
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -120,9 +168,6 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let sectionNum = indexPath.section
         let cellNum = indexPath.row
         
-        print(sectionNum)
-        print(cellNum)
-        
         switch sectionNum {
         case 0:
             
@@ -136,6 +181,8 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.attentionSpanActivityArray?.sorted(by: { $0.date < $1.date }) {
                 
+                    attentionSpanActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
                         
@@ -164,13 +211,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.defianceActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    defianceActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -188,13 +241,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.hyperActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    hyperActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -212,13 +271,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.implisivityActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    implisivityActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -236,13 +301,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.repetitionActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    repetitionActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -260,13 +331,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.selfHarmActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    selfHarmActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -285,13 +362,19 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.tantrumsActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    tantrumsActivityArray = array
+                    
                     if array.isEmpty == false {
                         newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
                         }
                     }
+                    
                     //setting gradient colors
                     cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
                     newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
@@ -343,6 +426,101 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         default:
             return 0
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? GraphDetailTableViewController {
+
+            var dateArray = [Date]()
+            var valueArray = [Int]()
+            
+            print(selectedArrayType)
+            
+            switch selectedArrayType {
+            case "attentionSpanActivityArray":
+                
+                dateArray.removeAll()
+                
+                for item in attentionSpanActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+            case "defianceActivityArray":
+                dateArray.removeAll()
+                
+                for item in defianceActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            case "hyperActivityArray":
+                dateArray.removeAll()
+                
+                for item in hyperActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            case "implisivityActivityArray":
+                dateArray.removeAll()
+                
+                for item in implisivityActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            case "repetitionActivityArray":
+                dateArray.removeAll()
+                
+                for item in repetitionActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            case "selfHarmActivityArray":
+                dateArray.removeAll()
+                
+                for item in selfHarmActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            case "tantrumsActivityArray":
+                dateArray.removeAll()
+                
+                for item in tantrumsActivityArray {
+                    dateArray.append(item.date)
+                    valueArray.append(Int(item.value))
+                }
+                
+                destination.titleArray = dateArray
+                destination.valueArray = valueArray
+                
+            default:
+                print("bad prepare")
+            }
+            
+        }
+
     }
 
 }

@@ -131,6 +131,7 @@
                                             <outlet property="drawingView" destination="zD9-1J-PTV" id="zDk-fU-KZi"/>
                                             <outlet property="graphTitleLabel" destination="Pu0-lo-hml" id="WGk-gn-fGY"/>
                                             <outlet property="graphView" destination="xGR-aR-0pc" id="U2B-2B-8dF"/>
+                                            <segue destination="yvy-nU-ndJ" kind="show" id="ASb-wC-VPA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -158,6 +159,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxb-hK-N7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2392.8000000000002" y="-367.46626686656674"/>
+        </scene>
+        <!--Graph Detail Table View Controller-->
+        <scene sceneID="Q4n-9j-WsE">
+            <objects>
+                <tableViewController id="yvy-nU-ndJ" customClass="GraphDetailTableViewController" customModule="ThompsonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vQw-Om-7ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="graphdetailcell" textLabel="cDk-To-Cl5" detailTextLabel="W4h-U9-VbH" style="IBUITableViewCellStyleSubtitle" id="9SZ-wi-qwR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9SZ-wi-qwR" id="fwq-uJ-5cg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cDk-To-Cl5">
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W4h-U9-VbH">
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yvy-nU-ndJ" id="isH-LQ-mIu"/>
+                            <outlet property="delegate" destination="yvy-nU-ndJ" id="TcV-9a-ILP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PD0-60-Adh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3356" y="-367"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="Nyy-fB-jOq">
@@ -195,11 +240,11 @@
                                     <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categorycell" id="yah-CH-RDX" customClass="DashboardCollectionViewCell" customModule="ThompsonTracker" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="0.0" width="160" height="160"/>
+                                        <rect key="frame" x="20" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -723,6 +768,6 @@
         <image name="gear.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XN1-aZ-cUk"/>
+        <segue reference="ZaE-Ab-A5L"/>
     </inferredMetricsTieBreakers>
 </document>
