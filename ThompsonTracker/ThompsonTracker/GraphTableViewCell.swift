@@ -11,8 +11,9 @@ import UIKit
 class GraphTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var drawingView: DrawingView!
     @IBOutlet weak var averageValue: UILabel!
-    @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var graphTitleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -24,6 +25,14 @@ class GraphTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        
+        for view in graphView.subviews{
+            view.removeFromSuperview()
+        }
+        
     }
 
 }

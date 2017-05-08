@@ -10,13 +10,38 @@ import UIKit
 
 class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - Setup for graph colors
+    
+    let behaviourQuestionsArray = ["Attention Span", "Defiance", "Hyperactivity", "Impulsivity", "Repetition", "Self-harm", "Tantrums"]
+    let healthQuestionArray = ["Stomach Ache/Pain", "Headaches","Tremors/Seizures", "Diet Problems", "Diarrhea/Constipation", "Respiratory Issues"]
+    let sleepQuestionsArray = ["Quality", "Duration"]
+    let moodQuestionsArray = ["Excited", "Happy", "Calm", "Anxious", "Sad", "Irritable", "Angry"]
+    
+    let behaviorDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
+    let behaviorLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
+    let behaviorsStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let behaviorsEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    
+    let healthDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
+    let healthLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
+    let healthStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let healthEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    
+    let sleepDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
+    let sleepLineColorArray = ["D0011B", "000000"]
+    let sleepStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let sleepEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    
+    let moodDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
+    let moodLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
+    let moodStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let moodEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    
     @IBOutlet weak var tableView: UITableView!
     
     var childIndex: Int?
     
     var children: [Child]?
-
-//    @IBOutlet weak var averageResponse: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,37 +55,11 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let dashVC = (viewControllers.first as? UINavigationController)?.viewControllers.first as? DashboardViewController{
                 childIndex = dashVC.patientIndex
         }
-
-        //print(children.first?.nickName)
-        
-//        let activityArray = Model.sharedInstance.fetchHyperactivity()
-//        
-//        for item in activityArray {
-//            graphView.graphPoints.append(Int(item.value))
-//        }
-//        
-//        setupGraphDisplay()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         children = Model.sharedInstance.fetchChild()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-
-//        graphView.graphPoints.removeAll()
-//        
-//        let activityArray = Model.sharedInstance.fetchHyperactivity()
-//        //print(activityArray)
-//        
-//        for item in activityArray {
-//            graphView.graphPoints.append(Int(item.value))
-//        }
-//        
-//        graphView.setNeedsDisplay()
-        
-        //setupGraphDisplay()
-
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,30 +67,22 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    /*func setupGraphDisplay(indexValue: Int) -> [Int]? {
+    func setupGraphDisplay(indexValues: [Int]) -> Double {
         
-        switch sectionValue {
-        case <#pattern#>:
-            <#code#>
-        default:
-            <#code#>
+        var average: Double = 0
+        
+        if indexValues.count != 0{
+        
+            average = Double(indexValues.reduce(0, +)) / Double(indexValues.count)
+        
         }
+        return average
         
-//        print(graphView.graphPoints.reduce(0, +))
-//        print(graphView.graphPoints.count)
-        
-//        let average: Double = Double(graphView.graphPoints.reduce(0, +)) / Double(graphView.graphPoints.count)
-//        
-//        let doubleStr = String(format: "%.2f", average)
-//        
-//        averageResponse.text = "\(doubleStr)"
-        
-        
-        
-    }*/
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected")
+        print(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -105,64 +96,227 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return titleArray[section]
     }
     
-    let behaviourQuestionsArray = ["Attention Span", "Defiance", "Hyperactivity", "Impulsivity", "Repetition", "Self-harm", "Tantrums"]
-    let healthQuestionArray = ["Stomach Ache/Pain", "Headaches","Tremors/Seizures", "Diet Problems", "Diarrhea/Constipation", "Respiratory Issues"]
-    let sleepQuestionsArray = ["Quality", "Duration"]
-    let moodQuestionsArray = ["Excited", "Happy", "Calm", "Anxious", "Sad", "Irritable", "Angry"]
-    
-    let dotColorArray = ["4A4A4A"]
-    //let behaviorLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "graphcell", for: indexPath) as! GraphTableViewCell
         
+        let newGraph = GraphView()
+        
+        newGraph.translatesAutoresizingMaskIntoConstraints = false
+        newGraph.frame = cell.graphView.frame
+        newGraph.backgroundColor = .clear
+        cell.graphView.addSubview(newGraph)
+        
+        newGraph.leadingAnchor.constraint(equalTo: cell.graphView.leadingAnchor).isActive = true
+        
+        newGraph.trailingAnchor.constraint(equalTo: cell.graphView.trailingAnchor).isActive = true
+        
+        newGraph.topAnchor.constraint(equalTo: cell.graphView.topAnchor).isActive = true
+        
+        newGraph.bottomAnchor.constraint(equalTo: cell.graphView.bottomAnchor).isActive = true
+        
+        //cell.graphView = GraphView(frame: cell.frame, graphPoints: )
+        
         let sectionNum = indexPath.section
+        let cellNum = indexPath.row
+        
+        print(sectionNum)
+        print(cellNum)
+        
         switch sectionNum {
         case 0:
-            cell.graphTitleLabel.text = behaviourQuestionsArray[indexPath.row]
-            cell.graphView.lineColor = UIColor.red//UIColor(hex: behaviorLineColorArray[indexPath.row])
+            
+            cell.graphTitleLabel.text = behaviourQuestionsArray[cellNum]
+            //cell.graphView.lineColor = UIColor.red//UIColor(hex: behaviorLineColorArray[indexPath.row])
             
             //setting points
-            switch indexPath.row {
+            switch cellNum {
             case 0:
                 if let index = childIndex,
                     let child = children?[index],
-                    let array = child.attentionSpanActivityArray{
-                    
-                    print(array)
-                    
-                    cell.graphView.graphPoints.removeAll()
-                    
-                    for value in array {
-                        cell.graphView.graphPoints.append(Int(value.value))
-                        print(Int(value.value))
+                    let array = child.attentionSpanActivityArray?.sorted(by: { $0.date < $1.date }) {
+                
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+                        cell.averageValue.text = "\(value)"
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
                     }
                     
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
                 }
             case 1:
-                print("TESTING")
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.defianceActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
             case 2:
-                print("TESTING")
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.hyperActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
             case 3:
-                print("TESTING")
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.implisivityActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
             case 4:
-                print("TESTING")
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.repetitionActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
             case 5:
-                print("TESTING")
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.selfHarmActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
+            case 6:
+                
+                if let index = childIndex,
+                    let child = children?[index],
+                    let array = child.tantrumsActivityArray?.sorted(by: { $0.date < $1.date }) {
+                    
+                    if array.isEmpty == false {
+                        newGraph.graphPoints.removeAll()
+                        
+                        for value in array {
+                            newGraph.graphPoints.append(Int(value.value))
+                        }
+                    }
+                    //setting gradient colors
+                    cell.drawingView.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    newGraph.startColor = UIColor(hex: behaviorsStartColorArray[cellNum])
+                    cell.drawingView.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    newGraph.endColor = UIColor(hex: behaviorsEndColorArray[cellNum])
+                    
+                    //setting fot and line colors
+                    newGraph.lineColor = UIColor(hex: behaviorLineColorArray[cellNum])
+                    newGraph.dotColor = UIColor(hex: behaviorDotColorArray[cellNum])
+                    
+                    newGraph.setNeedsDisplay()
+                }
             default:
                 print("ERROR in 0")
             }
         case 1:
             cell.graphTitleLabel.text = healthQuestionArray[indexPath.row]
-            cell.graphView.lineColor = UIColor.blue//UIColor(hex: "000000")
+            //cell.graphView.lineColor = UIColor.blue//UIColor(hex: "000000")
             print("LineColor should be blue here")
         case 2:
             cell.graphTitleLabel.text = sleepQuestionsArray[indexPath.row]
-            cell.graphView.lineColor = UIColor.green//UIColor(hex: "000000")
+            //cell.graphView.lineColor = UIColor.green//UIColor(hex: "000000")
         case 3:
             cell.graphTitleLabel.text = moodQuestionsArray[indexPath.row]
-            cell.graphView.lineColor = UIColor.purple//UIColor(hex: "000000")
+            //cell.graphView.lineColor = UIColor.purple//UIColor(hex: "000000")
         default:
             print("Section Error")
         }
@@ -171,6 +325,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //cell.graphView.endColor = UIColor(hex: "FFFFFF")//(hex: "69C1D3")
         //cell.graphView.dotColor = UIColor(hex: dotColorArray.first!)
         
+        cell.draw(cell.frame)
         
         return cell
     }

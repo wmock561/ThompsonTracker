@@ -17,7 +17,6 @@ class GraphView: UIView {
     var dotColor: UIColor = UIColor.black
     var horizontalLineColor: UIColor = UIColor.black
     
-    
     var graphPoints: [Int] = [0]
     
 //    init(frame: CGRect, graphPoints: [Int]) {
@@ -29,6 +28,10 @@ class GraphView: UIView {
 //        
 //    }
 //    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
 //    init(frame: CGRect, graphPoints: [Int], startColor: UIColor, endColor: UIColor, lineColor: UIColor, dotColor: UIColor, horizontalLineColor: UIColor, axisColor: UIColor) {
 //        self.startColor = startColor
 //        self.endColor = endColor
@@ -39,10 +42,6 @@ class GraphView: UIView {
 //        self.graphPoints = graphPoints
 //        
 //        super.init(frame: frame)
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
 //    }
     
     override func draw(_ rect: CGRect) {
@@ -78,14 +77,10 @@ class GraphView: UIView {
         //6 - draw the gradient
         var startPoint = CGPoint.zero
         var endPoint = CGPoint(x:0, y:self.bounds.height)
-        context.drawLinearGradient(gradient!,
-                                    start: startPoint,
-                                    end: endPoint,
-                                    options: CGGradientDrawingOptions(rawValue: 0))
         
         //calculate the x point
         
-        let margin:CGFloat = 20.0
+        let margin:CGFloat = 10.0
         let columnXPoint = { (column:Int) -> CGFloat in
             //Calculate gap between points
             let spacer = (width - margin*2 - 4) /
@@ -97,8 +92,8 @@ class GraphView: UIView {
         
         // calculate the y point
         
-        let topBorder:CGFloat = 60
-        let bottomBorder:CGFloat = 50
+        let topBorder:CGFloat = 15
+        let bottomBorder:CGFloat = 15
         let graphHeight = height - topBorder - bottomBorder
         let maxValue = graphPoints.max()
         let columnYPoint = { (graphPoint:Int) -> CGFloat in

@@ -18,6 +18,7 @@
 		B217C5151EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */; };
 		B217C5161EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */; };
 		B217C5181EAA73A100AE6BCD /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217C5171EAA73A100AE6BCD /* CustomLayout.swift */; };
+		B21FF5421EC0F8BB001C6556 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FF5411EC0F8BB001C6556 /* DrawingView.swift */; };
 		B25408F51EB114510012072D /* Anxiety+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */; };
 		B25408F61EB114510012072D /* Anxiety+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */; };
 		B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25408E31EB114510012072D /* Irritability+CoreDataClass.swift */; };
@@ -204,6 +205,7 @@
 		B217C5111EA9831600AE6BCD /* Hyperactivity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B217C5121EA9831600AE6BCD /* Hyperactivity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hyperactivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B217C5171EAA73A100AE6BCD /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		B21FF5411EC0F8BB001C6556 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		B25408DF1EB114510012072D /* Anxiety+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anxiety+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B25408E01EB114510012072D /* Anxiety+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Anxiety+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B25408E31EB114510012072D /* Irritability+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Irritability+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				B2A203FE1EA5381C000195BA /* ActivityTableViewCell.swift */,
 				B2A181F31EAD3BCC002FA82F /* GraphViewController.swift */,
 				B2A181ED1EAA9F38002FA82F /* GraphView.swift */,
+				B21FF5411EC0F8BB001C6556 /* DrawingView.swift */,
 				B211F0061EBB9D7400BA37F8 /* GraphTableViewCell.swift */,
 				B2A2036E1E9DD2EC000195BA /* Assets.xcassets */,
 				B2A203701E9DD2EC000195BA /* LaunchScreen.storyboard */,
@@ -808,6 +811,7 @@
 				B2A203BD1EA477E9000195BA /* DashDetailViewController.swift in Sources */,
 				B25409021EB114510012072D /* Defiance+CoreDataProperties.swift in Sources */,
 				B2CB50E01EB447C40075B04E /* Sad+CoreDataProperties.swift in Sources */,
+				B21FF5421EC0F8BB001C6556 /* DrawingView.swift in Sources */,
 				B217C5131EA9831600AE6BCD /* Activity+CoreDataClass.swift in Sources */,
 				B25408F91EB114510012072D /* Irritability+CoreDataClass.swift in Sources */,
 				B2A2036D1E9DD2EC000195BA /* ThompsonTracker.xcdatamodeld in Sources */,
