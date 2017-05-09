@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Happy)
 public class Happy: NSManagedObject {
     var date: Date{
         get{

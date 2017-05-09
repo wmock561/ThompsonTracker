@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(StomachAche)
 public class StomachAche: NSManagedObject {
     var date: Date{
         get{

@@ -29,13 +29,13 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     let cellImages = [#imageLiteral(resourceName: "behaviorHead.png"), #imageLiteral(resourceName: "health problems.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "mood.png")]
     
     //categories
-    let behaviourQuestionsArray = ["Attention Span", "Defiance", "Hyperactivity", "Impulsivity", "Repetition", "Self-harm", "Tantrums"]
+    let behaviourQuestionsArray = ["Attention Span", "Defiance", "Hyperactivity", "Impulsivity", "Self-harm", "Repetition", "Tantrums"]
     let healthArray = ["Stomach Ache/Pain", "Headaches","Tremors/Seizures", "Diet Problems", "Diarrhea/Constipation", "Respiratory Issues"]
     let sleepQuestionsArray = ["Quality", "Duration"]
     let moodQuestionsArray = ["Excited", "Happy", "Calm", "Anxious", "Sad", "Irritable", "Angry"]
     
     //categoryImages
-    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "defianceFixed.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "selfHarmFixed.png"), #imageLiteral(resourceName: "Tantrums.png")]
+    let behaviourQuestionImageArray = [#imageLiteral(resourceName: "short attention span.png"), #imageLiteral(resourceName: "defianceFixed.png"), #imageLiteral(resourceName: "Hyperactivity.png"), #imageLiteral(resourceName: "impulsivity.png"), #imageLiteral(resourceName: "selfHarmFixed.png"), #imageLiteral(resourceName: "behaviors.png"), #imageLiteral(resourceName: "Tantrums.png")]
     let healthQuestionImageArray = [#imageLiteral(resourceName: "digestiveSystem.png"), #imageLiteral(resourceName: "headache.png"), #imageLiteral(resourceName: "ticks.png"), #imageLiteral(resourceName: "diet.png"), #imageLiteral(resourceName: "Diarrhea.png"), #imageLiteral(resourceName: "lungs.png")]
     let sleepQuestionImageArray = [#imageLiteral(resourceName: "sleep.png"),#imageLiteral(resourceName: "calendar.png")]
     let moodQuestionImageArray = [#imageLiteral(resourceName: "Excited.png"), #imageLiteral(resourceName: "happy.png"), #imageLiteral(resourceName: "Calm.png"), #imageLiteral(resourceName: "Anxious.png"), #imageLiteral(resourceName: "sad.png"), #imageLiteral(resourceName: "irritable.png"), #imageLiteral(resourceName: "Angry.png")]
@@ -56,13 +56,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         self.navigationController?.title = "Dashboard"
         
         self.title = "Dashboard"
-        
-        print("here")
-        print(childArray)
-        print(childArray.first?.attentionSpanActivityArray)
-        print(childArray.first?.headacheActivityArray)
-        
-        
+       
         //Tap Gesture Recognizer
         
         let recognizer = UITapGestureRecognizer() // Creates a tap gesture recognzier
@@ -128,8 +122,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categorycell", for: indexPath) as! DashboardCollectionViewCell
         
         cell.cellImage.image = cellImages[indexPath.row]
-        cell.titleLabel.text = cellTitles[indexPath.row] //Fill Dynamically from array
-        //cell.cellImage.image = cellImages[indexPath.row]
+        cell.titleLabel.text = cellTitles[indexPath.row]
         
         let bcolor : UIColor = UIColor( red: 0.2, green: 0.2, blue:0.2, alpha: 0.5 )
         
@@ -142,7 +135,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func showModal(sender: AnyObject) {
         dismiss(animated: true)
-        //performSegue(withIdentifier: "childlist", sender: sender)
     }
 
     // MARK: - Navigation
@@ -166,14 +158,17 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 case 1:
                     destination.cellTitleArray = healthArray
                     destination.cellImageArray = healthQuestionImageArray
+                    destination.childObject = childArray[patientIndex!]
                     destination.categoryIndex = row
                 case 2:
                     destination.cellTitleArray = sleepQuestionsArray
                     destination.cellImageArray = sleepQuestionImageArray
+                    destination.childObject = childArray[patientIndex!]
                     destination.categoryIndex = row
                 case 3:
                     destination.cellTitleArray = moodQuestionsArray
                     destination.cellImageArray = moodQuestionImageArray
+                    destination.childObject = childArray[patientIndex!]
                     destination.categoryIndex = row
                 default:
                     print("Error in switch")
@@ -183,12 +178,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             
         }
         
-//        if let destination = segue.destination as? GraphViewController,
-//            let childIndex = patientIndex {
-//            
-//            destination.childIndex = childIndex
-//            
-//        }
     }
 
 }

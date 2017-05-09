@@ -9,8 +9,9 @@
 import Foundation
 import CoreData
 
-
+@objc(Headaches)
 public class Headaches: NSManagedObject {
+    
     var date: Date{
         get{
             return rawDate as Date

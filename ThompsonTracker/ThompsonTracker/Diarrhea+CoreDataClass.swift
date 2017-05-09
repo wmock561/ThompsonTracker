@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Diarrhea)
 public class Diarrhea: NSManagedObject {
     var date: Date{
         get{

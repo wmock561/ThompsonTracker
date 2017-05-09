@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Angry)
 public class Angry: NSManagedObject {
     var date: Date{
         get{

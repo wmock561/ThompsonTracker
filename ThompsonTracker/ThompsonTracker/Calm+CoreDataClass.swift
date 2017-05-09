@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Calm)
 public class Calm: NSManagedObject {
     var date: Date{
         get{

@@ -118,7 +118,7 @@
     </entity>
     <entity name="SleepLength" representedClassName="SleepLength" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="value" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="sleepLengthActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
     <entity name="SleepQuality" representedClassName="SleepQuality" syncable="YES">

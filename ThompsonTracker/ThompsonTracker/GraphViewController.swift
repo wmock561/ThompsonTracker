@@ -19,23 +19,23 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let behaviorDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
     let behaviorLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
-    let behaviorsStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
-    let behaviorsEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let behaviorsStartColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
+    let behaviorsEndColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
     
     let healthDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
-    let healthLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
-    let healthStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
-    let healthEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let healthLineColorArray = ["F69679", "FAAF3A", "2CA3D8", "DF4444", "8B572A", "2CA3D8"]
+    let healthStartColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
+    let healthEndColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
     
-    let sleepDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
-    let sleepLineColorArray = ["D0011B", "000000"]
-    let sleepStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
-    let sleepEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let sleepDotColorArray = ["4A4A4A","4A4A4A"]
+    let sleepLineColorArray = ["4990E2", "2CA3D8"]
+    let sleepStartColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
+    let sleepEndColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
     
     let moodDotColorArray = ["4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A","4A4A4A"]
     let moodLineColorArray = ["D0011B", "000000", "F6A623", "D0011B", "#000000", "F6A623", "F6A623"]
-    let moodStartColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
-    let moodEndColorArray = ["FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF"]
+    let moodStartColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
+    let moodEndColorArray = ["F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5","F5F5F5"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -89,7 +89,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    func setupGraphDisplay(indexValues: [Int]) -> Double {
+    func setupGraphDisplay(indexValues: [Int]) -> String {
         
         var average: Double = 0
         
@@ -98,8 +98,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
             average = Double(indexValues.reduce(0, +)) / Double(indexValues.count)
         
         }
-        return average
-        
+        return String(format: "%.2f", average)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -198,6 +197,8 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Switch for what graph to poulate with what data. this could be done more cleanly if I had more time.
         let sectionNum = indexPath.section
         let cellNum = indexPath.row
+        var dataForAverageArray = [Int]()
+        dataForAverageArray.removeAll()
         
         switch sectionNum {
         case 0:
@@ -221,6 +222,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -251,6 +253,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -281,6 +284,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -311,6 +315,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -341,6 +346,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -371,6 +377,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -402,6 +409,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -446,6 +454,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                         
                         print(newGraph.graphPoints)
@@ -478,6 +487,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -508,6 +518,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -538,6 +549,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -568,6 +580,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -598,6 +611,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                     }
                     
@@ -635,6 +649,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                         
                         print(newGraph.graphPoints)
@@ -657,6 +672,8 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     let child = children?[index],
                     let array = child.sleepLengthActivityArray?.sorted(by: { $0.date < $1.date }) {
                     
+                    print("Sleep Array Here")
+                    print(array)
                     sleepLengthActivityArray = array
                     
                     if array.isEmpty == false {
@@ -667,6 +684,7 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         
                         for value in array {
                             newGraph.graphPoints.append(Int(value.value))
+                            dataForAverageArray.append(Int(value.value))
                         }
                         
                         print(newGraph.graphPoints)
@@ -689,11 +707,91 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print("Error in sleep section")
             }
         case 3:
-            cell.graphTitleLabel.text = moodQuestionsArray[indexPath.row]
+            cell.graphTitleLabel.text = "Emotions"
+            
+//            if let index = childIndex,
+//                let child = children?[index] {
+//                
+//                var holderArray: [(date: Date, value: Int)]
+//                
+//                let excitedArray = child.excitedActivityArray
+//                let happyArray = child.happyActivityArray
+//                let calmArray = child.calmActivityArray
+//                let anxiousArray = child.anxietyActivityArray
+//                let sadArray = child.sadActivityArray
+//                let irritabilityArray = child.irritabilityActivityArray
+//                let angryArray = child.angryActivityArray
+//                
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                for item in excitedArray! {
+//                    holderArray.append((date: item.date, value: Int(item.value)))
+//                }
+//                
+//                let item = (date: , value: Int)
+//                
+//                print("Sleep Array Here")
+//                print(array)
+//                sleepLengthActivityArray = array
+//                
+//                if array.isEmpty == false {
+//                    newGraph.graphPoints.removeAll()
+//                    
+//                    let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
+//                    cell.averageValue.text = "\(value)"
+//                    
+//                    for value in array {
+//                        newGraph.graphPoints.append(Int(value.value))
+//                        dataForAverageArray.append(Int(value.value))
+//                    }
+//                    
+//                    print(newGraph.graphPoints)
+//                }
+//                
+//                
+//                
+//                //setting gradient colors
+//                cell.drawingView.startColor = UIColor(hex: sleepStartColorArray[cellNum])
+//                newGraph.startColor = UIColor(hex: sleepStartColorArray[cellNum])
+//                cell.drawingView.endColor = UIColor(hex: sleepEndColorArray[cellNum])
+//                newGraph.endColor = UIColor(hex: sleepEndColorArray[cellNum])
+//                
+//                //setting dot and line colors
+//                newGraph.lineColor = UIColor(hex: sleepLineColorArray[cellNum])
+//                newGraph.dotColor = UIColor(hex: sleepDotColorArray[cellNum])
+//                
+//                newGraph.setNeedsDisplay()
+//                
+//            }
+            
         default:
             print("Section Error")
         }
-    
+        
+        
+        //setting average
+        if cell.graphTitleLabel.text != "Duration" {
+            cell.averageValue.text = setupGraphDisplay(indexValues: dataForAverageArray)
+        }else{
+            cell.averageValue.text = setupGraphDisplay(indexValues: dataForAverageArray) + " hr"
+        }
+        
         cell.draw(cell.frame)
     
         return cell

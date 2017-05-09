@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Tremors)
 public class Tremors: NSManagedObject {
     
     var date: Date{

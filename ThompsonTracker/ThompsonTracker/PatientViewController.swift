@@ -84,7 +84,7 @@ extension PatientViewController: UITableViewDelegate, UITableViewDataSource {
             let child = children?[indexPath.row] {
             
             cell.patientNickname.text = child.nickName
-            cell.patientFullname.text = child.firstName + " " + child.lastName
+            cell.patientFullname.text = child.firstName! + " " + child.lastName!
             cell.patientUpdatedDate.text = dateFormatter.string(from: child.birthDate! as Date)
             cell.patientDoctor.text = child.doctorsName
             

@@ -239,7 +239,7 @@ class DashDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 
             case 1:
                 let questionTestSteptitle = "Duration"
-                let testQuestionFormat: ORKTimeIntervalAnswerFormat = ORKTimeIntervalAnswerFormat(defaultInterval: 8, step: 15)
+                let testQuestionFormat: ORKTimeIntervalAnswerFormat = ORKTimeIntervalAnswerFormat(defaultInterval: TimeInterval(((2*60)*60)), step: 15)
                 let testQuestionStep = ORKQuestionStep(identifier: "\(questionTestSteptitle)TimeIntervalQuestionStep", title: questionTestSteptitle, answer: testQuestionFormat)
                 testQuestionStep.text = "Please record \(questionTestSteptitle) of sleep"
                 steps += [testQuestionStep]
@@ -671,9 +671,10 @@ extension DashDetailViewController : ORKTaskViewControllerDelegate {
         }
         
         //FLOAT CASE HERE NEED TO CONFIRM WORKS
-        if let answer = taskViewController.result.stepResult(forStepIdentifier: "LengthTimeIntervalQuestionStep")?.results?[0].value(forKey: "answer") as? Float{
+        if let answer = taskViewController.result.stepResult(forStepIdentifier: "DurationTimeIntervalQuestionStep")?.results?[0].value(forKey: "answer") as? TimeInterval{
             
-            let newVal = SleepLength(date: Date(), value: answer)
+            print((answer/60)/60)
+            let newVal = SleepLength(date: Date(), value: ((answer/60)/60))
             childObject?.addToSleepLengthActivities(newVal!)
             Model.sharedInstance.saveContext()
             

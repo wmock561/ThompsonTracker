@@ -21,7 +21,7 @@ public class SleepLength: NSManagedObject {
         }
     }
     
-    convenience init?(date: Date, value: Float) {
+    convenience init?(date: Date, value: Double) {
         
         guard let context = Model.sharedInstance.managedContext else{
             return nil

@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(Excited)
 public class Excited: NSManagedObject {
     var date: Date{
         get{

@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-
+@objc(RespiratoryIssues)
 public class RespiratoryIssues: NSManagedObject {
     var date: Date{
         get{

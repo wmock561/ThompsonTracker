@@ -2,7 +2,7 @@
 //  Child+CoreDataProperties.swift
 //  ThompsonTracker
 //
-//  Created by Will Mock on 5/3/17.
+//  Created by Will Mock on 5/9/17.
 //  Copyright © 2017 Will Mock. All rights reserved.
 //
 
@@ -16,12 +16,12 @@ extension Child {
         return NSFetchRequest<Child>(entityName: "Child")
     }
 
-    @NSManaged public var nickName: String?
-    @NSManaged public var firstName: String
-    @NSManaged public var lastName: String
     @NSManaged public var birthDate: NSDate?
     @NSManaged public var doctorsName: String?
+    @NSManaged public var firstName: String?
     @NSManaged public var hospital: String?
+    @NSManaged public var lastName: String?
+    @NSManaged public var nickName: String?
     @NSManaged public var photo: NSData?
     @NSManaged public var angryActivities: NSSet?
     @NSManaged public var anxietyActivities: NSSet?

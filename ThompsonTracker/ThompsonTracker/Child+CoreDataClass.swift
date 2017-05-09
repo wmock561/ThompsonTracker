@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 import UIKit
 
-
 public class Child: NSManagedObject {
 
     var anxietyActivityArray: [Anxiety]?{
