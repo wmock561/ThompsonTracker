@@ -67,7 +67,6 @@ class AddPatientViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func addPhoto(_ sender: Any) {
         importPicture()
-        //imagePickerController(<#T##picker: UIImagePickerController##UIImagePickerController#>, didFinishPickingMediaWithInfo: <#T##[String : Any]#>)
     }
     
     @IBAction func addPatient(_ sender: UIBarButtonItem) {

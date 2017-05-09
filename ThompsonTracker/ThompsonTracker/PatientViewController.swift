@@ -50,7 +50,6 @@ class PatientViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //self.navigationController?.popToRootViewController(animated: <#T##Bool#>)
         
         if let destination = segue.destination as? UITabBarController,
             let indexPath = tableview.indexPathForSelectedRow,

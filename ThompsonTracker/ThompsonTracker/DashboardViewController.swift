@@ -21,10 +21,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     var patientImage: UIImage?
     var patientIndex: Int?
     
-//    @IBOutlet weak var patientPhoto: UIImageView!
-//    @IBOutlet weak var patientNickname: UILabel!
-//    @IBOutlet weak var patientFullname: UILabel!
-    
     let cellTitles = ["Behavior", "Health", "Sleep", "Mood"]
     let cellImages = [#imageLiteral(resourceName: "behaviorHead.png"), #imageLiteral(resourceName: "health problems.png"), #imageLiteral(resourceName: "sleep.png"), #imageLiteral(resourceName: "mood.png")]
     
@@ -144,10 +140,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             let cell = sender as? DashboardCollectionViewCell{
             
             if let row = dashboardCollectionView.indexPath(for: cell)?.row{
-                
-                //print(row)
-                
-                //TODO: fix the nil cases once we have the questions from the designers
                 
                 switch row {
                 case 0:
