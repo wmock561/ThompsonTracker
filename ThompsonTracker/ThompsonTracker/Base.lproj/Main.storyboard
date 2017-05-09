@@ -131,7 +131,6 @@
                                             <outlet property="drawingView" destination="zD9-1J-PTV" id="zDk-fU-KZi"/>
                                             <outlet property="graphTitleLabel" destination="Pu0-lo-hml" id="WGk-gn-fGY"/>
                                             <outlet property="graphView" destination="xGR-aR-0pc" id="U2B-2B-8dF"/>
-                                            <segue destination="yvy-nU-ndJ" kind="show" id="ASb-wC-VPA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,6 +153,7 @@
                     <connections>
                         <outlet property="tableView" destination="cu0-XC-xZD" id="wiJ-BQ-TcL"/>
                         <outlet property="view" destination="tmd-Ur-0MB" id="XDn-Yw-eQk"/>
+                        <segue destination="yvy-nU-ndJ" kind="show" identifier="todetailgraphview" id="dve-gC-9zK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxb-hK-N7A" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Angry" representedClassName=".Angry" syncable="YES">
+    <entity name="Angry" representedClassName="Angry" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="angryActivities" inverseEntity="Child" syncable="YES"/>
@@ -15,7 +15,7 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="attentionSpanActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Calm" representedClassName=".Calm" syncable="YES">
+    <entity name="Calm" representedClassName="Calm" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="calmActivities" inverseEntity="Child" syncable="YES"/>
@@ -56,27 +56,27 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="defianceActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Diarrhea" representedClassName=".Diarrhea" syncable="YES">
+    <entity name="Diarrhea" representedClassName="Diarrhea" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="diarrheaActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Diet" representedClassName=".Diet" syncable="YES">
+    <entity name="Diet" representedClassName="Diet" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="dietActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Excited" representedClassName=".Excited" syncable="YES">
+    <entity name="Excited" representedClassName="Excited" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="excitedActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Happy" representedClassName=".Happy" syncable="YES">
+    <entity name="Happy" representedClassName="Happy" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="happyActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Headaches" representedClassName=".Headaches" syncable="YES">
+    <entity name="Headaches" representedClassName="Headaches" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="headacheActivities" inverseEntity="Child" syncable="YES"/>
@@ -101,12 +101,12 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="repetitionActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="RespiratoryIssues" representedClassName=".RespiratoryIssues" syncable="YES">
+    <entity name="RespiratoryIssues" representedClassName="RespiratoryIssues" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="respritoryActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Sad" representedClassName=".Sad" syncable="YES">
+    <entity name="Sad" representedClassName="Sad" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="sadActivities" inverseEntity="Child" syncable="YES"/>
@@ -126,7 +126,7 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="sleepQualityActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="StomachAche" representedClassName=".StomachAche" syncable="YES">
+    <entity name="StomachAche" representedClassName="StomachAche" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="stomachAcheActivities" inverseEntity="Child" syncable="YES"/>
@@ -136,17 +136,17 @@
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="tantrumActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
-    <entity name="Tremors" representedClassName=".Tremors" syncable="YES">
+    <entity name="Tremors" representedClassName="Tremors" syncable="YES">
         <attribute name="rawDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="tremorActivities" inverseEntity="Child" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Child" positionX="-306" positionY="-234" width="128" height="480"/>
         <element name="Angry" positionX="-99" positionY="-72" width="128" height="90"/>
         <element name="Anxiety" positionX="90" positionY="18" width="128" height="90"/>
         <element name="AttentionSpan" positionX="99" positionY="36" width="128" height="90"/>
         <element name="Calm" positionX="-90" positionY="-72" width="128" height="90"/>
+        <element name="Child" positionX="-531" positionY="-111" width="128" height="480"/>
         <element name="Defiance" positionX="72" positionY="45" width="128" height="90"/>
         <element name="Diarrhea" positionX="-45" positionY="-27" width="128" height="90"/>
         <element name="Diet" positionX="-54" positionY="-36" width="128" height="90"/>

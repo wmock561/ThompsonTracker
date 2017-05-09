@@ -57,6 +57,12 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         self.title = "Dashboard"
         
+        print("here")
+        print(childArray)
+        print(childArray.first?.attentionSpanActivityArray)
+        print(childArray.first?.headacheActivityArray)
+        
+        
         //Tap Gesture Recognizer
         
         let recognizer = UITapGestureRecognizer() // Creates a tap gesture recognzier

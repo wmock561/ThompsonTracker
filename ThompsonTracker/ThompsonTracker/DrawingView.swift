@@ -46,11 +46,6 @@ class DrawingView: UIView {
     
     override func draw(_ rect: CGRect) {
         
-        //print(graphPoints)
-        
-        let width = rect.width
-        let height = rect.height
-        
         //set up background clipping area
         let path = UIBezierPath(roundedRect: rect,
                                 byRoundingCorners: UIRectCorner.allCorners,

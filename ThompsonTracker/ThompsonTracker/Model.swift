@@ -31,18 +31,6 @@ class Model {
         
         guard !UserDefaults.standard.bool(forKey: coreDataLoadedKey) else { return }
         
-//        let newsCategories = NewsJSONLoader.load(fileName: "news")
-//        
-//        for newsCategory in newsCategories {
-//            if let category = Category(title: newsCategory.title){
-//                for newsArticle in newsCategory.articles {
-//                    if let article = Article(title: newsArticle.title, date: newsArticle.date){
-//                        category.addToArticles(article)
-//                    }
-//                }
-//            }
-//        }
-        
         do {
             try self.managedContext?.save()
             
