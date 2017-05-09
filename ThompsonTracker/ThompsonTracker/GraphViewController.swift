@@ -709,76 +709,67 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case 3:
             cell.graphTitleLabel.text = "Emotions"
             
-//            if let index = childIndex,
-//                let child = children?[index] {
-//                
-//                var holderArray: [(date: Date, value: Int)]
-//                
-//                let excitedArray = child.excitedActivityArray
-//                let happyArray = child.happyActivityArray
-//                let calmArray = child.calmActivityArray
-//                let anxiousArray = child.anxietyActivityArray
-//                let sadArray = child.sadActivityArray
-//                let irritabilityArray = child.irritabilityActivityArray
-//                let angryArray = child.angryActivityArray
-//                
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                for item in excitedArray! {
-//                    holderArray.append((date: item.date, value: Int(item.value)))
-//                }
-//                
-//                let item = (date: , value: Int)
-//                
-//                print("Sleep Array Here")
-//                print(array)
-//                sleepLengthActivityArray = array
-//                
-//                if array.isEmpty == false {
-//                    newGraph.graphPoints.removeAll()
-//                    
-//                    let value = setupGraphDisplay(indexValues: newGraph.graphPoints)
-//                    cell.averageValue.text = "\(value)"
-//                    
-//                    for value in array {
-//                        newGraph.graphPoints.append(Int(value.value))
-//                        dataForAverageArray.append(Int(value.value))
-//                    }
-//                    
-//                    print(newGraph.graphPoints)
-//                }
-//                
-//                
-//                
-//                //setting gradient colors
-//                cell.drawingView.startColor = UIColor(hex: sleepStartColorArray[cellNum])
-//                newGraph.startColor = UIColor(hex: sleepStartColorArray[cellNum])
-//                cell.drawingView.endColor = UIColor(hex: sleepEndColorArray[cellNum])
-//                newGraph.endColor = UIColor(hex: sleepEndColorArray[cellNum])
-//                
-//                //setting dot and line colors
-//                newGraph.lineColor = UIColor(hex: sleepLineColorArray[cellNum])
-//                newGraph.dotColor = UIColor(hex: sleepDotColorArray[cellNum])
-//                
-//                newGraph.setNeedsDisplay()
-//                
-//            }
+            if let index = childIndex,
+                let child = children?[index] {
+                
+                var holderArray = [(date: Date, value: Int)]()
+                
+                let excitedArray = child.excitedActivityArray
+                let happyArray = child.happyActivityArray
+                let calmArray = child.calmActivityArray
+                let anxiousArray = child.anxietyActivityArray
+                let sadArray = child.sadActivityArray
+                let irritabilityArray = child.irritabilityActivityArray
+                let angryArray = child.angryActivityArray
+                
+                for item in excitedArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in happyArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in calmArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in anxiousArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in sadArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in irritabilityArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                for item in angryArray! {
+                    holderArray.append((date: item.date, value: Int(item.value)))
+                }
+                
+                if holderArray.isEmpty == false {
+                    newGraph.graphPoints.removeAll()
+                    
+                    holderArray.sort(by: { $0.date < $1.date })
+                    
+                    for value in holderArray {
+                        newGraph.graphPoints.append(Int(value.value))
+                        dataForAverageArray.append(Int(value.value))
+                    }
+                    
+                    print(newGraph.graphPoints)
+                }
+                
+                //setting gradient colors
+                cell.drawingView.startColor = UIColor(hex: sleepStartColorArray[cellNum])
+                newGraph.startColor = UIColor(hex: sleepStartColorArray[cellNum])
+                cell.drawingView.endColor = UIColor(hex: sleepEndColorArray[cellNum])
+                newGraph.endColor = UIColor(hex: sleepEndColorArray[cellNum])
+                
+                //setting dot and line colors
+                newGraph.lineColor = UIColor(hex: sleepLineColorArray[cellNum])
+                newGraph.dotColor = UIColor(hex: sleepDotColorArray[cellNum])
+                
+                newGraph.setNeedsDisplay()
+                
+            }
             
         default:
             print("Section Error")

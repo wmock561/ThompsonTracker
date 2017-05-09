@@ -18,32 +18,7 @@ class GraphView: UIView {
     var horizontalLineColor: UIColor = UIColor.black
     
     var graphPoints: [Int] = [0]
-    
-//    init(frame: CGRect, graphPoints: [Int]) {
-//        
-//        //NEED TO ADD OTHER COLOR VALUES INTO CONSTRUCTOR?
-//        self.graphPoints = graphPoints
-//        
-//        super.init(frame: frame)
-//        
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-//    init(frame: CGRect, graphPoints: [Int], startColor: UIColor, endColor: UIColor, lineColor: UIColor, dotColor: UIColor, horizontalLineColor: UIColor, axisColor: UIColor) {
-//        self.startColor = startColor
-//        self.endColor = endColor
-//        self.lineColor = lineColor
-//        self.dotColor = dotColor
-//        self.horizontalLineColor = horizontalLineColor
-//        self.axisColor = axisColor
-//        self.graphPoints = graphPoints
-//        
-//        super.init(frame: frame)
-//    }
-    
+        
     override func draw(_ rect: CGRect) {
         
         //print(graphPoints)
