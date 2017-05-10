@@ -310,13 +310,7 @@
                                     <constraint firstAttribute="width" secondItem="oO6-bh-wnb" secondAttribute="height" multiplier="1:1" id="iWl-q9-Neh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Moon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2l-DR-T6A">
-                                <rect key="frame" x="59" y="206" width="47" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain_s_cloudy.png" translatesAutoresizingMaskIntoConstraints="NO" id="wSV-4I-1vn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly_cloudy.png" translatesAutoresizingMaskIntoConstraints="NO" id="wSV-4I-1vn">
                                 <rect key="frame" x="259" y="134" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wSV-4I-1vn" secondAttribute="height" multiplier="1:1" id="dyw-QY-V3p"/>
@@ -324,6 +318,12 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sT-c2-Fl4">
                                 <rect key="frame" x="271" y="206" width="41" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2l-DR-T6A">
+                                <rect key="frame" x="68" y="206" width="27" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -341,12 +341,12 @@
                             <constraint firstItem="wSV-4I-1vn" firstAttribute="leading" secondItem="y3M-4Z-55u" secondAttribute="trailing" constant="30" id="QKE-wB-LMm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y3M-4Z-55u" secondAttribute="trailing" constant="130" id="VYS-OK-Tg2"/>
                             <constraint firstItem="Cro-BH-Ahy" firstAttribute="top" secondItem="1eq-6E-evh" secondAttribute="bottom" constant="8" id="Xzl-ej-yCQ"/>
+                            <constraint firstItem="y3M-4Z-55u" firstAttribute="leading" secondItem="e2l-DR-T6A" secondAttribute="trailing" constant="51" id="aw1-hS-19M"/>
                             <constraint firstItem="y3M-4Z-55u" firstAttribute="leading" secondItem="qkf-6h-Vz7" secondAttribute="leadingMargin" constant="130" id="b0q-jQ-BMd"/>
                             <constraint firstItem="r5c-Pa-8ug" firstAttribute="top" secondItem="oO6-bh-wnb" secondAttribute="bottom" constant="16" id="bfS-ay-FV0"/>
                             <constraint firstItem="y3M-4Z-55u" firstAttribute="top" secondItem="cCp-Uh-BOr" secondAttribute="bottom" constant="7.5" id="dOJ-cu-euR"/>
                             <constraint firstItem="oO6-bh-wnb" firstAttribute="leading" secondItem="qkf-6h-Vz7" secondAttribute="leadingMargin" constant="41" id="hkk-ZI-wqV"/>
                             <constraint firstAttribute="trailing" secondItem="r5c-Pa-8ug" secondAttribute="trailing" id="hmD-d4-2iI"/>
-                            <constraint firstItem="y3M-4Z-55u" firstAttribute="leading" secondItem="e2l-DR-T6A" secondAttribute="trailing" constant="40" id="lGX-CS-t5K"/>
                             <constraint firstItem="r5c-Pa-8ug" firstAttribute="top" secondItem="wSV-4I-1vn" secondAttribute="bottom" constant="16" id="lTM-eR-X7Z"/>
                             <constraint firstItem="cCp-Uh-BOr" firstAttribute="centerX" secondItem="qkf-6h-Vz7" secondAttribute="centerX" id="qoe-1u-fBD"/>
                             <constraint firstItem="y3M-4Z-55u" firstAttribute="centerX" secondItem="qkf-6h-Vz7" secondAttribute="centerX" id="sWA-25-jdj"/>
@@ -800,7 +800,7 @@
         <image name="bargraph.png" width="30" height="30"/>
         <image name="dashboard.png" width="30" height="30"/>
         <image name="gear.png" width="30" height="30"/>
-        <image name="rain_s_cloudy.png" width="64" height="64"/>
+        <image name="partly_cloudy.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XN1-aZ-cUk"/>

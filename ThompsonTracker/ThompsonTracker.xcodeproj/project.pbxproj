@@ -40,6 +40,7 @@
 		B25797A01EB3BCF800946412 /* SleepLength+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */; };
 		B25DF9A51EC271EE00D0930A /* Full Moon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B25DF9A41EC271EE00D0930A /* Full Moon-50.png */; };
 		B25DF9A71EC273D100D0930A /* rain_s_cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = B25DF9A61EC273D100D0930A /* rain_s_cloudy.png */; };
+		B25DF9AB1EC37C6D00D0930A /* partly_cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = B25DF9AA1EC37C6D00D0930A /* partly_cloudy.png */; };
 		B28682711EAE761C002A768A /* angryFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B28682511EAE761C002A768A /* angryFace.jpg */; };
 		B28682721EAE761C002A768A /* anxiety.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682521EAE761C002A768A /* anxiety.png */; };
 		B28682741EAE761C002A768A /* brain.png in Resources */ = {isa = PBXBuildFile; fileRef = B28682541EAE761C002A768A /* brain.png */; };
@@ -228,6 +229,7 @@
 		B257979C1EB3BCF800946412 /* SleepLength+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SleepLength+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B25DF9A41EC271EE00D0930A /* Full Moon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Full Moon-50.png"; sourceTree = "<group>"; };
 		B25DF9A61EC273D100D0930A /* rain_s_cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain_s_cloudy.png; sourceTree = "<group>"; };
+		B25DF9AA1EC37C6D00D0930A /* partly_cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partly_cloudy.png; sourceTree = "<group>"; };
 		B28682511EAE761C002A768A /* angryFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angryFace.jpg; sourceTree = "<group>"; };
 		B28682521EAE761C002A768A /* anxiety.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anxiety.png; sourceTree = "<group>"; };
 		B28682541EAE761C002A768A /* brain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain.png; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 		B28682101EAE741A002A768A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B25DF9AA1EC37C6D00D0930A /* partly_cloudy.png */,
 				B25DF9A61EC273D100D0930A /* rain_s_cloudy.png */,
 				B25DF9A41EC271EE00D0930A /* Full Moon-50.png */,
 				B2CB510F1EB7AD0D0075B04E /* behaviors */,
@@ -728,6 +731,7 @@
 				B29022D41EAFD77B0008391E /* gear.png in Resources */,
 				B2CB513B1EB7AD0D0075B04E /* happy.png in Resources */,
 				B28682741EAE761C002A768A /* brain.png in Resources */,
+				B25DF9AB1EC37C6D00D0930A /* partly_cloudy.png in Resources */,
 				B2CB513D1EB7AD0D0075B04E /* sad.png in Resources */,
 				B28682901EAE761C002A768A /* waxingMoon.png in Resources */,
 				B2A203721E9DD2EC000195BA /* LaunchScreen.storyboard in Resources */,
